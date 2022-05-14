@@ -21,12 +21,13 @@ import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
 import Footer from '../../comp/Footer';
 
+
 const HomePage = ()=>{
     
     return (
         <ThemeProvider theme={theme}>
             <ResponsiveAppBar/>
-            <Container  align="center">
+            <Container  align="center" sx={{mt:2}}>
                 <Typography variant="h1" >
                     Coding Classes for Kids
                 </Typography>
