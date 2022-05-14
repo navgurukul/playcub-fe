@@ -48,34 +48,43 @@ const HomePage = ()=>{
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} align="left">
-                            <Typography variant="body1">
-                                <MenuBookIcon sx={{pt:0.5,mr:1,color:"#666699"}}/>
-                                Cirriculum designed by experts 
-                            </Typography>
-                            <Typography variant="body1">
-                                <VideocamIcon sx={{pt:0.5,mr:1,color:"#666699"}}/>
-                                Private 1-1 classes
-                            </Typography>
-                            <Typography variant="body1">
-                                <PermContactCalendarIcon sx={{pt:0.5,mr:1,color:"#666699"}} />
-                                Convinient scheduling 
-                            </Typography>
-                            <Typography variant="body1">
-                                <ChildCareIcon sx={{pt:0.5,mr:1,color:"#666699"}} />
-                                For kids between 10 to 14 years
-                            </Typography>
-                            <Typography variant="body1" sx={{mr:1}}>
-                            <IconButton sx={{p:0.2,mr:1.2, background:"#666699",color:"#fff",height:18 ,width:18}}>
-                                <CurrencyRupeeRoundedIcon 
-                                    variant="outlined"
-                                    fontSize="small"                                                 
-                                    />
-                            </IconButton>
-                                Teachers keep 100% of the feee
-
-                            </Typography>
+                            <Box sx={{display:"flex"}}>
+                                <MenuBookIcon sx={{pt:0.5,mr:1,mb:2, color:"#666699"}}/>
+                                <Typography variant="body1">
+                                    Cirriculum designed by experts 
+                                </Typography>
+                            </Box>
+                            <Box sx={{display:"flex"}}>
+                                <VideocamIcon sx={{pt:0.5,mr:1,mb:2,color:"#666699"}}/>
+                                <Typography variant="body1">
+                                    Private 1-1 classes
+                                </Typography>
+                            </Box>
+                            <Box sx={{display:"flex"}}>
+                                <PermContactCalendarIcon sx={{pt:0.5,mr:1,mb:2,color:"#666699"}} />
+                                <Typography variant="body1">
+                                    Convinient scheduling 
+                                </Typography>
+                            </Box>
+                            <Box sx={{display:"flex"}}>
+                                <ChildCareIcon sx={{pt:0.5,mr:1, mb:2,color:"#666699"}} />
+                                <Typography variant="body1">
+                                    For kids between 10 to 14 years
+                                </Typography>
+                            </Box>
+                            <Box sx={{display:"flex"}}>
+                                <IconButton sx={{p:0.2,mr:1, ml:0.5,mb:2, background:"#666699",color:"#fff",height:18 ,width:18}}>
+                                    <CurrencyRupeeRoundedIcon 
+                                        variant="outlined"
+                                        fontSize="small"                                                 
+                                        />
+                                </IconButton>
+                                <Typography variant="body1" >
+                                    Teachers keep 100% of the feee
+                                </Typography>
+                            </Box>
                             
-                            <Button sx={{background:'#FFCC00', color:"#2E2E2E" ,mt:3, p:"8px,16px"}} height="48px"  >
+                            <Button sx={{background:'#FFCC00', color:"#2E2E2E" ,mt:2, p:"8px,16px"}} height="48px"  >
                                 Book a free demo class
                             </Button>
                            
@@ -98,6 +107,7 @@ const HomePage = ()=>{
                     width: 650,
                     maxWidth: '100%',
                     mb:18,
+                    display:"inline-block"
                 }}
                 >
                 <TextField fullWidth label="Enter your email"
