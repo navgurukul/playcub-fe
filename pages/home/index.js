@@ -113,7 +113,6 @@ const HomePage = ()=>{
                 >
                 <TextField fullWidth label="Enter your email"
                  margin="normal"
-                 fullWidth
                  name="email"
                  autoComplete="email" 
                  InputProps={{
