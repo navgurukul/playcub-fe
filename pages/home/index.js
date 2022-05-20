@@ -114,10 +114,11 @@ const HomePage = ()=>{
                 <TextField fullWidth label="Enter your email"
                  margin="normal"
                  name="email"
+                 type="email"
                  autoComplete="email" 
                  InputProps={{
                     endAdornment: (
-                        <Button  fullwidth sx={{p:3,background:'#FFCC00', color:"#2E2E2E" }}  >
+                        <Button  fullwidth sx={{p:3.4,ml:64.8 ,background:'#FFCC00', color:"#2E2E2E" , position:'absolute'}}  >
                             Subscribe
                         </Button>
                      
