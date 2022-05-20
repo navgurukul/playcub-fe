@@ -115,6 +115,7 @@ theme = createTheme(theme, {
       fontSize: "18px",
       fontFamily: "Nunito Sans",
       letterSpacing:"0.15px",
+      color:'#6D6D6D',
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.75rem",
       },
@@ -132,6 +133,18 @@ theme = createTheme(theme, {
         fontSize: "0.875rem",
       },
       lineHeight: "27px",
+    },
+
+    overline: {
+      fontFamily: "Nunito Sans",
+      fontSize: "12px",
+      lineHeight: '18px',
+      fontWeight:400,
+      letterSpacing:'1px',
+      color:'#666699',
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "12px",
+      },
     },
    
     button: {
