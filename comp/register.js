@@ -4,7 +4,6 @@ import {
   Container, 
   Grid, 
 } from "@mui/material";
-import Grid from '@mui/material/Grid';
 import { useState } from "react";
 const register =()=>{
     const [registerdata,setRegisterData]=useState({
