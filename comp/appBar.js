@@ -26,15 +26,21 @@ const ResponsiveAppBar =() =>{
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button  sx={{background:'#FFF',color:"#2E2E2E",mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
+            <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
+              <Link href="#" underline="none" sx={{color:"#2E2E2E"}}>
                 Our vision
+              </Link>
             </Button>
-            <Button  sx={{background:'#FFF',color:"#2E2E2E",mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
+            <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
+              <Link href="/ourCirriculaum" underline="none" sx={{color:"#2E2E2E"}}>
                 Curriculum  
+              </Link>
             </Button>
-            <Button sx={{background:'#FFCC00', color:"#2E2E2E" ,mt:0.4, p:"8px,16px"}} height="48px"  >
+            <Button sx={{background:'#FFCC00',mt:0.4, p:"8px,16px"}} height="48px"  >
+              <Link href="#" underline="none" sx={{color:"#2E2E2E"}}> 
                 Book a free demo class
-            </Button>       
+              </Link>
+            </Button>        
           </Box>  
                           
         </Toolbar>
