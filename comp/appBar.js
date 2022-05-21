@@ -27,9 +27,9 @@ const ResponsiveAppBar =() =>{
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
-              <Link href="#" underline="none" sx={{color:"#2E2E2E"}}>
+              {/* <Link href="#" underline="none" sx={{color:"#2E2E2E"}}> */}
                 Our vision
-              </Link>
+              {/* </Link> */}
             </Button>
             <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
               <Link href="/ourCirriculaum" underline="none" sx={{color:"#2E2E2E"}}>
@@ -37,9 +37,9 @@ const ResponsiveAppBar =() =>{
               </Link>
             </Button>
             <Button sx={{background:'#FFCC00',mt:0.4, p:"8px,16px"}} height="48px"  >
-              <Link href="#" underline="none" sx={{color:"#2E2E2E"}}> 
+              {/* <Link href="#" underline="none" sx={{color:"#2E2E2E"}}>  */}
                 Book a free demo class
-              </Link>
+              {/* </Link> */}
             </Button>        
           </Box>  
                           
