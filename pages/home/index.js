@@ -32,13 +32,13 @@ const HomePage = ()=>{
                 <Container sx={{ mt: 10 }} maxWidth="lg">
                     <Grid container spacing={15}>
                         <Grid item xs={12} sm={6} md={6}  >
-                            <Card  borderColor='warning' sx={{ color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
+                            <Card  bordercolor='warning' sx={{ color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
                                 <Image 
                                 
                                 src={require("./assest/Coding.png")} 
                                 width={`1180px`}
                                 height={`689px`}
-                                borderRadius= {'8%'}
+                                sx={{borderRadius:'8%'}}
                                 />
                             </Card>
                         </Grid>
@@ -106,7 +106,7 @@ const HomePage = ()=>{
                     display:"inline-block"
                 }}
                 >
-                <TextField fullWidth label="Enter your email"
+                <TextField fullwidth="true" label="Enter your email"
                  margin="normal"
                  name="email"
                  type="email"

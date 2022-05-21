@@ -22,26 +22,27 @@ export default (props)=>{
     }),
   };
     return <>
-        <Typography variant="h1" component="h1" align="left">
-                Help your child learn code
+        <Typography variant="h1">
+        Get started with Playcub
             </Typography>
             
-            <Typography variant="h5" component="h5" align="left">
-                Register and our team will reach out to you to connect you with a teacher
+            <Typography variant="h5">
+            Register and our team will reach out to you to connect you with a teacher
             </Typography>
-          <TextField style={{marginTop:40}} fullWidth 
+            
+          <TextField style={{marginTop:40}} fullWidth="true" 
           value={props.data.Name.value} 
           helperText={props.data.Name.errorMsg}
           error={props.data.Name.error}
-          onChange={(e)=>{props.onChange(e,"Name")}} label="Name" id="Name" variant="filled"/>
-          <TextField style={{marginTop:40}} fullWidth value={props.data.Email.value} onChange={(e)=>{props.onChange(e,"Email")}} label="Email" id="Email" 
+          onChange={(e)=>{props.onChange(e,"Name")}} label="Name" id="Name" />
+          <TextField style={{marginTop:40}} fullWidth="true" value={props.data.Email.value} onChange={(e)=>{props.onChange(e,"Email")}} label="Email" id="Email" 
           helperText={props.data.Email.errorMsg}
-          variant="filled"
+          
           // helperText="Incorrect email"
           error={props.data.Email.error}
           />
-          <TextField style={{marginTop:40}} fullWidth value={props.data.age.value} onChange={(e)=>{props.onChange(e,"age")}} label="Child age" id="age" 
-          variant="filled"
+          <TextField style={{marginTop:40}} fullWidth="true" value={props.data.age.value} onChange={(e)=>{props.onChange(e,"age")}} label="Child age" id="age" 
+          
           helperText={props.data.age.errorMsg}
           // helperText="only children between age 12 and 15 are allowed to register"
           error={props.data.age.error}/>
@@ -49,28 +50,34 @@ export default (props)=>{
            
           <Box sx={{ 
                 marginTop:"40px",
-                background: "#FFFFFF",
-                border: "1px solid #000000",
-                boxSizing: "border-box",
+                // background: "#FFFFFF",
+                // border: "1px solid #000000",
+                // boxSizing: "border-box",
                 // height: "68px",
-                position: 'relative' 
+                // position: 'relative' ,
+                mb:10,
+                height: '27px',
+                width: '200px',
               }}>
                
-              <Button fullWidth onClick={()=>props.onSubmit()}
+              <Button fullWidth="true" onClick={()=>props.onSubmit()}
                   key={"submit reqeust"}
                   disabled={props.data.fetching.value}
                   sx={{ 
-                    ...buttonSx,
-
-                    my: 2,
-                    fontFamily: 'Work Sans',
-                    fontStyle: 'normal',
-                    fontWeight: '700',
-                    fontSize: "20px",
-                    lineHeight: "23px",
-                    textAlign: "center",
-                    margin:"0 0px", 
-                    color: props.data.fetching.success?"#fff":props.data.fetching.failure?"#fff":"#000000", display: "block" }}
+                    // ...buttonSx,
+                   
+                    
+                    // my: 2,
+                    // fontFamily: 'Work Sans',
+                    // fontStyle: 'normal',
+                    // fontWeight: '700',
+                    // fontSize: "20px",
+                    // lineHeight: "23px",
+                    // textAlign: "center",
+                    // margin:"0 0px", 
+                    // color: props.data.fetching.success?"#fff":props.data.fetching.failure?"#fff":"#000000",
+                    //  display: "block" 
+                    }}
                 >
                   {
                   props.data.fetching.success?

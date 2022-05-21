@@ -19,8 +19,11 @@ const ClassesCard =()=>{
         <>
         <Container maxWidth="100px"sx={{mt:10,mb:6, background: "#FFF5CC",align:"right"}}>
             <Container maxWidth="lg">
-            <Grid container  >
-                <Grid item xs={12} sm={6} md={8} spacing={12}>
+            <Grid container>
+                <Grid item xs={12} sm={6} md={8}  sx={{position:'relative'}}>
+                    <Box sx={{position:'sticky',
+                    top:10,
+                    }}>
                     <Typography variant="h2" sx={{mt:10}}>
                         Web development  
                     </Typography>
@@ -50,6 +53,7 @@ const ClassesCard =()=>{
                         <Typography variant="body1">
                             Free access to materials
                         </Typography>
+                    </Box>
                     </Box>
                 </Grid> 
                 <Grid item xs={12} sm={6} md={4}  align="left" >

@@ -1,6 +1,6 @@
 import C1 from "./c1";
 import C2 from "./c2";
-import Box from '@mui/material/Box';
+import {Box,Container} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { useState } from "react";
 const register =()=>{
@@ -87,16 +87,28 @@ const register =()=>{
       setRegisterData({...register})
       
     }
-    return (<>
+    return (<Container>
         
-       
-    <Box sx={{flexGrow: 1, m:10,display: { xs: "none", md: "flex" } }}>
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={10}>
+        <Box sx={{ width: '100%' }}>
+      <Grid container Spacing={10} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item md={6}>
+        <C1 data={registerdata} onChange={handleChange} onSubmit={onSubmit}/>
+
+        </Grid>
+        <Grid item md={6}>
+        <C2/>
+        </Grid>
+      </Grid>
+    </Box>
+    {/* <Box sx={{flexGrow: 1, m:10,display: { xs: "none", md: "flex" } }}>
+      <Grid container spacing={10} columns={16}>
+        <Grid item xs={8}>
             <C1 data={registerdata} onChange={handleChange} onSubmit={onSubmit}/>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={8}>
+        <Container  align="left" sx={{mt:2}}>
           <C2/>
+          </Container>
         </Grid>
       </Grid>
     </Box>
@@ -109,8 +121,8 @@ const register =()=>{
         <C2/>
         </Grid>
       </Grid>
-    </Box>
-        </>
+    </Box> */}
+        </Container>
     )
 }
 export default register;
