@@ -1,6 +1,9 @@
 import C1 from "./c1";
 import C2 from "./c2";
-import {Box,Container} from '@mui/material';
+import {
+  Container, 
+  Grid, 
+} from "@mui/material";
 import Grid from '@mui/material/Grid';
 import { useState } from "react";
 const register =()=>{
@@ -87,42 +90,19 @@ const register =()=>{
       setRegisterData({...register})
       
     }
-    return (<Container>
-        
-        <Box sx={{ width: '100%' }}>
-      <Grid container Spacing={10} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item md={6}>
-        <C1 data={registerdata} onChange={handleChange} onSubmit={onSubmit}/>
-
-        </Grid>
-        <Grid item md={6}>
-        <C2/>
-        </Grid>
-      </Grid>
-    </Box>
-    {/* <Box sx={{flexGrow: 1, m:10,display: { xs: "none", md: "flex" } }}>
-      <Grid container spacing={10} columns={16}>
-        <Grid item xs={8}>
+    return (
+      <Container maxWidth='xl' align="left"  >
+        <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+          <Grid item xs={12} sm={4} md={6}  >
             <C1 data={registerdata} onChange={handleChange} onSubmit={onSubmit}/>
+          </Grid>
+          <Grid item xs={12} sm={4} md={6} sx={{mt:10}} >
+            <C2/>
+          </Grid>
         </Grid>
-        <Grid item xs={8}>
-        <Container  align="left" sx={{mt:2}}>
-          <C2/>
-          </Container>
-        </Grid>
-      </Grid>
-    </Box>
-    <Box sx={{flexGrow: 1,margin:"1%", display: { xs: "flex", md: "none" } }}>
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={16}>
-        <C1 data={registerdata} onChange={handleChange}  onSubmit={onSubmit}/>
-        </Grid>
-        <Grid item xs={16}>
-        <C2/>
-        </Grid>
-      </Grid>
-    </Box> */}
-        </Container>
+      </Container>
+    
+    
     )
 }
 export default register;

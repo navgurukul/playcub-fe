@@ -8,8 +8,6 @@ import {
     Grid,
     Box,
   } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../../theme/theme";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
@@ -18,10 +16,7 @@ const OurCirriculum = () =>{
     return(
         
         <>
-        <ThemeProvider theme={theme}>
-
-
-            <Container maxWidth='xl' align="left"  >
+            <Container maxWidth='xl' align="left" sx={{mb:5}}  >
                 <Typography variant="h2" align="center">
                    Our Cirriculum
                 </Typography>
@@ -227,7 +222,7 @@ const OurCirriculum = () =>{
                 </Box>
                 
             </Container>
-        </ThemeProvider>
+        
         </>
     )
 }
