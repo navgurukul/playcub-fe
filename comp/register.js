@@ -95,7 +95,7 @@ const register =()=>{
           <Grid item xs={12} sm={4} md={6}  >
             <C1 data={registerdata} onChange={handleChange} onSubmit={onSubmit}/>
           </Grid>
-          <Grid item xs={12} sm={4} md={6} sx={{mt:10}} >
+          <Grid item xs={12} sm={4} md={6}  >
             <C2/>
           </Grid>
         </Grid>
