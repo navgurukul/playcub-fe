@@ -151,6 +151,7 @@ theme = createTheme(theme, {
       fontSize: "18px",
       fontFamily: "Nunito Sans",
       letterSpacing:"0.15px",
+      background:'#FFCC00',
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
       },
@@ -169,6 +170,7 @@ theme.components = {
       root: {
         borderRadius: "8px",
         height: "48px",
+        color:"#2E2E2E",
       },
     },
   },

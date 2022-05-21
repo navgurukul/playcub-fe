@@ -80,7 +80,7 @@ const HomePage = ()=>{
                                 </Typography>
                             </Box>
                             
-                            <Button sx={{background:'#FFCC00', color:"#2E2E2E" ,mt:2, p:"8px,16px"}} height="48px"  >
+                            <Button sx={{mt:2, p:"8px,16px"}} height="48px"  >
                                 Book a free demo class
                             </Button>
                            
@@ -113,7 +113,7 @@ const HomePage = ()=>{
                  autoComplete="email" 
                  InputProps={{
                     endAdornment: (
-                        <Button  fullwidth sx={{p:3.4,ml:64.8 ,background:'#FFCC00', color:"#2E2E2E" , position:'absolute'}}  >
+                        <Button  fullwidth sx={{p:3.4,ml:64.8  , position:'absolute'}}  >
                             Subscribe
                         </Button>
                      

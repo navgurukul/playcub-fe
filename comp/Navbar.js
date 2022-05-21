@@ -38,7 +38,7 @@ const Navbar =() =>{
                 Curriculum  
               </Link>
             </Button>
-            <Button sx={{background:'#FFCC00',mt:0.4, p:"8px,16px"}} height="48px"  >
+            <Button sx={{mt:0.4, p:"8px,16px"}} height="48px"  >
               <Link href="#" underline="none" sx={{color:"#2E2E2E"}}> 
                 Book a free demo class
               </Link>

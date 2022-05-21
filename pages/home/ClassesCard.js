@@ -101,7 +101,7 @@ const ClassesCard =()=>{
                             
                         </CardContent>
                         <CardActions >
-                            <Button sx={{background:'#FFCC00', color:"#2E2E2E" }} height="30px" fullWidth >Book a free demo class</Button>     
+                            <Button  height="30px" fullWidth >Book a free demo class</Button>     
                         </CardActions>
                     </Card>
                     <Card  sx={{ borderColor: "#FFCC00 !important", maxWidth: 345 ,border:1, borderBottom: 6, borderRight: 6 ,mt:12,mb:8}}

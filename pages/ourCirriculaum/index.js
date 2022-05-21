@@ -98,7 +98,7 @@ const OurCirriculum = () =>{
                                 
                             </CardContent>
                             <CardActions >
-                                <Button sx={{background:'#FFCC00', color:"#2E2E2E" ,mb:3,ml:3,mr:3}} height="30px"  fullWidth >Book a free demo class</Button>     
+                                <Button sx={{mb:3,ml:3,mr:3}} height="30px"  fullWidth >Book a free demo class</Button>     
                             </CardActions>
                         </Card>
                     </Grid>
