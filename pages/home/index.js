@@ -1,4 +1,3 @@
-import ResponsiveAppBar from "../../comp/appBar";
 import Image from 'next/image'
 import {
     Typography,
@@ -8,8 +7,6 @@ import {
     Grid,
   } from "@mui/material";
 import * as React from "react";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../../theme/theme";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
@@ -19,14 +16,12 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
-import Footer from '../../comp/Footer';
 
 
 const HomePage = ()=>{
     
     return (
-        <ThemeProvider theme={theme}>
-            <ResponsiveAppBar/>
+        <>
             <Container  align="center" sx={{mt:2}}>
                 <Typography variant="h1" >
                     Coding Classes for Kids
@@ -128,9 +123,9 @@ const HomePage = ()=>{
                    >
                    </TextField>
                 </Box>
-                <Footer />
+                
             </Container>
-        </ThemeProvider>
+        </>
        
 
         

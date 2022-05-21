@@ -1,4 +1,3 @@
-import ResponsiveAppBar from "./appBar"
 import C1 from "./c1";
 import C2 from "./c2";
 import Box from '@mui/material/Box';
@@ -90,7 +89,7 @@ const register =()=>{
     }
     return (<>
         
-        <ResponsiveAppBar/>
+       
     <Box sx={{flexGrow: 1, m:10,display: { xs: "none", md: "flex" } }}>
       <Grid container spacing={2} columns={16}>
         <Grid item xs={10}>
