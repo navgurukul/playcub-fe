@@ -106,16 +106,18 @@ const HomePage = ()=>{
                     display:"inline-block"
                 }}
                 >
-                <TextField fullwidth="true" label="Enter your email"
+                <TextField fullWidth label="Enter your email"
                  margin="normal"
                  name="email"
-                 type="email"
                  autoComplete="email" 
                  InputProps={{
                     endAdornment: (
-                        <Button  fullwidth sx={{p:3.4,ml:64.8  , position:'absolute'}}  >
+                        <Box sx={{position:'absolute',left:"80%"}}>
+                        <Button  fullwidth sx={{p:3.4 , position:'relative'}}  >
                             Subscribe
                         </Button>
+                        </Box>
+                        
                      
                        
                     ),
