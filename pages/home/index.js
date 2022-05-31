@@ -5,8 +5,9 @@ import {
     Button,
     Card,
     Grid,
+    Modal,
   } from "@mui/material";
-import * as React from "react";
+import React, { useState } from "react";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
@@ -16,12 +17,48 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
+import RegisterPage from "../../comp/register";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const HomePage = ()=>{
-    
+    const [open,setOpen]=useState(true)
+    const handleClose=async()=>{
+        await setOpen(false)
+    }
+    const handleOpen=async()=>{
+        await setOpen(true)
+    }
     return (
         <>
+         <Button onClick={handleOpen}>Open modal</Button>
+<Modal
+  open={open}
+  onClose={handleClose}
+  aria-labelledby="modal-modal-title"
+  aria-describedby="modal-modal-description"
+>
+  <Box 
+  sx={{
+    // position: 'relative',
+    // top: '50%',
+    // left: '50%',
+    // transform: 'translate(-50%, -50%)',
+    // width: 800,
+    bgcolor: 'background.paper',
+    border: '2px solid #fff',
+    // boxShadow: 24,
+    p: 4,
+    // margin:'10px 10px',
+}}
+  >
+      <CloseIcon onClick={()=>{
+          console.log("clicked");
+          handleClose()
+          }} />
+    <RegisterPage/>
+  </Box>
+</Modal>
             <Container  align="center" sx={{mt:2}}>
                 <Typography variant="h1" >
                     Coding Classes for Kids

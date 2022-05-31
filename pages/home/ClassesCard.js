@@ -3,7 +3,6 @@ import {
     Typography,
     Container,
     Button,
-    Card,
     CardContent,
     CardActions,
     Grid,
@@ -12,6 +11,7 @@ import {
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import Footer from "../../comp/Footer";
+import CardStyle from "../../comp/cardComponent";
 
 
 const ClassesCard =()=>{
@@ -57,9 +57,8 @@ const ClassesCard =()=>{
                     </Box>
                 </Grid> 
                 <Grid item xs={12} sm={6} md={4}  align="left" >
-                    <Card  sx={{ borderColor: "#FFCC00 !important", maxWidth: 345 ,border:1, borderBottom: 6, borderRight: 6 ,mt:12,mb:10}}
-                   
-                    >
+                    
+        <CardStyle>
                         <CardContent >
                             
                             <Typography gutterBottom variant="h4" component="div">
@@ -107,10 +106,9 @@ const ClassesCard =()=>{
                         <CardActions >
                             <Button  height="30px" fullWidth >Book a free demo class</Button>     
                         </CardActions>
-                    </Card>
-                    <Card  sx={{ borderColor: "#FFCC00 !important", maxWidth: 345 ,border:1, borderBottom: 6, borderRight: 6 ,mt:12,mb:8}}
-                   
-                    >
+                    </CardStyle>
+                    <CardStyle>
+
                         <CardContent >
                             
                             <Typography gutterBottom variant="h4" component="div">
@@ -141,10 +139,8 @@ const ClassesCard =()=>{
                                 Coming soon
                             </Typography>
                         </CardActions>
-                    </Card>
-                    <Card  sx={{ borderColor: "#FFCC00 !important", maxWidth: 345 ,border:1, borderBottom: 6, borderRight: 6 ,mt:12,mb:10}}
-                   
-                    >
+                    </CardStyle>
+                    <CardStyle>
                         <CardContent >
                             
                             <Typography gutterBottom variant="h4" component="div">
@@ -174,7 +170,7 @@ const ClassesCard =()=>{
                                 Coming soon
                             </Typography>
                         </CardActions>
-                    </Card>
+                    </CardStyle>
                     
 
                         

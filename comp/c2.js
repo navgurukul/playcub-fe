@@ -11,18 +11,10 @@ import {
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import CardStyle from "./cardComponent";
 
 export default ()=>{
-    return  <Card  sx={{ 
-        borderColor: "#FFCC00 !important", 
-        // maxWidth:  ,
-        width:450,
-        // boxShadow: "10px 10px #FFCC00 !important",
-        border:1, 
-        borderBottom: 6, borderRight: 6 ,mt:1,mb:1
-    }}
-                        
-    >
+    return  <CardStyle>
         <CardContent >
             
             <Typography gutterBottom variant="h4" m={3} component="div">
@@ -91,5 +83,5 @@ export default ()=>{
         </CardContent>
         <CardActions >
         </CardActions>
-    </Card>
+    </CardStyle>
 }

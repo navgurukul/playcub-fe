@@ -10,6 +10,7 @@ import {
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import CardStyle from "../../comp/cardComponent";
 
 
 const OurCirriculum = () =>{
@@ -23,9 +24,7 @@ const OurCirriculum = () =>{
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12} sm={4} md={4}  >
-                        <Card  sx={{ borderColor: "#FFCC00 !important", maxWidth: 450 ,border:1, borderBottom: 6, borderRight: 6 ,mt:12,mb:10}}
-                        
-                        >
+                        <CardStyle>
                             <CardContent >
                                 
                                 <Typography gutterBottom variant="h4" m={3} component="div">
@@ -95,7 +94,7 @@ const OurCirriculum = () =>{
                             <CardActions >
                                 <Button sx={{mb:3,ml:3,mr:3}} height="30px"  fullWidth >Book a free demo class</Button>     
                             </CardActions>
-                        </Card>
+                        </CardStyle>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4} sx={{mt:10}} >
                         <Box>
