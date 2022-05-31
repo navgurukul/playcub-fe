@@ -49,7 +49,7 @@ const HomePage = ()=>{
     border: '2px solid #fff',
     // boxShadow: 24,
     p: 4,
-    // margin:'10px 10px',
+    margin:'30px 30px',
 }}
   >
       <CloseIcon onClick={()=>{
