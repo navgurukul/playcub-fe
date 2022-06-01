@@ -10,21 +10,25 @@ import {
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import Footer from "../../comp/Footer";
 import CardStyle from "../../comp/cardComponent";
+import useStyles from "./styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../../theme/constant";
 
 
 const ClassesCard =()=>{
+    const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
+    const classes = useStyles();
     return(
         <>
-        <Container maxWidth="100px"sx={{mt:10,mb:6, background: "#FFF5CC",align:"right"}}>
+        <Container maxWidth="100px"sx={{mt:!isActive?10:6,mb:!isActive?6:4, background: "#FFF5CC",align:"right"}}>
             <Container maxWidth="lg">
             <Grid container>
                 <Grid item xs={12} sm={6} md={8}  sx={{position:'relative'}}>
                     <Box sx={{position:'sticky',
                     top:10,
                     }}>
-                    <Typography variant="h2" sx={{mt:10}}>
+                    <Typography variant={isActive?"h4":"h2"} sx={{mt:10,mb:1}}>
                         Web development  
                     </Typography>
                     <Typography variant="body1">
@@ -170,14 +174,11 @@ const ClassesCard =()=>{
                                 Coming soon
                             </Typography>
                         </CardActions>
-                    </CardStyle>
-                    
-
-                        
+                    </CardStyle>                    
                 </Grid>
             </Grid>
             </Container>
-            <Footer />
+           
         </Container>
             
         </>
