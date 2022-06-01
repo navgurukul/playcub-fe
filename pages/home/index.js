@@ -19,14 +19,14 @@ import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
 import RegisterPage from "../../comp/register";
 import CloseIcon from '@mui/icons-material/Close';
-import useStyles from "./styles";
+import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
-    const classes = useStyles();
+    const classes = Styles();
 
     const [open,setOpen]=useState(true)
     const handleClose=async()=>{

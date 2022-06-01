@@ -11,14 +11,14 @@ import {
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../comp/cardComponent";
-import useStyles from "./styles";
+import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 
 
 const ClassesCard =()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
-    const classes = useStyles();
+    const classes = Styles();
     return(
         <>
         <Container maxWidth="100px"sx={{mt:!isActive?10:6,mb:!isActive?6:4, background: "#FFF5CC",align:"right"}}>

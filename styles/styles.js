@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles((theme) => ({
+const Styles = makeStyles((theme) => ({
     homePageIcon:{
         marginTop:"1px",
         marginRight:"10px",
@@ -28,4 +28,4 @@ const useStyles = makeStyles((theme) => ({
     
   }));
   
-  export default useStyles;
+  export default Styles;
