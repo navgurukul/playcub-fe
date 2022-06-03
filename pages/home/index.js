@@ -65,21 +65,20 @@ const HomePage = ()=>{
     <RegisterPage/>
   </Box>
 </Modal>
-            <Container  align="center" sx={{mt:2}}>
-                <Typography variant={isActive?"h4":"h1"} >
-                    Coding Classes for Kids
+            <Container  align="center" sx={{mt:1}}>
+                <Typography variant="h3" >
+                    Interactive Coding Classes for Kids
                 </Typography>
                 <Typography variant="subtitle0">
-                    Teach your kids how to build websites
+                    Teach your kids how to build websites with fun
                 </Typography>
-                <Container sx={ isActive?{mt: 4 }:{ mt: 10}} maxWidth="lg">
-                    <Grid container spacing={isActive?5:10}>
+                <Container sx={ isActive?{mt: 4 }:{ mt: 6}} maxWidth="lg">
+                    <Grid container spacing={isActive?5:2}>
                         <Grid item xs={12} sm={6} md={6}  >
-                            <Card  bordercolor='warning' sx={{ color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
+                            <Card  bordercolor='warning'height={isActive?335:'auto'} sx={{maxWidth: 500  , color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
                                 <Image 
                                 
                                 src={require("./assest/Coding.png")} 
-                                className={classes.homePageImg}
                                 sx={{borderRadius:'8%'}}
                                 />
                             </Card>
@@ -132,7 +131,7 @@ const HomePage = ()=>{
             </Container>
             <ClassesCard />
             <Container  align="center">
-                <Typography variant={isActive?"h4":"h2"}>
+                <Typography variant="h3">
                     Get involved
                 </Typography>
                 <Typography variant="subtitle0">
@@ -141,11 +140,12 @@ const HomePage = ()=>{
                 
                 <Box
                 sx={{
-                    mt:!isActive?4:1,
-                    width: 650,
+                    mt:!isActive?3:1,
+                    width: 550,
                     maxWidth: '100%',
-                    mb:!isActive?18:14,
-                    display:"inline-block"
+                    mb:!isActive?16:14,
+                    display:"inline-block",
+                
                 }}
                 >
                 <TextField fullWidth label="Enter your email"
@@ -154,7 +154,7 @@ const HomePage = ()=>{
                  autoComplete="email" 
                  InputProps={{
                     endAdornment: (
-                        <Box sx={{position:'absolute',}} left={!isActive?"79%":"64.5%"}>
+                        <Box sx={{position:'absolute',}} left={!isActive?"75%":"64.5%"}>
                         <Button  fullwidth sx={{p:3.4 , position:'relative'}}  >
                             Subscribe
                         </Button>

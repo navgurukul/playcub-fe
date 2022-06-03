@@ -19,11 +19,7 @@ const Styles = makeStyles((theme) => ({
         width:"18px",
 
     },
-    homePageImg:{
-        width:"100px",
-        height:"80px",
-
-    },
+    
     
     
   }));

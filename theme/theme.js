@@ -28,7 +28,7 @@ theme = createTheme(theme, {
   },
 
   typography: {
-    fontFamily: "Nunito Sans , Lusitana",
+    fontFamily: "Noto Sans",
 
     fontSize: 18,
 
@@ -56,58 +56,58 @@ theme = createTheme(theme, {
 
 
     h3: {
-      fontSize: "3.5rem",
+      fontSize: "56px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "2.75rem",
       },
       fontWeight: 700,
-      fontFamily: "Lusitana",
-      lineHeight: 1.3,
+      fontFamily: "Noto Sans",
+      lineHeight: "72.8px",
     },
 
 
     h4: {
       fontWeight: 700,
       fontSize: "42px",
-      letterSpacing:"0.25px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "	2rem",
       },
-      fontFamily: "Lusitana",
-      lineHeight: 1.3,
+      fontFamily: "Noto Sans",
+      lineHeight: "54.6px",
     },
 
 
 
     h5: {
       fontWeight: 700,
-      fontSize: "2rem",
+      fontSize: "32px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "	1.5rem",
       },
-      lineHeight: 1.5,
-      fontFamily: "Lusitana",
+      lineHeight: "48px",
+      fontFamily: "Noto Sans",
     },
+
     h6: {
-      fontSize: "1.5rem",
+      fontSize: "24px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "	1.125rem",
       },
-      lineHeight: 1.5,
+      lineHeight: "36px",
       fontWeight: 700,
-      fontFamily: "Lusitana",
+      fontFamily: "Noto Sans",
     },
-
     
    
     subtitle0: {
       fontSize: "32px",
-      fontFamily: "Nunito Sans",
+      fontFamily: "Noto Sans",
+      color:"#6D6D6D",
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
       },
-      lineHeight: "41.6px",
-      fontWeight: 700,
+      lineHeight: "48px",
+      fontWeight: 400,
     },
 
 
@@ -127,7 +127,7 @@ theme = createTheme(theme, {
     body1: {
       fontWeight: 400,
       fontSize: "18px",
-      fontFamily: "Nunito Sans",
+      fontFamily: "Noto Sans",
       letterSpacing:"0.15px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
@@ -149,8 +149,7 @@ theme = createTheme(theme, {
    
     button: {
       fontSize: "18px",
-      fontFamily: "Nunito Sans",
-      letterSpacing:"0.15px",
+      fontFamily: "Noto Sans",
       background:'#FFCC00',
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
@@ -171,6 +170,9 @@ theme.components = {
         borderRadius: "8px",
         height: "48px",
         color:"#2E2E2E",
+        "&:hover":{
+          background:"#FFF5CC",
+        }
       },
     },
   },
