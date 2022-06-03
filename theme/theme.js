@@ -99,7 +99,7 @@ theme = createTheme(theme, {
     },
     
    
-    subtitle0: {
+    subtitle: {
       fontSize: "32px",
       fontFamily: "Noto Sans",
       color:"#6D6D6D",
@@ -128,7 +128,6 @@ theme = createTheme(theme, {
       fontWeight: 400,
       fontSize: "18px",
       fontFamily: "Noto Sans",
-      letterSpacing:"0.15px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
       },

@@ -68,7 +68,7 @@ export default ()=>{
             </Box>
             <Box sx={{display:"flex",ml:3}}>
                 <CurrencyRupeeIcon  sx={{mt:0.2,height:45}}/>
-                <Typography variant="subtitle0">
+                <Typography variant="subtitle">
                     120 / week
                 </Typography>
                 

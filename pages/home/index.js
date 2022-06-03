@@ -69,13 +69,13 @@ const HomePage = ()=>{
                 <Typography variant="h3" >
                     Interactive Coding Classes for Kids
                 </Typography>
-                <Typography variant="subtitle0">
+                <Typography variant="subtitle">
                     Teach your kids how to build websites with fun
                 </Typography>
                 <Container sx={ isActive?{mt: 4 }:{ mt: 6}} maxWidth="lg">
-                    <Grid container spacing={isActive?5:2}>
+                    <Grid container spacing={isActive?5:1}>
                         <Grid item xs={12} sm={6} md={6}  >
-                            <Card  bordercolor='warning'height={isActive?335:'auto'} sx={{maxWidth: 500  , color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
+                            <Card  bordercolor='warning'height={isActive?334:'auto'} sx={{maxWidth: 500  , color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
                                 <Image 
                                 
                                 src={require("./assest/Coding.png")} 
@@ -134,8 +134,8 @@ const HomePage = ()=>{
                 <Typography variant="h3">
                     Get involved
                 </Typography>
-                <Typography variant="subtitle0">
-                    Get regular updates about PlayCub’s initiatives 
+                <Typography variant="subtitle">
+                    Get regular updates about PlayCub’s initiatives
                 </Typography>
                 
                 <Box
@@ -155,7 +155,7 @@ const HomePage = ()=>{
                  InputProps={{
                     endAdornment: (
                         <Box sx={{position:'absolute',}} left={!isActive?"75%":"64.5%"}>
-                        <Button  fullwidth sx={{p:3.4 , position:'relative'}}  >
+                        <Button  fullwidth sx={{p:3.4 , backgroundColor:'#FFCC00', position:'relative'}}  >
                             Subscribe
                         </Button>
                         </Box>
