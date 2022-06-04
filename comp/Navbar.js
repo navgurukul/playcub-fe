@@ -29,7 +29,7 @@ const Navbar =() =>{
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
-              <Link href="#" underline="none" sx={{color:"#2E2E2E"}}>
+              <Link href="/ourVision" underline="none" sx={{color:"#2E2E2E"}}>
                 Our vision
               </Link>
             </Button>
