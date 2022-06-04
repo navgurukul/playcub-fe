@@ -19,10 +19,7 @@ const Styles = makeStyles((theme) => ({
         width:"18px",
 
     },
-    homeCardSpacing:{
-        marginTop:"70px",
-       
-    }
+    
     
     
     

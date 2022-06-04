@@ -14,6 +14,7 @@ import CardStyle from "../../comp/cardComponent";
 import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
+import { Link } from '@mui/material';
 
 
 const ClassesCard =()=>{
@@ -60,9 +61,9 @@ const ClassesCard =()=>{
                     </Box>
                     </Box>
                 </Grid> 
-                <Grid item xs={12} sm={6} md={4} className={classes.homeCardSpacing} align="left" >
-                    <Box sx={{mb:6}}>
-                    <CardStyle  >
+                <Grid item xs={12} sm={6} md={4}  align="left" >
+                    
+                    <CardStyle style={{mb:6,mt:8}} >
                         <CardContent  >
                             
                             <Typography gutterBottom variant="h4" component="div">
@@ -87,10 +88,12 @@ const ClassesCard =()=>{
                                 </Typography>
                             </Box>
                             <Box  sx={{display:"flex"}}>
-                                <ArrowRightAltIcon  sx={{mr:1}} />
                                 <Typography variant="body1" sx={{mb:4 }}>
-                                    View full cirriculum 
+                                    <Link href="/ourCirriculaum" ml={3} underline="none" color="#CCA300">
+                                        View full cirriculum 
+                                    </Link>
                                 </Typography>
+                                
                             </Box>
                             <Box  sx={{display:"flex"}}>
                                 <CurrencyRupeeIcon variant="h5" sx={{mt:1.5}}/>
@@ -111,9 +114,8 @@ const ClassesCard =()=>{
                             <Button  height="30px" fullWidth >Book a free demo class</Button>     
                         </CardActions>
                     </CardStyle>
-                    </Box>
-                    <Box sx={{mb:6}}>
-                    <CardStyle>
+                   
+                    <CardStyle style={{mb:6}}>
                     
 
                         <CardContent >
@@ -147,9 +149,8 @@ const ClassesCard =()=>{
                             </Typography>
                         </CardActions>
                     </CardStyle>
-                    </Box>
-                    <Box sx={{mb:6}}>
-                    <CardStyle>
+                   
+                    <CardStyle style={{mb:6}}>
                         <CardContent >
                             
                             <Typography gutterBottom variant="h4" component="div">
@@ -180,7 +181,7 @@ const ClassesCard =()=>{
                             </Typography>
                         </CardActions>
                     </CardStyle> 
-                    </Box>                   
+                                     
                 </Grid>
             </Grid>
             </Container>
