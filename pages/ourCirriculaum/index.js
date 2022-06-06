@@ -11,7 +11,7 @@ import {
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../comp/cardComponent";
-import ClassesData from "./ClassesData";
+import ClassesData from "../../uitls/ClassesData";
 import Image from 'next/image'
 
 const OurCirriculum = () =>{
