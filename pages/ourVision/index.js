@@ -38,13 +38,15 @@ const ourVision = ()=>{
                                 src={require("./assest/Img1.png")} 
                                 height={420}
                                 width={252}
+                                alt="Laptop img"
                             />    
                         </Grid>
                         <Grid item xs={12} sm={3} md={3}  >                          
                             <Image 
                                 src={require("./assest/Img2.png")}
                                 height={450}
-                                width={272}                                  
+                                width={272}  
+                                alt="Laptops img"                                
                             />                           
                         </Grid>
                     </Grid>

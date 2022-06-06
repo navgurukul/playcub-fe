@@ -86,6 +86,7 @@ const HomePage = ()=>{
                                 
                                 src={require("./assest/Coding1.png")} 
                                 height={isActive&&334}
+                                alt="Picture of the student who is doing coding"
                                 
                                 />
                         </Grid>

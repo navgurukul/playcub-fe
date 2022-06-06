@@ -38,6 +38,7 @@ const OurCirriculum = () =>{
                                             src={require("./assest/classes.png")} 
                                             height={"32px"}
                                             width={'32px'}
+                                            alt="laptop logo img"
                                             
                                             />
                                     </Box>
@@ -56,6 +57,7 @@ const OurCirriculum = () =>{
                                             src={require("./assest/video.png")} 
                                             height={"32px"}
                                             width={'32px'}
+                                            alt="Video Content logo img"
                                         
                                         />
                                     </Box>
@@ -73,6 +75,7 @@ const OurCirriculum = () =>{
                                             src={require("./assest/assigments.png")} 
                                             height={"30.54px"}
                                             width={'28.67px'}
+                                            alt="Regular Assignments logo img"   
                                         
                                             />
                                     </Box>
