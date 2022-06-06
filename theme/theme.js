@@ -37,7 +37,7 @@ theme = createTheme(theme, {
       fontWeight: 700,
       fontSize: "96px",
       lineHeight: 1.3,
-      fontFamily: "Lusitana",
+      fontFamily: "Noto Sans",
       [theme.breakpoints.down("sm")]: {
         fontSize: "4.875rem",
       },
@@ -46,7 +46,7 @@ theme = createTheme(theme, {
     h2: {
       fontSize: "72px",
       lineHeight: "93.6px",
-      fontFamily: "Lusitana",
+      fontFamily: "Noto Sans",
       letterSpacing:"-0.5px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "3.625rem",
@@ -113,9 +113,8 @@ theme = createTheme(theme, {
 
     subtitle1: {
       fontSize: "18px",
-      fontFamily: "Nunito Sans",
-      letterSpacing:"0.15px",
-      color:'#6D6D6D',
+      fontFamily: "Noto Sans",
+      // color:'#6D6D6D',
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.75rem",
       },
@@ -135,11 +134,10 @@ theme = createTheme(theme, {
     },
 
     overline: {
-      fontFamily: "Nunito Sans",
+      fontFamily: "Noto Sans",
       fontSize: "12px",
       lineHeight: '18px',
       fontWeight:400,
-      letterSpacing:'1px',
       color:'#666699',
       [theme.breakpoints.down("sm")]: {
         fontSize: "12px",

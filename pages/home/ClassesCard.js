@@ -110,7 +110,7 @@ const ClassesCard =()=>{
                             
                             
                         </CardContent>
-                        <CardActions >
+                        <CardActions sx={{mb:3}} >
                             <Button  height="30px" fullWidth >Book a free demo class</Button>     
                         </CardActions>
                     </CardStyle>
@@ -143,7 +143,7 @@ const ClassesCard =()=>{
                             </Box>
                             
                         </CardContent>
-                        <CardActions >
+                        <CardActions sx={{mb:3}}  >
                             <Typography sx={{ml:1}} color="#BDBDBD" variant="h6">
                                 Coming soon
                             </Typography>
@@ -175,7 +175,7 @@ const ClassesCard =()=>{
                                 </Typography>
                             </Box>
                         </CardContent>
-                        <CardActions >
+                        <CardActions sx={{mb:3}} >
                             <Typography sx={{ml:1}} color="#BDBDBD" variant="h6">
                                 Coming soon
                             </Typography>

@@ -73,15 +73,21 @@ const HomePage = ()=>{
                     Teach your kids how to build websites with fun
                 </Typography>
                 <Container sx={ isActive?{mt: 4 }:{ mt: 6}} maxWidth="lg">
-                    <Grid container spacing={isActive?5:1}>
+                    <Grid container spacing={isActive?5:4}>
                         <Grid item xs={12} sm={6} md={6}  >
-                            <Card  bordercolor='warning'height={isActive?334:'auto'} sx={{maxWidth: 500  , color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
+                            {/* <Card  bordercolor='warning'height={isActive?334:'auto'} sx={{maxWidth: 500  , color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
                                 <Image 
                                 
                                 src={require("./assest/Coding.png")} 
                                 sx={{borderRadius:'8%'}}
                                 />
-                            </Card>
+                            </Card> */}
+                            <Image 
+                                
+                                src={require("./assest/Coding1.png")} 
+                                height={isActive&&334}
+                                
+                                />
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} align="left">

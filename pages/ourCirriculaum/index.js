@@ -11,211 +11,169 @@ import {
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../comp/cardComponent";
-
+import ClassesData from "./ClassesData";
+import Image from 'next/image'
 
 const OurCirriculum = () =>{
     return(
         
         <>
-            <Container maxWidth='xl' align="left" sx={{mb:5}}  >
-                <Typography variant="h2" align="center">
-                   Our Cirriculum
+            <Container maxWidth='lg' align="left" sx={{mt:4,mb:3}}  >
+                <Typography variant="h4" align="center">
+                Curriculum Overview
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                    <Grid item xs={12} sm={4} md={4}  >
-                        <CardStyle>
-                            <CardContent >
+                    <Grid container spacing={{ xs: 2, md: 15 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid item xs={12} sm={6} md={6} mt={10}  sx={{mb:15}}>
+                        <Typography variant="h6">
+                            Web Development Basics  
+                        </Typography>
+                        <Box>  
+                        </Box>
+                        <Box sx ={{mt:2,mb:3}}>
+                            <Grid container  >
+                                <Grid item xs={3} display={'flex'}>
+                                    <Box sx ={{mr:1}} >
+                                        <Image 
+                                            src={require("./assest/classes.png")} 
+                                            height={"32px"}
+                                            width={'32px'}
+                                            
+                                            />
+                                    </Box>
+                                    <Box >
+                                        <Typography variant="body1" mt={0.3}>
+                                            16 Classes
+                                        </Typography>
+                                    </Box>
+                                    
+                                </Grid>
+                                <Grid item xs={4}display={'flex'}>
+                                    <Box sx ={{mr:1}} >
                                 
-                                <Typography gutterBottom variant="h4" m={3} component="div">
-                                    Web Development Basic
-                                </Typography>
-                                <Typography gutterBottom variant="subtitle1" m={3} component="div">
-                                    Empower your kids to think critically, communicate clearly and build beautiful websites
-    
-                                </Typography>
-                                <Box sx={{display:"flex" ,m:3}}>
-                                    <ArrowRightAltIcon sx={{mr:1}}/>
-                                    <Typography variant="subtitle1">
-                                        20 Classes, 1 hour each
+                                        <Image 
+                                            
+                                            src={require("./assest/video.png")} 
+                                            height={"32px"}
+                                            width={'32px'}
+                                        
+                                        />
+                                    </Box>
+                                    <Box >
+                                        <Typography variant="body1"  mt={0.3}>
+                                            Video Content
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={5} display={'flex'}>
+                                    <Box sx ={{mr:1}} >
+                                
+                                        <Image 
+                                            
+                                            src={require("./assest/assigments.png")} 
+                                            height={"30.54px"}
+                                            width={'28.67px'}
+                                        
+                                            />
+                                    </Box>
+                                    <Box >
+                                        <Typography variant="body1"  mt={0.3}>
+                                            Regular Assignments
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                        {ClassesData.map((value, index)=>{
+                            return(
+                                <Box key={index}>
+                                    <Typography variant="overline"  gutterBottom>
+                                        {value.classNo}
+                                    </Typography>
+                                    <Typography variant="subtitle1" sx={{mt:1}}>
+                                        {value.title}
+                                    </Typography>
+                                    <Typography variant="body1" sx={{mb:3}}>
+                                        {value.info}
                                     </Typography>
                                 </Box>
-                                <Box sx={{display:"flex",mt:2,m:3}}>   
-                                    <ArrowRightAltIcon sx={{mr:1}} />
-                                    <Typography variant="subtitle1">
-                                        Assignments and homework after every session
+
+                            )
+                        })}
+                        
+                        
+                        
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={6} sx={{mt:10,mb:10 ,position:'relative'}}  >
+                        <Box sx={{position:'sticky',
+                        top:10,
+                        }}>
+                            <CardStyle style={{mb:6,maxWidth:"450px"}}>
+                                <CardContent >
+                                    
+                                    <Typography gutterBottom variant="h5" m={3} component="div">
+                                        Web Development Basic
                                     </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",mt:2,m:3}}>
-                                    <ArrowRightAltIcon sx={{mr:1}}/>
-                                    <Typography variant="subtitle1">
-                                        Solve doubts in and outside the class
+                                    <Typography gutterBottom variant="body1" m={3} paragraph>
+                                        Empower your kids to think critically, 
+                                        communicate clearly and build beautiful websites
                                     </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",mt:2,m:3}}>
-                                    <ArrowRightAltIcon sx={{mr:1}}/>
-                                    <Typography variant="subtitle1">
-                                        Free access to materials
-                                    </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",mt:2,m:3}}>
-                                    <ArrowRightAltIcon sx={{mr:1}}/>
-                                    <Typography variant="subtitle1">
-                                        HTML
-                                    </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",mt:2,m:3}}>
-                                    <ArrowRightAltIcon sx={{mr:1}}/>
-                                    <Typography variant="subtitle1">
-                                        CSS
-                                    </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",mt:2,m:3}}>
-                                    <ArrowRightAltIcon sx={{mr:1}}/>
-                                    <Typography variant="subtitle1">
-                                        Javascript
-                                    </Typography>
-                                </Box>
-                                <Box sx={{display:"flex",ml:3}}>
-                                    <CurrencyRupeeIcon  sx={{mt:0.2,height:45}}/>
-                                    <Typography variant="subtitle">
-                                        120 / week
+                                    <Box sx={{display:"flex",ml:3}}>
+                                        <CurrencyRupeeIcon  sx={{mt:0.2,height:45}}/>
+                                        <Typography variant="h5">
+                                            120 / week
+                                        </Typography>        
+                                    </Box>
+                                    <Typography variant="body1" ml={4}>
+                                        16 Classes
                                     </Typography>
                                     
-                                </Box>
-                                <Box>
-                                    <Typography variant="subtitle1" sx={{ml:4}} >
-                                        20 Classes
-                                    </Typography>
-                                </Box>
-                                
-                                
+                                    <Box sx={{display:"flex" ,m:3}}>
+                                        <ArrowRightAltIcon sx={{mr:1}}/>
+                                        <Typography variant="body1">
+                                        Learn HTML, CSS and Javascript
+                                        </Typography>
+                                    </Box>
+
+                                    <Box sx={{display:"flex",mt:2,m:3}}>   
+                                        <ArrowRightAltIcon sx={{mr:1}} />
+                                        <Typography variant="body1">
+                                        1 hour interactive classes
+                                        </Typography>
+                                    </Box>
+                                    <Box sx={{display:"flex",mt:2,m:3}}>
+                                        <ArrowRightAltIcon sx={{mr:1}}/>
+                                        <Typography variant="body1">
+                                            Assignments and homework after every session
+                                        </Typography>
+                                    </Box>
+
+                                    <Box sx={{display:"flex",mt:2,m:3}}>
+                                        <ArrowRightAltIcon sx={{mr:1}}/>
+                                        <Typography variant="body1">
+                                            Solve doubts during and outside the class
+                                        </Typography>
+                                    </Box>
+                                    <Box sx={{display:"flex",mt:2,m:3}}>
+                                        <ArrowRightAltIcon sx={{mr:1}}/>
+                                        <Typography variant="body1">
+                                            Free access to materials
+                                        </Typography>
+                                    </Box>
+                                    
+                                    
                             </CardContent>
-                            <CardActions >
-                                <Button sx={{mb:3,ml:3,mr:3}} height="30px"  fullWidth >Book a free demo class</Button>     
+                            <CardActions >    
+                                <Button sx={{mb:3,ml:3,mr:3}} height="30px" fullWidth={true}  >Book a free demo class</Button>                               
                             </CardActions>
+                            <Button  height="30px"  variant="outlined"  
+                            sx={{mb:3,ml:4, pl:11,pr:11,color: '#CCA300', backgroundColor: '#ffff', borderColor: '#FFCC00' }} >
+                                    Get Detailed Curriculum
+                                </Button>
                         </CardStyle>
-                    </Grid>
-                    <Grid item xs={12} sm={4} md={4} sx={{mt:10}} >
-                        <Box>
-                        <Typography variant="overline">
-                                Lecture 1
-
-                            </Typography>
-                            <Typography variant="h5" gutterbottom sx={{mb:2}}>
-                                Introduction to the Internet.
-                            </Typography>
-                       
-                            <Typography variant="subtitle1">
-                                <li> How the internet works</li>
-                                
-                            </Typography>
-                            <Typography variant="subtitle1">
-                                <li> How websites and browser work</li>
-                            </Typography>
-                        
-                            <Typography variant="subtitle1">
-                                <li>What is HTML
-                                    <ul>
-                                    <li> Markup language</li>
-                                    <li>Tag and general syntax</li>
-                                    <li>Heading tags</li>
-                                    <li>a line brake</li>
-                                    </ul>
-                                </li>
-                            </Typography>
-                       
-                       
-                            <Typography variant="subtitle1">
-                                ...
-                            </Typography>
-                        </Box>
-                        <Box sx ={{mt:4}}>
-                        <Typography variant="overline" >
-                                Lecture 2
-
-                            </Typography>
-                            <Typography variant="h5" gutterbottom sx={{mb:2}}>
-                                Getting started with HTML
-                            </Typography>
-                       
-                            <Typography variant="subtitle1">
-                                <li> How the internet works</li>
-                                
-                            </Typography>
-                            <Typography variant="subtitle1">
-                                <li> How websites and browser work</li>
-                            </Typography>
-                        
-                            <Typography variant="subtitle1">
-                                <li>What is HTML
-                                    <ul>
-                                    <li> Markup language</li>
-                                    <li>Tag and general syntax</li>
-                                    <li>Heading tags</li>
-                                    <li>a line brake</li>
-                                    </ul>
-                                </li>
-                            </Typography>
-                       
-                       
-                            <Typography variant="subtitle1">
-                                ...
-                            </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} sm={4} md={4} sx={{mt:22}} >
-                        <Box >
-                            <Typography variant="subtitle1">
-                                    <li> How the internet works</li>
-                                
-                            </Typography>
-                            <Typography variant="subtitle1">
-                                <li> How websites and browser work</li>
-                            </Typography>
-                            
-                            <Typography variant="subtitle1">
-                                <li>What is HTML
-                                    <ul>
-                                    <li> Markup language</li>
-                                    <li>Tag and general syntax</li>
-                                    <li>Heading tags</li>
-                                    <li>a line brake</li>
-                                    </ul>
-                                </li>
-                            </Typography>
-                            
-                        
-                            <Typography variant="subtitle1">
-                                ...
-                            </Typography>
-                        </Box>
-                        <Box sx={{mt:14}} >
-                            <Typography variant="subtitle1">
-                                    <li> How the internet works</li>
-                                
-                            </Typography>
-                            <Typography variant="subtitle1">
-                                <li> How websites and browser work</li>
-                            </Typography>
-                            
-                            <Typography variant="subtitle1">
-                                <li>What is HTML
-                                    <ul>
-                                    <li> Markup language</li>
-                                    <li>Tag and general syntax</li>
-                                    <li>Heading tags</li>
-                                    <li>a line brake</li>
-                                    </ul>
-                                </li>
-                            </Typography>
-                            
-                        
-                            <Typography variant="subtitle1">
-                                ...
-                            </Typography>
-                        </Box>
-                    </Grid>
+                    
                     
                     </Grid>
                 </Box>

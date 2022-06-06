@@ -15,7 +15,7 @@ const ourVision = ()=>{
     return(
         <>
         <Container  maxWidth="lg" sx={{mt:10}}>
-                    <Grid container spacing={10}>
+                    <Grid container >
                         <Grid item xs={12} sm={6} md={6}  >
                             <Typography variant="h3" sx ={{mb:3}}>
                                 Get Kids from Cubs to Fearless Developers
@@ -33,21 +33,19 @@ const ourVision = ()=>{
                            
                         </Grid>
 
-                        <Grid item xs={12} sm={3} md={3} align="left" >
-                            <Card sx={{borderRadius:'150px', width:"280px",height:'420px' ,mt:10 ,}}>
-                                <Image 
-                                    src={require("./assest/laptop.jpeg")} 
-                                />
-                            </Card>
-                           
+                        <Grid item xs={12} sm={3} md={3} sx={{mt:9}}>   
+                            <Image 
+                                src={require("./assest/Img1.png")} 
+                                height={420}
+                                width={252}
+                            />    
                         </Grid>
-                        <Grid item xs={12} sm={3} md={3} align="left">
-                            <Card sx={{borderRadius:'150px', width:"315px",height:'420px'}}>
-                                <Image 
-                                    src={require("./assest/laptops.jpeg")}                                  
-                                />
-                            </Card>
-                           
+                        <Grid item xs={12} sm={3} md={3}  >                          
+                            <Image 
+                                src={require("./assest/Img2.png")}
+                                height={450}
+                                width={272}                                  
+                            />                           
                         </Grid>
                     </Grid>
                 </Container>
