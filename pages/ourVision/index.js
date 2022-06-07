@@ -29,8 +29,16 @@ const ourVision = ()=>{
                             <Typography variant="body1" gutterBottom paragraph sx ={{mb:3}}>
                                 PlayCub offers live classes to students taught by trained teachers who work towards making the student independent and encourage free thinking and exploration.
                             </Typography>
-                            <Button  sx={{pl:16,pr:16, mt:2}} > Book a free demo class</Button> 
-                           
+                            <Box
+                                sx={{
+                                    display: "grid",
+                                    gap: 2,
+                                    width: "384px",
+                                    
+                                    
+                                }} >
+                            <Button  > Book a free demo class</Button> 
+                           </Box>
                         </Grid>
 
                         <Grid  item xs={12} sm={6} md={6}>   

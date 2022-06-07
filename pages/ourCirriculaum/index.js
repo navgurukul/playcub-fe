@@ -166,13 +166,31 @@ const OurCirriculum = () =>{
                                     
                                     
                             </CardContent>
-                            <CardActions >    
-                                <Button sx={{mb:3,ml:3,mr:3}} height="30px" fullWidth={true}  >Book a free demo class</Button>                               
+                            <CardActions >  
+                            <Box
+                                sx={{
+                                    display: "grid",
+                                    width: "395px",
+                                    mb:3,
+                                    ml:2,                                 
+                                }} >  
+                                <Button height={"48px"} fullWidth={true}  >Book a free demo class</Button>                               
+                                </Box>
                             </CardActions>
-                            <Button  height="30px"  variant="outlined"  
-                            sx={{mb:3,ml:4, pl:11,pr:11,color: '#CCA300', backgroundColor: '#ffff', borderColor: '#FFCC00' }} >
+                            <Box
+                                sx={{
+                                    display: "grid",
+                                    width: "395px",
+                                    mb:3,
+                                    ml:3,                           
+                                }} >
+                                <Button  height={"715px"}  variant="outlined"  
+                                    sx={{color: '#CCA300', backgroundColor: '#ffff', borderColor: '#FFCC00' }} >
                                     Get Detailed Curriculum
                                 </Button>
+
+                                </Box>
+                            
                         </CardStyle>
                         </Box>
                     </Grid>
