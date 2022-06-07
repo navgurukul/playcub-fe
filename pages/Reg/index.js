@@ -18,12 +18,13 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
+import * as React from 'react';
 
 const Reg =(props) =>{
     const [registerdata,setRegisterData]=useState({
-        Name:{error:false,errorMsg:'',value:'tester'},
-        Email:{error:false,errorMsg:'',value:'tester@playcub.com'},
-        age:{error:false,errorMsg:'',value:'14'},
+        Name:{error:false,errorMsg:'',value:''},
+        Email:{error:false,errorMsg:'',value:''},
+        age:{error:false,errorMsg:'',value:''},
         phonenumber:{error:false,errorMsg:'',value:''},
         slot:{error:false,errorMsg:'',value:0},
         fetching:{value:false,success:false,failure:false},
@@ -98,6 +99,14 @@ const Reg =(props) =>{
           register['age'].error=false
           register['age'].errorMsg=''
         }
+        if (register['phonenumber'].value<0 ||register['phonenumber'].value<10 ){
+            error=true
+            register['phonenumber'].error=true
+            register['phonenumber'].errorMsg='Phone number should be 10 digit number.'
+          }else{
+            register['phonenumber'].error=false
+            register['phonenumber'].errorMsg=''
+          }
         if (!error){
           register.fetching.value=true
         //   fetchData()
@@ -105,11 +114,26 @@ const Reg =(props) =>{
         setRegisterData({...register})
         
       }
+
+      const [state, setState] = React.useState({
+        Morning: false,
+        Afternoon: false,
+        Evening: false,
+      });
+    
+      const handleChange1 = (event) => {
+        setState({
+          ...state,
+          [event.target.name]: event.target.checked,
+        });
+      };
+    
+      const { Morning , Afternoon, Evening } = state;
     return(
         <>
-        <Container sx={{mt: 4,ml:6 }} maxWidth="lg" >
+        <Container sx={{mt: 4,ml:20 }} maxWidth="lg" >
             <Grid container>
-                <Grid item sm={11} sx ={{mt:2,mb:4}}>
+                <Grid item sm={11} sx ={{mt:2,mb:4, ml:5}}>
                     <Box display="flex" justifyContent="flex-end">
                         
                         <Image 
@@ -147,9 +171,7 @@ const Reg =(props) =>{
                         <TextField
                             label="Name"
                             type="text"
-                            // value={}
-                            // name="name"
-                            // onChange={}
+                            name="name"    
                             id="name"
                             variant="outlined"
                             required
@@ -162,9 +184,11 @@ const Reg =(props) =>{
                         <TextField
                             label="Email"
                             type="text"
-                            // value={}
+                            value={registerdata.Email.value} 
+                            helperText={registerdata.Email.errorMsg}
+                            error={registerdata.Email.error}
+                            onChange={(e)=>{handleChange(e,"Email")}} 
                             name="email"
-                            // onChange={}
                             id="email"
                             variant="outlined"
                             required
@@ -173,9 +197,11 @@ const Reg =(props) =>{
                         <TextField
                             label="Child age"
                             type="number"
-                            // value={}
+                            value={registerdata.age.value} 
+                            helperText={registerdata.age.errorMsg}
+                            error={registerdata.age.error}
+                            onChange={(e)=>{handleChange(e,"age")}}  
                             name="childAge"
-                            // onChange={}
                             id="childAge"
                             variant="outlined"
                             required
@@ -185,9 +211,11 @@ const Reg =(props) =>{
                             label="Phone Number"
                             type="number"
                             pattern="^[0-9]{10}$"
-                            // value={}
+                            value={registerdata.phonenumber.value} 
+                            helperText={registerdata.phonenumber.errorMsg}
+                            error={registerdata.phonenumber.error}
+                            onChange={(e)=>{handleChange(e,"phonenumber")}}
                             name="phoneNumber"
-                            // onChange={}
                             id="phoneNumber"
                             variant="outlined"
                             required
@@ -206,9 +234,9 @@ const Reg =(props) =>{
                             Preferred slot for the demo class
                         </Typography>
                         <FormGroup>
-                            <FormControlLabel variant="body1" control={<Checkbox value={true} />} label="Morning (9 AM to 12 PM)" />
-                            <FormControlLabel variant="body1" control={<Checkbox value={true} />} label="Afternoon (12 PM to 1 PM)" />
-                            <FormControlLabel variant="body1" control={<Checkbox value={true} />} label="Evening (3 PM to 6 PM)" />
+                            <FormControlLabel variant="body1" control={<Checkbox checked={Morning} onChange={handleChange1} name="Morning"/>} label="Morning (9 AM to 12 PM)" />
+                            <FormControlLabel variant="body1" control={<Checkbox checked={Afternoon} onChange={handleChange1} name="Afternoon"/>} label="Afternoon (12 PM to 1 PM)" />
+                            <FormControlLabel variant="body1" control={<Checkbox checked={Evening} onChange={handleChange1} name="Evening" />} label="Evening (3 PM to 6 PM)" />
                        
                         </FormGroup>
                         <Box
@@ -233,7 +261,7 @@ const Reg =(props) =>{
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={6} >
-                    <CardStyle style={{mb:6,maxWidth:"450px"}}>
+                    <CardStyle style={{mb:6,maxWidth:"500px"}}>
                         <CardContent >
                             
                             <Typography gutterBottom variant="h5" m={3} component="div">

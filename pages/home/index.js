@@ -58,37 +58,65 @@ const HomePage = ()=>{
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} align="left">
-                            <Box sx={{display:"flex"}}>
-                                <MenuBookIcon className={classes.homePageIcon}/>
+                            <Box sx={{display:"flex", mb:2,gap:1}}> 
+                                <Image 
+                                    src={require("./assest/Menu book.png")} 
+                                    height={'32px'}
+                                    width={'32px'}
+                                    alt="Book logo"
+                                   
+                                
+                                />
                                 <Typography variant="body1">
                                     Cirriculum designed by experts 
                                 </Typography>
                             </Box>
-                            <Box sx={{display:"flex"}}>
-                                <VideocamIcon className={classes.homePageIcon}/>
+                            <Box sx={{display:"flex",mb:2,gap:1}}>
+                                <Image 
+                                    src={require("./assest/Videocam.png")} 
+                                    height={'32px'}
+                                    width={'32px'}
+                                    alt="Video logo"
+                                
+                                />
                                 <Typography variant="body1">
                                     Private 1-1 classes
                                 </Typography>
                             </Box>
-                            <Box sx={{display:"flex"}}>
-                                <PermContactCalendarIcon className={classes.homePageIcon} />
+                            <Box sx={{display:"flex",mb:2,gap:1}}>
+                                <Image 
+                                    src={require("./assest/Perm contact.png")} 
+                                    height={'32px'}
+                                    width={'32px'}
+                                    alt="Contact logo"
+                                
+                                />
                                 <Typography variant="body1">
                                     Convinient scheduling 
                                 </Typography>
                             </Box>
-                            <Box sx={{display:"flex"}}>
-                                <ChildCareIcon className={classes.homePageIcon} />
+                            <Box sx={{display:"flex",mb:2,gap:1}}>
+                                <Image 
+                                    src={require("./assest/Child care.png")} 
+                                    height={'32px'}
+                                    width={'32px'}
+                                    alt="Child logo"
+                                
+                                />
+                               
                                 <Typography variant="body1">
                                     For kids between 10 to 14 years
                                 </Typography>
                             </Box>
-                            <Box sx={{display:"flex"}}>
-                                <IconButton className={classes.homePageIconButton}>
-                                    <CurrencyRupeeRoundedIcon 
-                                        variant="outlined"
-                                        fontSize="small"                                                 
-                                        />
-                                </IconButton>
+                            <Box sx={{display:"flex",mb:2, gap:1}}>
+                                <Image 
+                                        src={require("./assest/Child care (1).png")} 
+                                        height={'32px'}
+                                        width={'32px'}
+                                        alt="Rupee logo"
+                                        
+                                    
+                                    />
                                 <Typography variant="body1" >
                                     Teachers keep 100% of the feee
                                 </Typography>
