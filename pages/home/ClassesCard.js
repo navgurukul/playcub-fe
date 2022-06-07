@@ -15,7 +15,7 @@ import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import { Link } from '@mui/material';
-
+import BookAFreeDemoClassButton from '../../comp/model';
 
 const ClassesCard =()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
@@ -111,7 +111,8 @@ const ClassesCard =()=>{
                             
                         </CardContent>
                         <CardActions sx={{mb:3}} >
-                            <Button  height="30px" fullWidth >Book a free demo class</Button>     
+                            {/* <Button  height="30px" fullWidth >Book a free demo class</Button>  */}
+                            <BookAFreeDemoClassButton buttonstyle={{fullWidth:true}} />    
                         </CardActions>
                     </CardStyle>
                    

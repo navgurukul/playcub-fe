@@ -13,7 +13,7 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../comp/cardComponent";
 import ClassesData from "../../uitls/ClassesData";
 import Image from 'next/image'
-
+import BookAFreeDemoClassButton from "../../comp/model";
 const OurCirriculum = () =>{
     return(
         
@@ -174,7 +174,8 @@ const OurCirriculum = () =>{
                                     mb:3,
                                     ml:2,                                 
                                 }} >  
-                                <Button height={"48px"} fullWidth={true}  >Book a free demo class</Button>                               
+                                {/* <Button height={"48px"} fullWidth={true}  >Book a free demo class</Button>                                */}
+                                <BookAFreeDemoClassButton  buttonstyle={{fullWidth:true,height:'48px'}} />                      
                                 </Box>
                             </CardActions>
                             <Box

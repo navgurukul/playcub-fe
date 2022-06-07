@@ -22,49 +22,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-
+import BookAFreeDemoClassButton from "../../comp/model"
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const classes = Styles();
 
-    const [open,setOpen]=useState(true)
-    const handleClose=async()=>{
-        await setOpen(false)
-    }
-    const handleOpen=async()=>{
-        await setOpen(true)
-    }
+   
     return (
         <>
-         <Button onClick={handleOpen}>Open modal</Button>
-<Modal
-  open={open}
-  onClose={handleClose}
-  aria-labelledby="modal-modal-title"
-  aria-describedby="modal-modal-description"
->
-  <Box 
-  sx={{
-    // position: 'relative',
-    // top: '50%',
-    // left: '50%',
-    // transform: 'translate(-50%, -50%)',
-    // width: 800,
-    bgcolor: 'background.paper',
-    border: '2px solid #fff',
-    // boxShadow: 24,
-    p: 4,
-    margin:'30px 30px',
-}}
-  >
-      <CloseIcon onClick={()=>{
-          console.log("clicked");
-          handleClose()
-          }} />
-    <RegisterPage/>
-  </Box>
-</Modal>
             <Container  align="center" sx={{mt:1}}>
                 <Typography variant="h3" >
                     Interactive Coding Classes for Kids
@@ -128,9 +94,7 @@ const HomePage = ()=>{
                                 </Typography>
                             </Box>
                             
-                            <Button sx={{mt:2, p:"8px,16px"}} height="48px"  >
-                                Book a free demo class
-                            </Button>
+                            <BookAFreeDemoClassButton buttonstyle={{mt:2, p:"8px,16px",height:"48px"}}/>
                            
                         </Grid>
                     </Grid>

@@ -10,7 +10,7 @@ import {
     Box,
   } from "@mui/material";
 import { width } from '@mui/system';
-
+import BookAFreeDemoClassButton from '../../comp/model';
 const ourVision = ()=>{
     return(
         <>
@@ -37,7 +37,8 @@ const ourVision = ()=>{
                                     
                                     
                                 }} >
-                            <Button  > Book a free demo class</Button> 
+                            {/* <Button  > Book a free demo class</Button>  */}
+                           <BookAFreeDemoClassButton />
                            </Box>
                         </Grid>
 
