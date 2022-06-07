@@ -26,7 +26,7 @@ const Reg =(props) =>{
         Email:{error:false,errorMsg:'',value:''},
         age:{error:false,errorMsg:'',value:''},
         phonenumber:{error:false,errorMsg:'',value:''},
-        slot:{error:false,errorMsg:'',value:0},
+        // slot:{error:false,errorMsg:'',value:0},
         fetching:{value:false,success:false,failure:false},
       })
       const fetchData=async()=>{
@@ -45,7 +45,14 @@ const Reg =(props) =>{
             body: JSON.stringify({
               name:registerdata['Name'].value,
               email:registerdata['Email'].value,
-              childAge:parseInt(registerdata['age'].value)
+              childAge:parseInt(registerdata['age'].value),
+              phoneNumber:registerdata['phonenumber'].value,
+              Morning:state['Morning'].value,
+              Afternoon: state['Afternoon'].value,
+              Evening: state['Evening'].value,
+              
+    
+
             })
         }).then(e=>{
           if (e.status===201){
@@ -99,7 +106,7 @@ const Reg =(props) =>{
           register['age'].error=false
           register['age'].errorMsg=''
         }
-        if (register['phonenumber'].value<0 ||register['phonenumber'].value<10 ){
+        if (register['phonenumber'].value>9 || register['phonenumber'].value<15){
             error=true
             register['phonenumber'].error=true
             register['phonenumber'].errorMsg='Phone number should be 10 digit number.'
@@ -197,6 +204,7 @@ const Reg =(props) =>{
                         <TextField
                             label="Child age"
                             type="number"
+                            maxLength={2}
                             value={registerdata.age.value} 
                             helperText={registerdata.age.errorMsg}
                             error={registerdata.age.error}
@@ -211,6 +219,7 @@ const Reg =(props) =>{
                             label="Phone Number"
                             type="number"
                             pattern="^[0-9]{10}$"
+                            maxLength={12}
                             value={registerdata.phonenumber.value} 
                             helperText={registerdata.phonenumber.errorMsg}
                             error={registerdata.phonenumber.error}

@@ -7,7 +7,7 @@ import {
     Grid,
     Modal,
   } from "@mui/material";
-import React, { useState } from "react";
+
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
@@ -23,11 +23,30 @@ import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../comp/model"
+import { useState } from 'react';
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const classes = Styles();
+    const[email,setEmail]=useState('')
+    const[name,setName]=useState('')
 
+    const submit = async () =>{
+        const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
+            method:"POST",
+            body:JSON.stringify({name,email}),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        const data = await response.json()
+        console.log(data)
+        setEmail('')
+        setName('')
+
+    }
+    
+    
    
     return (
         <>
@@ -149,12 +168,14 @@ const HomePage = ()=>{
                 >
                 <TextField fullWidth label="Enter your email"
                  margin="normal"
+                 value={email}
+                 onChange={e=>setEmail(e.target.value)}
                  name="email"
                  autoComplete="email" 
                  InputProps={{
                     endAdornment: (
                         <Box sx={{position:'absolute',}} left={!isActive?"75%":"64.5%"}>
-                        <Button  fullwidth sx={{p:3.4 , backgroundColor:'#FFCC00', position:'relative'}}  >
+                        <Button onClick={submit}  fullwidth sx={{p:3.4 , backgroundColor:'#FFCC00', position:'relative'}}  >
                             Subscribe
                         </Button>
                         </Box>
