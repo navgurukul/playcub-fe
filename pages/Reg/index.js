@@ -2,12 +2,9 @@ import {
     Typography,
     Container,
     Button,
-    Card,
     CardContent,
-    CardActions,
     Grid,
     Box,
-    IconButton,
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
@@ -155,7 +152,7 @@ const Reg =(props) =>{
                     <Box display="flex" justifyContent="flex-end">
                         
                         <Image 
-                        onClick={()=>{
+                            onClick={()=>{
                             props.handleClose()
                             }}
                             src={require("./assest/close.png")} 

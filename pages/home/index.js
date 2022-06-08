@@ -3,22 +3,11 @@ import {
     Typography,
     Container,
     Button,
-    Card,
     Grid,
-    Modal,
   } from "@mui/material";
-
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import VideocamIcon from '@mui/icons-material/Videocam';
-import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
-import ChildCareIcon from '@mui/icons-material/ChildCare';
-import CurrencyRupeeRoundedIcon from '@mui/icons-material/CurrencyRupeeRounded';
 import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
-import RegisterPage from "../../comp/register";
-import CloseIcon from '@mui/icons-material/Close';
 import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
@@ -45,9 +34,7 @@ const HomePage = ()=>{
         setName('')
 
     }
-    
-    
-   
+      
     return (
         <>
             <Container  align="center" sx={{mt:1}}>
@@ -154,8 +141,7 @@ const HomePage = ()=>{
                 </Typography>
                 <Typography variant="subtitle">
                     Get regular updates about PlayCub’s initiatives
-                </Typography>
-                
+                </Typography>                
                 <Box
                 sx={{
                     mt:!isActive?3:1,
@@ -178,10 +164,7 @@ const HomePage = ()=>{
                         <Button onClick={submit}  fullwidth sx={{p:3.4 , backgroundColor:'#FFCC00', position:'relative'}}  >
                             Subscribe
                         </Button>
-                        </Box>
-                        
-                     
-                       
+                        </Box>                      
                     ),
                     }}
                    >

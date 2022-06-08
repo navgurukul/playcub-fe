@@ -2,7 +2,6 @@ import {
     Typography,
     Container,
     Button,
-    Card,
     CardContent,
     CardActions,
     Grid,
@@ -14,6 +13,7 @@ import CardStyle from "../../comp/cardComponent";
 import ClassesData from "../../uitls/ClassesData";
 import Image from 'next/image'
 import BookAFreeDemoClassButton from "../../comp/model";
+
 const OurCirriculum = () =>{
     return(
         
@@ -103,9 +103,7 @@ const OurCirriculum = () =>{
 
                             )
                         })}
-                        
-                        
-                        
+                                                
                     </Grid>
                     <Grid item xs={12} sm={6} md={6} sx={{mt:10,mb:10 ,position:'relative'}}  >
                         <Box sx={{position:'sticky',
@@ -162,9 +160,7 @@ const OurCirriculum = () =>{
                                         <Typography variant="body1">
                                             Free access to materials
                                         </Typography>
-                                    </Box>
-                                    
-                                    
+                                    </Box>                                   
                             </CardContent>
                             <CardActions >  
                             <Box

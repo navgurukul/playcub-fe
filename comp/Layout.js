@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "../theme/theme";
 import Head from 'next/head';
 
+
 const Layout =({children})=>{
     return(
         <>
