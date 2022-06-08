@@ -2,19 +2,14 @@ import Image from 'next/image'
 import {
     Typography,
     Container,
-    Button,
-    Card,
-    CardContent,
-    CardActions,
     Grid,
     Box,
   } from "@mui/material";
-import { width } from '@mui/system';
 import BookAFreeDemoClassButton from '../../comp/model';
 const ourVision = ()=>{
     return(
         <>
-        <Container  maxWidth="lg" sx={{mt:10}}>
+        <Container  maxWidth="lg" sx={{mt:20}}>
                     <Grid container >
                         <Grid item xs={12} sm={6} md={6}  >
                             <Typography variant="h3" sx ={{mb:3}}>

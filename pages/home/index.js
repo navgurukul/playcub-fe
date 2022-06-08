@@ -37,7 +37,7 @@ const HomePage = ()=>{
       
     return (
         <>
-            <Container  align="center" sx={{mt:1}}>
+            <Container  align="center" sx={{mt:15}}>
                 <Typography variant="h3" >
                     Interactive Coding Classes for Kids
                 </Typography>
