@@ -23,7 +23,7 @@ const OurCirriculum = () =>{
                 Curriculum Overview
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={{ xs: 2, md: 15 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid container spacing={{ xs: 2, md: 10 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12} sm={6} md={6} mt={10}  sx={{mb:15}}>
                         <Typography variant="h6">
                             Web Development Basics  
