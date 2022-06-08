@@ -76,7 +76,18 @@ const Reg =(props) =>{
         }
       }
       const handleChange=(e,id)=>{
-        setRegisterData({...registerdata,[id]:{...registerdata[id],value:e.target.value}})
+        const value = e.target.value
+        if (id=='phonenumber'){
+          if (value.length>13){
+            return 
+          }
+        }
+        if (id=='age'){
+          if (value.length>2){
+            return 
+          }
+        }
+        setRegisterData({...registerdata,[id]:{...registerdata[id],value}})
       }
       const onSubmit=(e)=>{
         var error=false
@@ -106,7 +117,7 @@ const Reg =(props) =>{
           register['age'].error=false
           register['age'].errorMsg=''
         }
-        if (register['phonenumber'].value>9 || register['phonenumber'].value<15){
+        if (register['phonenumber'].value.length<9 || register['phonenumber'].value.length>13){
             error=true
             register['phonenumber'].error=true
             register['phonenumber'].errorMsg='Phone number should be 10 digit number.'
@@ -127,7 +138,7 @@ const Reg =(props) =>{
         Afternoon: false,
         Evening: false,
       });
-    
+      console.log(state)
       const handleChange1 = (event) => {
         setState({
           ...state,
