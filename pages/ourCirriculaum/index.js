@@ -18,12 +18,12 @@ const OurCirriculum = () =>{
     return(
         
         <>
-            <Container maxWidth='lg' align="left" sx={{mt:4,mb:3}}  >
+            <Container maxWidth='lg'  sx={{mt:4,mb:2}}  >
                 <Typography variant="h4" align="center">
                 Curriculum Overview
                 </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={{ xs: 2, md: 10 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Box >
+                    <Grid container spacing={{ xs: 1, md: 10 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12} sm={6} md={6} mt={10}  sx={{mb:15}}>
                         <Typography variant="h6">
                             Web Development Basics  
