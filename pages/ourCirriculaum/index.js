@@ -20,10 +20,10 @@ const OurCirriculum = () =>{
         <>
             <Container maxWidth='lg'  sx={{mt:4,mb:2}}  >
                 <Typography variant="h4" align="center">
-                Curriculum Overview
+                    Curriculum Overview
                 </Typography>
                 <Box >
-                    <Grid container spacing={{ xs: 1, md: 10 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid container spacing={{ xs: 1, md: 12 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12} sm={6} md={6} mt={10}  sx={{mb:15}}>
                         <Typography variant="h6">
                             Web Development Basics  
@@ -32,8 +32,8 @@ const OurCirriculum = () =>{
                         </Box>
                         <Box sx ={{mt:2,mb:3}}>
                             <Grid container  >
-                                <Grid item xs={3} display={'flex'}>
-                                    <Box sx ={{mr:1}} >
+                                <Grid item display={'flex'}>
+                                    <Box  >
                                         <Image 
                                             src={require("./assest/classes.png")} 
                                             height={"32px"}
@@ -42,15 +42,15 @@ const OurCirriculum = () =>{
                                             
                                             />
                                     </Box>
-                                    <Box >
+                                    <Box sx={{ml:1,mr:1}}>
                                         <Typography variant="body1" mt={0.3} mb={0.3}>
                                             16 Classes
                                         </Typography>
                                     </Box>
                                     
                                 </Grid>
-                                <Grid item xs={4}display={'flex'}>
-                                    <Box sx ={{mr:1}} >
+                                <Grid item display={'flex'}>
+                                    <Box >
                                 
                                         <Image 
                                             
@@ -61,14 +61,14 @@ const OurCirriculum = () =>{
                                         
                                         />
                                     </Box>
-                                    <Box >
+                                    <Box sx={{ml:1,mr:1}} >
                                         <Typography variant="body1"  mt={0.3} mb={0.3}>
                                             Video Content
                                         </Typography>
                                     </Box>
                                 </Grid>
-                                <Grid item xs={5} display={'flex'}>
-                                    <Box sx ={{mr:1}} >
+                                <Grid item  display={'flex'}>
+                                    <Box  >
                                 
                                         <Image 
                                             
@@ -79,7 +79,7 @@ const OurCirriculum = () =>{
                                         
                                             />
                                     </Box>
-                                    <Box >
+                                    <Box sx={{ml:1}}>
                                         <Typography variant="body1"  mt={0.3} >
                                             Regular Assignments
                                         </Typography>
@@ -182,7 +182,7 @@ const OurCirriculum = () =>{
                                     ml:3,                           
                                 }} >
                                 <Button  height={"715px"}  variant="outlined"  
-                                    sx={{color: '#CCA300', backgroundColor: '#ffff', borderColor: '#FFCC00' }} >
+                                    sx={{ backgroundColor: 'white', borderColor: 'black' }} >
                                     Get Detailed Curriculum
                                 </Button>
 
