@@ -43,7 +43,7 @@ const OurCirriculum = () =>{
                                             />
                                     </Box>
                                     <Box >
-                                        <Typography variant="body1" mt={0.3}>
+                                        <Typography variant="body1" mt={0.3} mb={0.3}>
                                             16 Classes
                                         </Typography>
                                     </Box>
@@ -62,7 +62,7 @@ const OurCirriculum = () =>{
                                         />
                                     </Box>
                                     <Box >
-                                        <Typography variant="body1"  mt={0.3}>
+                                        <Typography variant="body1"  mt={0.3} mb={0.3}>
                                             Video Content
                                         </Typography>
                                     </Box>
@@ -80,7 +80,7 @@ const OurCirriculum = () =>{
                                             />
                                     </Box>
                                     <Box >
-                                        <Typography variant="body1"  mt={0.3}>
+                                        <Typography variant="body1"  mt={0.3} >
                                             Regular Assignments
                                         </Typography>
                                     </Box>

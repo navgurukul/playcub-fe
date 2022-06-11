@@ -9,8 +9,8 @@ import BookAFreeDemoClassButton from '../../comp/model';
 const ourVision = ()=>{
     return(
         <>
-        <Container  maxWidth="lg" sx={{mt:20}}>
-                    <Grid container >
+        <Container  maxWidth="xl" sx={{mt:7}}>
+                    <Grid container  spacing={10} >
                         <Grid item xs={12} sm={6} md={6}  >
                             <Typography variant="h3" sx ={{mb:3}}>
                                 Get Kids from Cubs to Fearless Developers
@@ -27,7 +27,7 @@ const ourVision = ()=>{
                             <Box
                                 sx={{
                                     display: "grid",
-                                    gap: 2,
+                                    gap: 10,
                                     width: "384px",
                                     
                                     
@@ -37,10 +37,12 @@ const ourVision = ()=>{
                            </Box>
                         </Grid>
 
-                        <Grid  item xs={12} sm={6} md={6}>   
+                        <Grid  item xs={12} sm={6} md={6} >   
                             <Image 
                                 src={require("./assest/Group.png")} 
                                 alt="Group image"
+                                height={"507px"}
+                                width={"544px"}
                             />    
                                               
                         </Grid>

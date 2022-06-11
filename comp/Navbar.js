@@ -68,9 +68,9 @@ const Navbar =() => {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position= 'fixed' justifyContent='space-around' top="0px" left=' 0px' right= '0px '
-       sx={{background:"white", height:80,width:"100%"}}>
+    <Box sx={{position:'sticky',top:0}}> 
+      <AppBar sx={{position:"static", backgroundColor:"white",height:80,width:"100%"}}
+       >
         <Toolbar>
           <Link href="/" underline="none" sx={{mt:2}}>
             <Image  src={Logo}></Image>

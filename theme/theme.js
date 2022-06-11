@@ -147,6 +147,7 @@ theme = createTheme(theme, {
     button: {
       fontSize: "18px",
       fontFamily: "Noto Sans",
+      Padding:"8px, 16px, 8px, 16px",
       background:'#FFCC00',
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",

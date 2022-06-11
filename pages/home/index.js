@@ -37,23 +37,16 @@ const HomePage = ()=>{
       
     return (
         <>
-            <Container  align="center" sx={{mt:15}}>
-                <Typography variant="h3" >
+            <Container  align="center" sx={{mt:7}}>
+                <Typography variant="h3" mb={1} >
                     Interactive Coding Classes for Kids
                 </Typography>
-                <Typography variant="subtitle">
+                <Typography variant="subtitle" color="#6D6D6D">
                     Teach your kids how to build websites with fun
                 </Typography>
-                <Container sx={ isActive?{mt: 4 }:{ mt: 6}} maxWidth="lg">
+                <Container sx={ isActive?{mt: 6 }:{ mt: 6}} >
                     <Grid container spacing={isActive?5:4}>
                         <Grid item xs={12} sm={6} md={6}  >
-                            {/* <Card  bordercolor='warning'height={isActive?334:'auto'} sx={{maxWidth: 500  , color:'#FFCC00', borderBottom: 7, borderRight: 7 }}>
-                                <Image 
-                                
-                                src={require("./assest/Coding.png")} 
-                                sx={{borderRadius:'8%'}}
-                                />
-                            </Card> */}
                             <Image 
                                 
                                 src={require("./assest/Coding1.png")} 
@@ -135,43 +128,64 @@ const HomePage = ()=>{
                 </Container>
             </Container>
             <ClassesCard />
-            <Container  align="center">
-                <Typography variant="h3">
-                    Get involved
-                </Typography>
-                <Typography variant="subtitle">
-                    Get regular updates about PlayCub’s initiatives
-                </Typography>                
-                <Box
-                sx={{
-                    mt:!isActive?3:1,
-                    width: 550,
-                    maxWidth: '100%',
-                    mb:!isActive?16:14,
-                    display:"inline-block",
-                
-                }}
-                >
+            <Container sx={{mt:12,mb:12}} >
+                    <Grid container spacing={8}>
+                        <Grid item xs={12} sm={6} md={6}  >                                        
+                            <Typography variant="h5" >
+                            Are you a Professional who wants to share their web dev expertise?
+                            </Typography>
+                            <Button sx={{mt:4}}>
+                                Join Our Teaching Pool
+                            </Button>
+                            
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={6} >
+                            <Image 
+                                
+                                src={require("./assest/teacher.png")} 
+                                height={isActive&&334}
+                                alt="Picture of the student who is doing coding"
+                                
+                            />   
+                        </Grid>
+                    </Grid>
+                </Container>
+            <Box  sx={{backgroundColor:"#F5F5F5" }}>
+                <Box  sx={{textAlign:"center",  }}>
+                    <Typography variant="h4"pt={8} >
+                        Get involved
+                    </Typography>
+                    <Typography variant="body1" mt={2} mb={2}>
+                        Get regular updates about PlayCub’s initiatives
+                    </Typography> 
+                </Box> 
+                <Container maxWidth="sm"  >          
+               
                 <TextField fullWidth label="Enter your email"
+                 
                  margin="normal"
                  value={email}
                  onChange={e=>setEmail(e.target.value)}
                  name="email"
                  autoComplete="email" 
+                 backgroundColor="white"
                  InputProps={{
                     endAdornment: (
-                        <Box sx={{position:'absolute',}} left={!isActive?"75%":"64.5%"}>
-                        <Button onClick={submit}  fullwidth sx={{p:3.4 , backgroundColor:'#FFCC00', position:'relative'}}  >
+                        <Box sx={{position: 'relative'}} >
+                        <Button onClick={submit}  fullwidth={true} sx={{width:"150px",  backgroundColor:'#FFCC00', p:3,}}  >
                             Subscribe
                         </Button>
                         </Box>                      
                     ),
                     }}
+                    sx={{mb:20}}
                    >
                    </TextField>
-                </Box>
                 
-            </Container>
+                </Container>  
+                
+            </Box>
         </>
        
 

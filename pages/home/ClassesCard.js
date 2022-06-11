@@ -22,38 +22,40 @@ const ClassesCard =()=>{
     const classes = Styles();
     return(
         <>
-        <Container maxWidth="100px"sx={{mt:!isActive?7:6,mb:!isActive?6:4, background: "#FFF5CC",align:"right"}}>
+        <Container maxWidth="100px"sx={{mt:!isActive?10:6,mb:!isActive?6:4, background: "#FFF5CC",align:"right"}}>
             <Container maxWidth="lg" >
-            <Grid container >
-                <Grid item xs={12} sm={6} md={8}  sx={{position:'relative'}}>
+            <Grid container  >
+                <Grid item xs={12} sm={6} md={6} mt={4}  sx={{position:'relative'}}>
                     <Box sx={{position:'sticky',
                     top:5,
-                    }}>
-                    <Typography variant="h3" sx={{mt:5,mb:1}}>
+                    
+                    }}
+                    >
+                    <Typography variant="h4" sx={{mt:5,mb:4}}>
                         Web development  
                     </Typography>
-                    <Typography variant="body1">
+                    <Typography variant="body1" mb={3}>
                         Empower your kids to think critically, communicate clearly and build beautiful websites.
                     </Typography>
-                    <Box sx={{display:"flex",mt:1}}>
+                    <Box sx={{display:"flex",mt:1.5}}>
                         <ArrowRightAltIcon  sx={{mr:1}} />
                         <Typography variant="body1">
                             20 Classes, 1 hour each
                         </Typography>
                     </Box>
-                    <Box sx={{display:"flex",mt:1}}>
+                    <Box sx={{display:"flex",mt:1.5}}>
                         <ArrowRightAltIcon  sx={{mr:1}} />
                         <Typography variant="body1">
                             Assignments and homework after every session 
                         </Typography>
                     </Box>
-                    <Box sx={{display:"flex",mt:1}}>
+                    <Box sx={{display:"flex",mt:1.5}}>
                         <ArrowRightAltIcon   sx={{mr:1}} />
                         <Typography variant="body1">
                             Solve doubts in and outside the class 
                         </Typography>
                     </Box>
-                    <Box sx={{display:"flex",mt:1}}>       
+                    <Box sx={{display:"flex",mt:1.5}}>       
                         <ArrowRightAltIcon  sx={{mr:1}} />
                         <Typography variant="body1">
                             Free access to materials
@@ -61,35 +63,35 @@ const ClassesCard =()=>{
                     </Box>
                     </Box>
                 </Grid> 
-                <Grid item xs={12} sm={6} md={4}  align="left" >
+                <Grid item xs={12} sm={6} md={6}  >
                     
-                    <CardStyle style={{mb:6,mt:8}} >
-                        <CardContent  >
+                    <CardStyle style={{mb:6,mt:10 ,ml:10}} >
+                        <CardContent sx={{mt:2,ml:3}} >
                             
-                            <Typography gutterBottom variant="h4" component="div">
+                            <Typography gutterBottom mb={3} variant="h4" component="div" >
                                 Web Basic
                             </Typography>
-                            <Box  sx={{display:"flex"}}>
+                            <Box  sx={{display:"flex",mt:2}} >
                                 <ArrowRightAltIcon sx={{mr:1}}/>
                                 <Typography variant="body1" >
                                     HTML
                                 </Typography>
                             </Box>
-                            <Box  sx={{display:"flex"}}>   
+                            <Box  sx={{display:"flex",mt:2}}>   
                                 <ArrowRightAltIcon sx={{mr:1}} />
                                 <Typography variant="body1">
                                     CSS
                                 </Typography>
                             </Box>
-                            <Box  sx={{display:"flex"}}>
+                            <Box  sx={{display:"flex",mt:2}}>
                                 <ArrowRightAltIcon sx={{mr:1}}/>
                                 <Typography variant="body1" >
                                     JavaScript
                                 </Typography>
                             </Box>
-                            <Box  sx={{display:"flex"}}>
-                                <Typography variant="body1" sx={{mb:4 }}>
-                                    <Link href="/ourCirriculaum" ml={3} underline="none" color="#CCA300">
+                            <Box  sx={{display:"flex",mt:3}}>
+                                <Typography variant="subtitle1" sx={{mb:4 }}>
+                                    <Link href="/ourCirriculaum" ml={2} underline="none" color="#CCA300">
                                         View full cirriculum 
                                     </Link>
                                 </Typography>
@@ -103,40 +105,40 @@ const ClassesCard =()=>{
                                 
                             </Box>
                             <Box>
-                                <Typography variant="body1" sx={{ml:1}} >
-                                    20 Classes
+                                <Typography variant="body1"  color="#6D6D6D"sx={{ml:1}} >
+                                    16 Classes
                                 </Typography>
                             </Box>
                             
                             
                         </CardContent>
-                        <CardActions sx={{mb:3}} >
+                        <CardActions sx={{mb:3,mt:2,ml:3,mr:3}} >
                             {/* <Button  height="30px" fullWidth >Book a free demo class</Button>  */}
                             <BookAFreeDemoClassButton buttonstyle={{fullWidth:true}} />    
                         </CardActions>
                     </CardStyle>
                    
-                    <CardStyle style={{mb:6}}>
+                    <CardStyle style={{mb:6 ,ml:10}}>
                     
 
-                        <CardContent >
+                        <CardContent  sx={{mt:2,ml:3}}>
                             
                             <Typography gutterBottom variant="h4" component="div">
                                Web Intermediate
                             </Typography>
-                            <Box  sx={{display:"flex"}}>   
+                            <Box  sx={{display:"flex",mt:2}}>   
                                 <ArrowRightAltIcon sx={{mr:1}}/>
                                 <Typography variant="body1">
                                     Intermediate JavaScript
                                 </Typography>
                             </Box>
-                            <Box  sx={{display:"flex"}}>
+                            <Box  sx={{display:"flex",mt:2}}>
                                 <ArrowRightAltIcon sx={{mr:1}} />
                                 <Typography variant="body1" >
                                     React JS
                                 </Typography>
                             </Box>
-                            <Box  sx={{display:"flex"}}>
+                            <Box  sx={{display:"flex",mt:2}}>
                                 <ArrowRightAltIcon sx={{mr:1}}/>
                                 <Typography variant="body1">
                                     Material UI
@@ -145,31 +147,31 @@ const ClassesCard =()=>{
                             
                         </CardContent>
                         <CardActions sx={{mb:3}}  >
-                            <Typography sx={{ml:1}} color="#BDBDBD" variant="h6">
+                            <Typography sx={{ml:4}} color="#BDBDBD" variant="h6">
                                 Coming soon
                             </Typography>
                         </CardActions>
                     </CardStyle>
                    
-                    <CardStyle style={{mb:6}}>
-                        <CardContent >
+                    <CardStyle style={{mb:6,ml:10}}>
+                        <CardContent   sx={{mt:2,ml:3}}>
                             
                             <Typography gutterBottom variant="h4" component="div">
                                 Web Advanced
                             </Typography>
-                            <Box sx={{display:"flex"}}>
+                            <Box sx={{display:"flex",mt:2}}>
                                 <ArrowRightAltIcon sx={{mr:1}}/>
                                 <Typography variant="body1">
                                     Advanced JavaScript
                                 </Typography>
                             </Box>
-                            <Box sx={{display:"flex"}}>
+                            <Box sx={{display:"flex",mt:2}}>
                                 <ArrowRightAltIcon sx={{mr:1}} />
                                 <Typography variant="body1">
                                     Git
                                 </Typography>
                             </Box>
-                            <Box sx={{display:"flex"}}>
+                            <Box sx={{display:"flex",mt:2}}>
                                 <ArrowRightAltIcon sx={{mr:1}}/>
                                 <Typography variant="body1">
                                     Command line
@@ -177,7 +179,7 @@ const ClassesCard =()=>{
                             </Box>
                         </CardContent>
                         <CardActions sx={{mb:3}} >
-                            <Typography sx={{ml:1}} color="#BDBDBD" variant="h6">
+                            <Typography sx={{ml:4}}color="#BDBDBD" variant="h6">
                                 Coming soon
                             </Typography>
                         </CardActions>
