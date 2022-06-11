@@ -9,11 +9,11 @@ import BookAFreeDemoClassButton from '../../comp/model';
 const ourVision = ()=>{
     return(
         <>
-        <Container  maxWidth="xl" sx={{mt:7}}>
-                    <Grid container  spacing={10} >
+        <Container  maxWidth="lg" sx={{mt:7}}>
+                    <Grid container  spacing={12} >
                         <Grid item xs={12} sm={6} md={6}  >
                             <Typography variant="h3" sx ={{mb:3}}>
-                                Get Kids from Cubs to Fearless Developers
+                            From Cubs to Fearless Developers
 
                             </Typography>
                             <Typography variant="body1" gutterBottom paragraph sx ={{mb:3}}>
@@ -28,7 +28,7 @@ const ourVision = ()=>{
                                 sx={{
                                     display: "grid",
                                     gap: 10,
-                                    width: "384px",
+                                    width: "238px",
                                     
                                     
                                 }} >
