@@ -6,13 +6,32 @@ import {
     Box,
   } from "@mui/material";
 import BookAFreeDemoClassButton from '../../comp/model';
+// import Styles from "../../styles/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../../theme/constant";
+
+
 const ourVision = ()=>{
+    const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
+    // const classes = Styles();
     return(
         <>
-        <Container  maxWidth="lg" sx={{mt:13}}>
-            <Grid container  spacing={12} >
-                <Grid item xs={12} sm={6} md={6}  >
-                    <Typography variant="h3" sx ={{mb:3}}>
+        <Container  maxWidth="lg" sx={{mt:13}} >
+            <Grid container  spacing={!isActive?12:2} >
+                {isActive&&<Grid  item xs={12} sm={6} md={6} >   
+                        <Image 
+                            src={require("./assest/Group.png")} 
+                            alt="Group image"
+                            height={"507px"}
+                            width={"544px"}
+                        
+                            
+                        
+                        />    
+                                            
+                    </Grid>}
+                <Grid item xs={12} sm={6} md={6} mb={isActive&&16} >
+                    <Typography variant="h3" sx ={!isActive?{mb:3}:{mb:2}} textAlign={isActive&&"center"} >
                     From Cubs to Fearless Developers
 
                     </Typography>
@@ -26,26 +45,27 @@ const ourVision = ()=>{
                     </Typography>
                     <Box
                         sx={{
-                            display: "grid",
-                            gap: 10,
-                            width: "238px",
-                            
-                            
-                        }} >
+                            display: "grid",                                                                                                           
+                        }}
+                        width={isActive?"100%":"238px"}
+                         >
                     {/* <Button  > Book a free demo class</Button>  */}
-                    <BookAFreeDemoClassButton />
+                    <BookAFreeDemoClassButton  />
                     </Box>
                 </Grid>
 
-                <Grid  item xs={12} sm={6} md={6} >   
+                {!isActive&&<Grid  item xs={12} sm={6} md={6} >   
                     <Image 
                         src={require("./assest/Group.png")} 
                         alt="Group image"
                         height={"507px"}
                         width={"544px"}
+                       
+                        
+                       
                     />    
                                         
-                </Grid>
+                </Grid>}
             </Grid>
         </Container>
      

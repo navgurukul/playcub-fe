@@ -13,8 +13,11 @@ import CardStyle from "../../comp/cardComponent";
 import ClassesData from "../../uitls/ClassesData";
 import Image from 'next/image'
 import BookAFreeDemoClassButton from "../../comp/model";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../../theme/constant";
 
 const OurCirriculum = () =>{
+    const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     return(
         
         <>
@@ -23,14 +26,14 @@ const OurCirriculum = () =>{
                     Curriculum Overview
                 </Typography>
                 <Box >
-                    <Grid container spacing={{ xs: 1, md: 12 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                    <Grid item xs={12} sm={6} md={6} mt={10}  sx={{mb:15}}>
-                        <Typography variant="h6">
+                    <Grid container spacing={!isActive?12:2 }>
+                    <Grid item xs={12} sm={6} md={6} mt={!isActive?10:3} ml={isActive&&1}mr={isActive&&1} mb={!isActive&&15}>
+                        <Typography variant="h6"  >
                             Web Development Basics  
                         </Typography>
                         <Box>  
                         </Box>
-                        <Box sx ={{mt:2,mb:3}}>
+                        <Box sx ={{mt:2,mb:3}} >
                             <Grid container  >
                                 <Grid item display={'flex'}>
                                     <Box  >
@@ -105,7 +108,7 @@ const OurCirriculum = () =>{
                         })}
                                                 
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6} sx={{mt:10,mb:10 ,position:'relative'}}  >
+                    <Grid item xs={12} sm={6} md={6} mt={!isActive&&10} sx={{mb:10 ,position:'relative'}}  >
                         <Box sx={{position:'sticky',
                         top:10,
                         }}>
@@ -168,7 +171,8 @@ const OurCirriculum = () =>{
                                     display: "grid",
                                     width: "395px",
                                     mb:3,
-                                    ml:2,                                 
+                                    ml:2, 
+                                    mr:isActive&&2,                               
                                 }} >  
                                 {/* <Button height={"48px"} fullWidth={true}  >Book a free demo class</Button>                                */}
                                 <BookAFreeDemoClassButton  buttonstyle={{fullWidth:true,height:'48px'}} />                      
@@ -177,9 +181,10 @@ const OurCirriculum = () =>{
                             <Box
                                 sx={{
                                     display: "grid",
-                                    width: "395px",
+                                    width: !isActive?"395px":"325px",
                                     mb:3,
-                                    ml:3,                           
+                                    ml:3, 
+                                                             
                                 }} >
                                 <Button  height={"715px"}  variant="outlined"  
                                     sx={{ backgroundColor: 'white', borderColor: 'black' }} >

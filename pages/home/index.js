@@ -14,6 +14,7 @@ import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../comp/model"
 import { useState } from 'react';
 import DailogBox from '../../comp/dailog'
+
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const classes = Styles();
@@ -50,7 +51,7 @@ const HomePage = ()=>{
                             <Image 
                                 
                                 src={require("./assest/Coding1.png")} 
-                                height={isActive&&334}
+                                // height={isActive&&550}
                                 alt="Picture of the student who is doing coding"
                                 
                                 />
@@ -120,28 +121,40 @@ const HomePage = ()=>{
                                     Teachers keep 100% of the feee
                                 </Typography>
                             </Box>
+                            <Box
+                            sx={{
+                                display: "grid",  
+                                // buttonstyle={{mt:2, p:"8px,16px",height:"48px"}}                                                                                                         
+                            }}
+                            width={isActive?"100%":"238px"}
+                            >
+                            <BookAFreeDemoClassButton />
+                            </Box>
                             
-                            <BookAFreeDemoClassButton buttonstyle={{mt:2, p:"8px,16px",height:"48px"}}/>
+                            
                            
                         </Grid>
                     </Grid>
                 </Container>
             </Container>
             <ClassesCard />
-            <Container sx={{mt:12,mb:12}} >
-                    <Grid container spacing={8}>
+            <Container sx={{mt:!isActive?12:6,mb:!isActive?12:6}} >
+                    <Grid container spacing={!isActive?8:6}>
                         <Grid item xs={12} sm={6} md={6}  >                                        
-                            <Typography variant="h5" >
+                            <Typography variant="h5" textAlign={isActive&&"center"} >
                             Are you a Professional who wants to share their web dev expertise?
                             </Typography>
+                           
                             <DailogBox/>
+                            
+                            
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} >
                             <Image 
                                 
                                 src={require("./assest/teacher.png")} 
-                                height={isActive&&334}
+                                // height={isActive&&550}
                                 alt="Picture of the student who is doing coding"
                                 
                             />   
@@ -150,7 +163,7 @@ const HomePage = ()=>{
                 </Container>
             <Box  sx={{backgroundColor:"#F5F5F5" }}>
                 <Box  sx={{textAlign:"center",  }}>
-                    <Typography variant="h4"pt={8} >
+                    <Typography variant="h4"pt={!isActive?8:4} >
                         Get involved
                     </Typography>
                     <Typography variant="body1" mt={2} mb={2}>
@@ -176,7 +189,7 @@ const HomePage = ()=>{
                         </Box>                      
                     ),
                     }}
-                    sx={{mb:20}}
+                    sx={{mb:!isActive?20:17}}
                    >
                    </TextField>
                 

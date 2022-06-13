@@ -11,7 +11,7 @@ import {
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../comp/cardComponent";
-import Styles from "../../styles/styles";
+// import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import { Link } from '@mui/material';
@@ -19,10 +19,10 @@ import BookAFreeDemoClassButton from '../../comp/model';
 
 const ClassesCard =()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
-    const classes = Styles();
+    // const classes = Styles();
     return(
         <>
-        <Container maxWidth="100px"sx={{mt:!isActive?10:6,mb:!isActive?6:4, background: "#FFF5CC",align:"right"}}>
+        <Container maxWidth="100px"sx={{mt:!isActive?10:6,mb:!isActive?6:4, background: "#FFF5CC"}}>
             <Container maxWidth="lg" >
             <Grid container  >
                 <Grid item xs={12} sm={6} md={6} mt={4}  sx={{position:'relative'}}>
@@ -65,7 +65,7 @@ const ClassesCard =()=>{
                 </Grid> 
                 <Grid item xs={12} sm={6} md={6}  >
                     
-                    <CardStyle style={{mb:6,mt:10 ,ml:10}} >
+                    <CardStyle style={{mb:6,mt:10 ,ml:!isActive&&10}} >
                         <CardContent sx={{mt:2,ml:3}} >
                             
                             <Typography gutterBottom mb={3} variant="h4" component="div" >
@@ -118,7 +118,7 @@ const ClassesCard =()=>{
                         </CardActions>
                     </CardStyle>
                    
-                    <CardStyle style={{mb:6 ,ml:10}}>
+                    <CardStyle style={{mb:6 ,ml:!isActive&&10}}>
                     
 
                         <CardContent  sx={{mt:2,ml:3}}>
@@ -153,7 +153,7 @@ const ClassesCard =()=>{
                         </CardActions>
                     </CardStyle>
                    
-                    <CardStyle style={{mb:6,ml:10}}>
+                    <CardStyle style={{mb:6,ml:!isActive&&10}}>
                         <CardContent   sx={{mt:2,ml:3}}>
                             
                             <Typography gutterBottom variant="h4" component="div">

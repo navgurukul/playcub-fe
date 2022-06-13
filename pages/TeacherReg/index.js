@@ -14,8 +14,11 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../../theme/constant";
 
 const TeacherReg =() =>{
+    const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [value, setValue] = React.useState('');
 
     const handleChange = (event) => {
@@ -208,7 +211,7 @@ const TeacherReg =() =>{
                         sx={{
                             display: "grid",
                             gap: 2,
-                            width: "30%",
+                            width:!isActive?"30%":"100%",
                             mb:2
                                
                         }} 
