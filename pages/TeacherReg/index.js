@@ -143,8 +143,8 @@ const TeacherReg =() =>{
                                 value={value}
                                 onChange={handleChange}
                             >
-                                <Typography variant="body1"> <FormControlLabel value="Yes" control={<Radio />} label="Yes" /></Typography>
-                                <Typography variant="body1"><FormControlLabel value="No" control={<Radio />} label="No" /></Typography>
+                                <Typography variant="body1"> <FormControlLabel value="Yes"  control={<Radio color='warning' />} label="Yes" /></Typography>
+                                <Typography variant="body1"><FormControlLabel value="No" control={<Radio color='warning' />} label="No" /></Typography>
                             </RadioGroup>
                         </FormControl>
                     </Box>
@@ -209,9 +209,8 @@ const TeacherReg =() =>{
                             display: "grid",
                             gap: 2,
                             width: "30%",
-                            mb:20
-                            
-                            
+                            mb:2
+                               
                         }} 
                     >
                         <Button sx={{mb:4}}>

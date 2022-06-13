@@ -160,6 +160,16 @@ theme = createTheme(theme, {
 });
 
 theme.components = {
+  MuiRadio: {
+    styleOverrides: {
+      root: {  
+
+        "&:hover":{
+          background:"#FFF5CC",
+        }
+      },
+    },
+  },
   
 
   MuiButton: {
