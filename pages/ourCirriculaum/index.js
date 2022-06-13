@@ -18,7 +18,7 @@ const OurCirriculum = () =>{
     return(
         
         <>
-            <Container maxWidth='lg'  sx={{mt:4,mb:2}}  >
+            <Container maxWidth='lg'  sx={{mt:13,mb:2}}  >
                 <Typography variant="h4" align="center">
                     Curriculum Overview
                 </Typography>

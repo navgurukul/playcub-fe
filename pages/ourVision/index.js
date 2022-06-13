@@ -9,7 +9,7 @@ import BookAFreeDemoClassButton from '../../comp/model';
 const ourVision = ()=>{
     return(
         <>
-        <Container  maxWidth="lg" sx={{mt:7}}>
+        <Container  maxWidth="lg" sx={{mt:13}}>
                     <Grid container  spacing={12} >
                         <Grid item xs={12} sm={6} md={6}  >
                             <Typography variant="h3" sx ={{mb:3}}>

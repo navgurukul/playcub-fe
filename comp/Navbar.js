@@ -1,7 +1,11 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
@@ -12,7 +16,27 @@ import Link from '@mui/material/Link';
 import Image from 'next/image';
 import BookAFreeDemoClassButton from "./model"
 
-const Navbar =() => {
+function ElevationScroll(props) {
+  
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
+
+ElevationScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  window: PropTypes.func,
+};
+
+
+const Navbar =(props) => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null); 
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -68,8 +92,10 @@ const Navbar =() => {
   );
 
   return (
-    <Box sx={{position:'sticky',top:0}}> 
-      <AppBar sx={{position:"static", backgroundColor:"white",height:80,width:"100%"}}
+    <Box sx={{top:0}}> 
+    <CssBaseline />
+      <ElevationScroll {...props}>
+      <AppBar sx={{ backgroundColor:"white",height:80,width:"100%"}}
        >
         <Toolbar>
           <Link href="/" underline="none" sx={{mt:2}}>
@@ -107,10 +133,10 @@ const Navbar =() => {
           </Box>
         </Toolbar>
       </AppBar>
+      </ElevationScroll>
       {renderMobileMenu}
     </Box>
   );
 }
 export default Navbar;
-
 
