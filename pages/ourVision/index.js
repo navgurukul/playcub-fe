@@ -6,14 +6,16 @@ import {
     Box,
   } from "@mui/material";
 import BookAFreeDemoClassButton from '../../comp/model';
-// import Styles from "../../styles/styles";
+/* eslint-disable */
 import useMediaQuery from "@mui/material/useMediaQuery";
+/* eslint-disable */
 import { breakpoints } from "../../theme/constant";
 
 
 const ourVision = ()=>{
+    /* eslint-disable */
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
-    // const classes = Styles();
+    /* eslint-disable */
     return(
         <>
         <Container  maxWidth="lg" sx={{mt:13}} >

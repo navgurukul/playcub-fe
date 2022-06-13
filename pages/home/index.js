@@ -8,7 +8,7 @@ import {
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
-import Styles from "../../styles/styles";
+// import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../comp/model"
@@ -17,7 +17,7 @@ import DailogBox from '../../comp/dailog'
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
-    const classes = Styles();
+    // const classes = Styles();
     const[email,setEmail]=useState('')
     const[name,setName]=useState('')
 
