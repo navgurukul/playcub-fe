@@ -13,7 +13,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../comp/model"
 import { useState } from 'react';
-
+import DailogBox from '../../comp/dailog'
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const classes = Styles();
@@ -134,10 +134,7 @@ const HomePage = ()=>{
                             <Typography variant="h5" >
                             Are you a Professional who wants to share their web dev expertise?
                             </Typography>
-                            <Button sx={{mt:4}}>
-                                Join Our Teaching Pool
-                            </Button>
-                            
+                            <DailogBox/>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} >
