@@ -75,6 +75,7 @@ const TeacherReg =() =>{
                             name="name"    
                             id="name"
                             variant="outlined"
+                            color="warning"
                             required
                             // value={} 
                             // helperText={}
@@ -92,6 +93,7 @@ const TeacherReg =() =>{
                             name="email"
                             id="email"
                             variant="outlined"
+                            color="warning"
                             required
                             
                         />
@@ -107,6 +109,7 @@ const TeacherReg =() =>{
                             // onChange={} 
                             id="phoneNumber"
                             variant="outlined"
+                            color="warning"
                             required
                         />
                         <TextField
@@ -115,6 +118,7 @@ const TeacherReg =() =>{
                             name="LinkedIn"    
                             id="LinkedIn"
                             variant="outlined"
+                            color="warning"
                             required
                             // value={} 
                             // helperText={}
@@ -172,6 +176,7 @@ const TeacherReg =() =>{
                             name="yourAnswer"    
                             id="yourAnswer"
                             variant="outlined"
+                            color="warning"
                             
                             // value={} 
                             // helperText={}
@@ -200,6 +205,7 @@ const TeacherReg =() =>{
                             name="yourAnswer"    
                             id="yourAnswer"
                             variant="outlined"
+                            color="warning"
                             
                             // value={} 
                             // helperText={}

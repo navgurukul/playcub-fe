@@ -35,7 +35,7 @@ const OurCirriculum = () =>{
                         </Box>
                         <Box sx ={{mt:2,mb:3}} >
                             <Grid container  >
-                                <Grid item display={'flex'}>
+                                <Grid item display={'flex'} >
                                     <Box  >
                                         <Image 
                                             src={require("./assest/classes.png")} 
@@ -46,7 +46,7 @@ const OurCirriculum = () =>{
                                             />
                                     </Box>
                                     <Box sx={{ml:1,mr:1}}>
-                                        <Typography variant="body1" mt={0.3} mb={0.3}>
+                                        <Typography variant="body1" mt={0.3} mr={!isActive?"16px":"60px"} mb={0.3}>
                                             16 Classes
                                         </Typography>
                                     </Box>
@@ -65,7 +65,7 @@ const OurCirriculum = () =>{
                                         />
                                     </Box>
                                     <Box sx={{ml:1,mr:1}} >
-                                        <Typography variant="body1"  mt={0.3} mb={0.3}>
+                                        <Typography variant="body1"  mr={!isActive?"16px":"70px"} mt={0.3} mb={0.3}>
                                             Video Content
                                         </Typography>
                                     </Box>
@@ -84,7 +84,7 @@ const OurCirriculum = () =>{
                                     </Box>
                                     <Box sx={{ml:1}}>
                                         <Typography variant="body1"  mt={0.3} >
-                                            Regular Assignments
+                                            Assignments
                                         </Typography>
                                     </Box>
                                 </Grid>

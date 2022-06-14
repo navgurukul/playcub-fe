@@ -32,7 +32,7 @@ const ClassesCard =()=>{
                     }}
                     >
                     <Typography variant="h4" sx={{mt:5,mb:4}}>
-                        Web development  
+                        Web Development  
                     </Typography>
                     <Typography variant="body1" mb={3}>
                         Empower your kids to think critically, communicate clearly and build beautiful websites.

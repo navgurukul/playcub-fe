@@ -194,6 +194,7 @@ const Reg =(props) =>{
                           name="name"    
                           id="name"
                           variant="outlined"
+                          color="warning"    
                           required
                           value={registerdata.Name.value} 
                           helperText={registerdata.Name.errorMsg}
@@ -204,6 +205,7 @@ const Reg =(props) =>{
                       <TextField
                           label="Email"
                           type="text"
+                          color="warning"
                           value={registerdata.Email.value} 
                           helperText={registerdata.Email.errorMsg}
                           error={registerdata.Email.error}
@@ -225,6 +227,7 @@ const Reg =(props) =>{
                           name="childAge"
                           id="childAge"
                           variant="outlined"
+                          color="warning"
                           required
                       />
 
@@ -240,6 +243,7 @@ const Reg =(props) =>{
                           name="phoneNumber"
                           id="phoneNumber"
                           variant="outlined"
+                          color="warning"
                           required
                       />
 

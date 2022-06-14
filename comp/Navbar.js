@@ -70,7 +70,7 @@ const Navbar =(props) => {
       <MenuItem> 
           <Button sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
             <Link href="/ourVision" underline="none" sx={{color:"#2E2E2E"}}>
-              Our vision
+              Our Vision
             </Link>
           </Button>
         
@@ -105,7 +105,7 @@ const Navbar =(props) => {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Button  sx={{background:'#FFF',mt:2,mr:3, p:"8px,16px"}} height="40px"  >
               <Link href="/ourVision" underline="none" sx={{color:"#2E2E2E"}}>
-                Our vision
+                Our Vision
               </Link>
             </Button>
             <Button  sx={{background:'#FFF',mt:2,mr:3, p:"8px,16px"}} height="40px"  >
@@ -113,7 +113,7 @@ const Navbar =(props) => {
                 Curriculum  
               </Link>
             </Button>
-            <BookAFreeDemoClassButton buttonstyle={{mt:2, p:"8px,16px"}}/>
+            <BookAFreeDemoClassButton buttonstyle={{mt:2, pl:"16px", pr:"16px"}}/>
             
          
             

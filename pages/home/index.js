@@ -39,7 +39,7 @@ const HomePage = ()=>{
     return (
         <>
             <Container  align="center" sx={{mt:13}}>
-                <Typography variant="h3" mb={1} >
+                <Typography variant="h3" mb="16px" >
                     Interactive Coding Classes for Kids
                 </Typography>
                 <Typography variant="subtitle" color="#6D6D6D">
@@ -92,7 +92,7 @@ const HomePage = ()=>{
                                 
                                 />
                                 <Typography variant="body1">
-                                    Convinient scheduling 
+                                    Convenient Scheduling
                                 </Typography>
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
@@ -179,7 +179,6 @@ const HomePage = ()=>{
                  onChange={e=>setEmail(e.target.value)}
                  name="email"
                  autoComplete="email" 
-                 backgroundColor="white"
                  InputProps={{
                     endAdornment: (
                         <Box sx={{position: 'relative'}} >
@@ -189,7 +188,7 @@ const HomePage = ()=>{
                         </Box>                      
                     ),
                     }}
-                    sx={{mb:!isActive?20:17}}
+                    sx={{mb:!isActive?20:17,backgroundColor:"white"}}
                    >
                    </TextField>
                 
