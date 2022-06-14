@@ -181,9 +181,10 @@ const OurCirriculum = () =>{
                             <Box
                                 sx={{
                                     display: "grid",
-                                    width: !isActive?"395px":"325px",
+                                    width: !isActive?"89.5%":"86%",
                                     mb:3,
                                     ml:3, 
+                                    
                                                              
                                 }} >
                                 <Button 
