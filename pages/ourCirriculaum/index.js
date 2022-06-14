@@ -35,7 +35,7 @@ const OurCirriculum = () =>{
                         </Box>
                         <Box sx ={{mt:2,mb:3}} >
                             <Grid container  >
-                                <Grid item display={'flex'} >
+                                <Grid item display={'flex'} mb={isActive&&"16px"}>
                                     <Box  >
                                         <Image 
                                             src={require("./assest/classes.png")} 
@@ -52,7 +52,7 @@ const OurCirriculum = () =>{
                                     </Box>
                                     
                                 </Grid>
-                                <Grid item display={'flex'}>
+                                <Grid item mb={isActive&&"16px"} display={'flex'}>
                                     <Box >
                                 
                                         <Image 
