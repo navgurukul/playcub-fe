@@ -146,7 +146,7 @@ const Reg =(props) =>{
       const { Morning , Afternoon, Evening } = state;
     return(
         <>
-        <Container sx={{mt: 4,ml:20 }} maxWidth="lg" >
+        <Container sx={{mt: 4,ml:0 }} maxWidth="lg" >
 
           <Box sx={{mt:5}} >
             <Box display="flex" justifyContent="flex-end"  sx={{mr:4,mb:4}}>
@@ -169,7 +169,7 @@ const Reg =(props) =>{
           
             
             
-          <Grid container spacing={15}>
+          <Grid container spacing={4}>
               <Grid item xs={12} sm={6} md={6}  >
                   <Typography variant="h3">
                       Get started with Playcub

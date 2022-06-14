@@ -7,6 +7,7 @@ import {
     Grid,
     IconButton,
     Modal,
+    Dialog,
 } from "@mui/material";
 import RegisterPage from "../pages/Reg";
 import CloseIcon from '@mui/icons-material/Close';
@@ -27,34 +28,23 @@ const BookAFreeDemoClassButton = (props)=>{
          fullWidth={props.buttonstyle && props.buttonstyle.fullWidth?true:false}
           onClick={handleOpen}
           >Book a free demo class</Button>
-<Modal
+<Dialog
+ sx={{
+  "& .MuiDialog-container": {
+    "& .MuiPaper-root": {
+      width: "100%",
+      padding:5,
+      maxWidth: "1140px",  // Set your width here
+    },
+  },
+}}
   open={open}
+  scroll={'body'}
   onClose={handleClose}
   aria-labelledby="modal-modal-title"
   aria-describedby="modal-modal-description"
 >
-  <Box 
-  sx={{
-    height:'80%',
-    width:'80%',
-    marginTop:'6%',
-    ml:'10%',
-    bgcolor: 'background.paper',
-    overflowY:'scroll',
-    // p: 4,
-    // height:100
-}}
-  >
-
-{/* <IconButton sx={{
-          borderRadius:100,
-          // bgcolor:'white',
-      }} onClick={()=>{
-          handleClose()
-          }}>
-      <CloseIcon  /></IconButton> */}
     <RegisterPage handleClose={handleClose}/>
-  </Box>
-</Modal></>
+</Dialog></>
 )}
 export default BookAFreeDemoClassButton;

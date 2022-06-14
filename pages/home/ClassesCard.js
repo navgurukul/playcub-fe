@@ -27,7 +27,7 @@ const ClassesCard =()=>{
             <Grid container  >
                 <Grid item xs={12} sm={6} md={6} mt={4}  sx={{position:'relative'}}>
                     <Box sx={{position:'sticky',
-                    top:5,
+                    top:90,
                     
                     }}
                     >

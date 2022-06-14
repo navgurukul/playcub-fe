@@ -186,7 +186,9 @@ const OurCirriculum = () =>{
                                     ml:3, 
                                                              
                                 }} >
-                                <Button  height={"715px"}  variant="outlined"  
+                                <Button 
+                                href='/playcub.pdf' download={"curriculum.pdf"}
+                                height={"715px"}  variant="outlined"  
                                     sx={{ backgroundColor: 'white', borderColor: 'black' }} >
                                     Get Detailed Curriculum
                                 </Button>
