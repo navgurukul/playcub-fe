@@ -12,8 +12,11 @@ import {
 import RegisterPage from "../pages/Reg";
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../theme/constant";
 
 const BookAFreeDemoClassButton = (props)=>{
+    const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
       console.log(props);
     const [open,setOpen]=useState(false)
     const handleClose=async()=>{
@@ -33,7 +36,8 @@ const BookAFreeDemoClassButton = (props)=>{
   "& .MuiDialog-container": {
     "& .MuiPaper-root": {
       width: "100%",
-      padding:5,
+      padding:!isActive&&2,
+      ml:isActive&&0,
       maxWidth: "1140px",  // Set your width here
     },
   },

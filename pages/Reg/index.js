@@ -16,8 +16,11 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
 import * as React from 'react';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../../theme/constant";
 
 const Reg =(props) =>{
+    const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [registerdata,setRegisterData]=useState({
         Name:{error:false,errorMsg:'',value:''},
         Email:{error:false,errorMsg:'',value:''},
@@ -148,8 +151,8 @@ const Reg =(props) =>{
         <>
         <Container sx={{mt: 4,ml:0 }} maxWidth="lg" >
 
-          <Box sx={{mt:5}} >
-            <Box display="flex" justifyContent="flex-end"  sx={{mr:4,mb:4}}>
+          <Box sx={{mt:!isActive?5:2}} >
+            <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive?1:2,mb:!isActive?5:1}}>
                 
                 <Image 
                     onClick={()=>{
@@ -165,11 +168,8 @@ const Reg =(props) =>{
                 />
             </Box>
           </Box>
-            
-          
-            
-            
-          <Grid container spacing={4}>
+              
+          <Grid container spacing={isActive?1:8}>
               <Grid item xs={12} sm={6} md={6}  >
                   <Typography variant="h3">
                       Get started with Playcub
@@ -182,7 +182,7 @@ const Reg =(props) =>{
                       sx={{
                           display: "grid",
                           gap: 5,
-                          width: "100%",
+                          width:"100%",
                           mt:4,
                           mb:5,
                       }}
@@ -265,7 +265,7 @@ const Reg =(props) =>{
                           sx={{
                               display: "grid",
                               gap: 3,
-                              width: "50%",
+                              width:isActive?"100%":"54%",
                               mb:3
                               
                               
@@ -283,7 +283,7 @@ const Reg =(props) =>{
               </Grid>
 
               <Grid item xs={12} sm={6} md={6} >
-                  <CardStyle style={{mb:6,maxWidth:"500px"}}>
+                  <CardStyle style={{mb:5,maxWidth:"500px"}}>
                       <CardContent >
                           
                           <Typography gutterBottom variant="h5" m={3} component="div">
