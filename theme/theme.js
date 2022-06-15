@@ -13,6 +13,18 @@ shadows[8] =
 theme = createTheme(theme, {
   breakpoints,
   palette: { 
+    mode: "light",
+    default: {  
+      light: "#0066ff",
+      main: "#fff",
+      contrastText: "#ffcc00",
+    },
+    error: {
+      //Red
+      main: "#f44336",
+      light: "#ffe5e3",
+      dark: "#c3362b",
+    },
     warning: {
       //Yellow
       main: "#ffc107",

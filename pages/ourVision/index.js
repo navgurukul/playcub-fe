@@ -10,9 +10,11 @@ import BookAFreeDemoClassButton from '../../common/model';
 import useMediaQuery from "@mui/material/useMediaQuery";
 /* eslint-disable */
 import { breakpoints } from "../../theme/constant";
+import Styles from "../../styles/styles";
 
 
 const ourVision = ()=>{
+    const classes = Styles();
     /* eslint-disable */
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     /* eslint-disable */
@@ -24,8 +26,8 @@ const ourVision = ()=>{
                         <Image 
                             src={require("../../assest/Group.png")} 
                             alt="Group image"
-                            height={"507px"}
-                            width={"544px"}
+                            className={classes.visionImg}
+                           
                         
                             
                         
@@ -60,8 +62,7 @@ const ourVision = ()=>{
                     <Image 
                         src={require("../../assest/Group.png")} 
                         alt="Group image"
-                        height={"507px"}
-                        width={"544px"}
+                        className={classes.visionImg}
                        
                         
                        

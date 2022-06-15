@@ -14,8 +14,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
+import Styles from "../../styles/styles";
 
 const TeacherReg =() =>{
+    const classes = Styles();
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [value, setValue] = React.useState('');
 
@@ -28,13 +30,12 @@ const TeacherReg =() =>{
         <Container  maxWidth="sm"   >
             
             <Box sx={{mt:5}} >
-                <Box display="flex" justifyContent="flex-end"  sx={{mr:4,mb:2}}>
+                <Box display="flex" justifyContent="flex-end"  sx={{mr:6,mb:2}}>
                     
                     <Image 
                         // onClick={}
                         src={require("../../assest/close.png")} 
-                        height={"32px"}
-                        width={'32px'}
+                        className={classes.Icons}
                         alt="close image"
                     
                         

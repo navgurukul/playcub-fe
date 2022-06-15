@@ -15,8 +15,10 @@ import Image from 'next/image'
 import BookAFreeDemoClassButton from "../../common/model";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
+import Styles from "../../styles/styles";
 
 const OurCirriculum = () =>{
+    const classes = Styles();
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     return(
         
@@ -27,7 +29,7 @@ const OurCirriculum = () =>{
                 </Typography>
                 <Box >
                     <Grid container spacing={!isActive?12:2 }>
-                    <Grid item xs={12} sm={6} md={6} mt={!isActive?10:3} ml={isActive&&1}mr={isActive&&1} mb={!isActive&&15}>
+                    <Grid item xs={12} sm={6} md={6} sx={{mt:!isActive?10:3, ml:isActive&&1,mr:isActive&&1, mb:!isActive&&15}} >
                         <Typography variant="h6"  >
                             Web Development Basics  
                         </Typography>
@@ -39,14 +41,13 @@ const OurCirriculum = () =>{
                                     <Box  >
                                         <Image 
                                             src={require("../../assest/classes.png")} 
-                                            height={"32px"}
-                                            width={'32px'}
+                                            className={classes.Icons}
                                             alt="laptop logo img"
                                             
                                             />
                                     </Box>
                                     <Box sx={{ml:1,mr:1}}>
-                                        <Typography variant="body1" mt={0.3} mr={!isActive?"16px":"60px"} mb={0.3}>
+                                        <Typography variant="body1" sx={{mt:0.3, mr:!isActive?"16px":"60px", mb:0.3}}>
                                             16 Classes
                                         </Typography>
                                     </Box>
@@ -58,14 +59,13 @@ const OurCirriculum = () =>{
                                         <Image 
                                             
                                             src={require("../../assest/video.png")} 
-                                            height={"32px"}
-                                            width={'32px'}
+                                            className={classes.Icons}
                                             alt="Video Content logo img"
                                         
                                         />
                                     </Box>
                                     <Box sx={{ml:1,mr:1}} >
-                                        <Typography variant="body1"  mr={!isActive?"16px":"70px"} mt={0.3} mb={0.3}>
+                                        <Typography variant="body1" sx={{mr:!isActive?"16px":"70px", mt:0.3, mb:0.3}} >
                                             Video Content
                                         </Typography>
                                     </Box>
@@ -108,7 +108,7 @@ const OurCirriculum = () =>{
                         })}
                                                 
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6} mt={!isActive&&10} sx={{mb:10 ,position:'relative'}}  >
+                    <Grid item xs={12} sm={6} md={6}  sx={{mb:10 ,position:'relative',mt:!isActive&&10}}  >
                         <Box sx={{position:'sticky',
                         top:10,
                         }}>

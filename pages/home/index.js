@@ -8,7 +8,7 @@ import {
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
-// import Styles from "../../styles/styles";
+import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../common/model"
@@ -17,7 +17,7 @@ import DailogBox from '../../common/dailog'
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
-    // const classes = Styles();
+    const classes = Styles();
     const[email,setEmail]=useState('')
     const[name,setName]=useState('')
 
@@ -61,11 +61,9 @@ const HomePage = ()=>{
                             <Box sx={{display:"flex", mb:2,gap:1}}> 
                                 <Image 
                                     src={require("../../assest/Menu book.png")} 
-                                    height={'32px'}
-                                    width={'32px'}
+                                    className={classes.Icons}
                                     alt="Book logo"
-                                   
-                                
+                                            
                                 />
                                 <Typography variant="body1">
                                     Cirriculum designed by experts 
@@ -74,8 +72,7 @@ const HomePage = ()=>{
                             <Box sx={{display:"flex",mb:2,gap:1}}>
                                 <Image 
                                     src={require("../../assest/Videocam.png")} 
-                                    height={'32px'}
-                                    width={'32px'}
+                                    className={classes.Icons}
                                     alt="Video logo"
                                 
                                 />
@@ -86,8 +83,7 @@ const HomePage = ()=>{
                             <Box sx={{display:"flex",mb:2,gap:1}}>
                                 <Image 
                                     src={require("../../assest/Perm contact.png")} 
-                                    height={'32px'}
-                                    width={'32px'}
+                                    className={classes.Icons}
                                     alt="Contact logo"
                                 
                                 />
@@ -98,8 +94,7 @@ const HomePage = ()=>{
                             <Box sx={{display:"flex",mb:2,gap:1}}>
                                 <Image 
                                     src={require("../../assest/Child care.png")} 
-                                    height={'32px'}
-                                    width={'32px'}
+                                    className={classes.homePageIcon}
                                     alt="Child logo"
                                 
                                 />
@@ -111,8 +106,7 @@ const HomePage = ()=>{
                             <Box sx={{display:"flex",mb:2, gap:1}}>
                                 <Image 
                                         src={require("../../assest/Child care (1).png")} 
-                                        height={'32px'}
-                                        width={'32px'}
+                                        className={classes.homePageIcon}
                                         alt="Rupee logo"
                                         
                                     

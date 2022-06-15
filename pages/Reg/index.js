@@ -18,8 +18,10 @@ import { useState } from "react";
 import * as React from 'react';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
+import Styles from "../../styles/styles";
 
 const Reg =(props) =>{
+    const classes = Styles();
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [registerdata,setRegisterData]=useState({
         Name:{error:false,errorMsg:'',value:''},
@@ -159,8 +161,7 @@ const Reg =(props) =>{
                       props.handleClose()
                       }}
                     src={require("../../assest/close.png")} 
-                    height={"32px"}
-                    width={'32px'}
+                    className={classes.Icons}
                     alt="close image"
                 
                     
