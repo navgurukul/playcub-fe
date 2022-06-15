@@ -1,17 +1,9 @@
 import React, { useState } from "react";
-import {
-    Typography,
-    Container,
+import {  
     Button,
-    Card,
-    Grid,
-    IconButton,
-    Modal,
     Dialog,
 } from "@mui/material";
 import RegisterPage from "../pages/Reg";
-import CloseIcon from '@mui/icons-material/Close';
-import Box from '@mui/material/Box';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../theme/constant";
 

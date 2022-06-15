@@ -3,8 +3,6 @@ import {
     Typography,
     Container,
     Button,
-    CardContent,
-    Grid,
     Box,
 } from "@mui/material";
 import Image from 'next/image'
