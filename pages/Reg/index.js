@@ -8,7 +8,7 @@ import {
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import CardStyle from "../../comp/cardComponent";
+import CardStyle from "../../common/cardComponent";
 import Image from 'next/image'
 import TextField from "@mui/material/TextField";
 import FormGroup from '@mui/material/FormGroup';
@@ -158,7 +158,7 @@ const Reg =(props) =>{
                     onClick={()=>{
                       props.handleClose()
                       }}
-                    src={require("./assest/close.png")} 
+                    src={require("../../assest/close.png")} 
                     height={"32px"}
                     width={'32px'}
                     alt="close image"

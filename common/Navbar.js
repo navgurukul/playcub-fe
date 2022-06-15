@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import Logo from "../public/Playcub 1.svg";
+import Logo from "../assest/Playcub 1.svg";
 import Button from "@mui/material/Button";
 import Link from '@mui/material/Link';
 import Image from 'next/image';

@@ -9,12 +9,12 @@ import {
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import CardStyle from "../../comp/cardComponent";
+import CardStyle from "../../common/cardComponent";
 // import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import { Link } from '@mui/material';
-import BookAFreeDemoClassButton from '../../comp/model';
+import BookAFreeDemoClassButton from '../../common/model';
 
 const ClassesCard =()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");

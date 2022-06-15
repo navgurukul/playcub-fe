@@ -9,10 +9,10 @@ import {
   } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import CardStyle from "../../comp/cardComponent";
+import CardStyle from "../../common/cardComponent";
 import ClassesData from "../../uitls/ClassesData";
 import Image from 'next/image'
-import BookAFreeDemoClassButton from "../../comp/model";
+import BookAFreeDemoClassButton from "../../common/model";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 
@@ -38,7 +38,7 @@ const OurCirriculum = () =>{
                                 <Grid item display={'flex'} mb={isActive&&"16px"}>
                                     <Box  >
                                         <Image 
-                                            src={require("./assest/classes.png")} 
+                                            src={require("../../assest/classes.png")} 
                                             height={"32px"}
                                             width={'32px'}
                                             alt="laptop logo img"
@@ -57,7 +57,7 @@ const OurCirriculum = () =>{
                                 
                                         <Image 
                                             
-                                            src={require("./assest/video.png")} 
+                                            src={require("../../assest/video.png")} 
                                             height={"32px"}
                                             width={'32px'}
                                             alt="Video Content logo img"
@@ -75,7 +75,7 @@ const OurCirriculum = () =>{
                                 
                                         <Image 
                                             
-                                            src={require("./assest/assigments.png")} 
+                                            src={require("../../assest/assigments.png")} 
                                             height={"30.54px"}
                                             width={'28.67px'}
                                             alt="Regular Assignments logo img"   

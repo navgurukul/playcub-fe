@@ -11,9 +11,9 @@ import ClassesCard from "./ClassesCard";
 // import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import BookAFreeDemoClassButton from "../../comp/model"
+import BookAFreeDemoClassButton from "../../common/model"
 import { useState } from 'react';
-import DailogBox from '../../comp/dailog'
+import DailogBox from '../../common/dailog'
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
@@ -50,7 +50,7 @@ const HomePage = ()=>{
                         <Grid item xs={12} sm={6} md={6}  >
                             <Image 
                                 
-                                src={require("./assest/Coding1.png")} 
+                                src={require("../../assest/Coding1.png")} 
                                 // height={isActive&&550}
                                 alt="Picture of the student who is doing coding"
                                 
@@ -60,7 +60,7 @@ const HomePage = ()=>{
                         <Grid item xs={12} sm={6} md={6} align="left">
                             <Box sx={{display:"flex", mb:2,gap:1}}> 
                                 <Image 
-                                    src={require("./assest/Menu book.png")} 
+                                    src={require("../../assest/Menu book.png")} 
                                     height={'32px'}
                                     width={'32px'}
                                     alt="Book logo"
@@ -73,7 +73,7 @@ const HomePage = ()=>{
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
                                 <Image 
-                                    src={require("./assest/Videocam.png")} 
+                                    src={require("../../assest/Videocam.png")} 
                                     height={'32px'}
                                     width={'32px'}
                                     alt="Video logo"
@@ -85,7 +85,7 @@ const HomePage = ()=>{
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
                                 <Image 
-                                    src={require("./assest/Perm contact.png")} 
+                                    src={require("../../assest/Perm contact.png")} 
                                     height={'32px'}
                                     width={'32px'}
                                     alt="Contact logo"
@@ -97,7 +97,7 @@ const HomePage = ()=>{
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
                                 <Image 
-                                    src={require("./assest/Child care.png")} 
+                                    src={require("../../assest/Child care.png")} 
                                     height={'32px'}
                                     width={'32px'}
                                     alt="Child logo"
@@ -110,7 +110,7 @@ const HomePage = ()=>{
                             </Box>
                             <Box sx={{display:"flex",mb:2, gap:1}}>
                                 <Image 
-                                        src={require("./assest/Child care (1).png")} 
+                                        src={require("../../assest/Child care (1).png")} 
                                         height={'32px'}
                                         width={'32px'}
                                         alt="Rupee logo"
@@ -153,7 +153,7 @@ const HomePage = ()=>{
                         <Grid item xs={12} sm={6} md={6} >
                             <Image 
                                 
-                                src={require("./assest/teacher.png")} 
+                                src={require("../../assest/teacher.png")} 
                                 // height={isActive&&550}
                                 alt="Picture of the student who is doing coding"
                                 

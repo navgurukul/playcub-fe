@@ -5,7 +5,7 @@ import {
     Grid,
     Box,
   } from "@mui/material";
-import BookAFreeDemoClassButton from '../../comp/model';
+import BookAFreeDemoClassButton from '../../common/model';
 /* eslint-disable */
 import useMediaQuery from "@mui/material/useMediaQuery";
 /* eslint-disable */
@@ -22,7 +22,7 @@ const ourVision = ()=>{
             <Grid container  spacing={!isActive?12:2} >
                 {isActive&&<Grid  item xs={12} sm={6} md={6} >   
                         <Image 
-                            src={require("./assest/Group.png")} 
+                            src={require("../../assest/Group.png")} 
                             alt="Group image"
                             height={"507px"}
                             width={"544px"}
@@ -58,7 +58,7 @@ const ourVision = ()=>{
 
                 {!isActive&&<Grid  item xs={12} sm={6} md={6} >   
                     <Image 
-                        src={require("./assest/Group.png")} 
+                        src={require("../../assest/Group.png")} 
                         alt="Group image"
                         height={"507px"}
                         width={"544px"}

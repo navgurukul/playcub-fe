@@ -1,6 +1,6 @@
 import BottomNavigation from '@mui/material/BottomNavigation';
 import Link from '@mui/material/Link';
-import Logo from "../public/Playcub 2.svg";
+import Logo from "../assest/Playcub 2.svg";
 import Typography from "@mui/material/Typography";
 import Image from 'next/image';
 

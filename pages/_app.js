@@ -1,4 +1,4 @@
-import Layout from '../comp/Layout'
+import Layout from '../common/Layout'
 
 
 function MyApp({ Component, pageProps }) {

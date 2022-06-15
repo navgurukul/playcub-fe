@@ -32,7 +32,7 @@ const TeacherReg =() =>{
                     
                     <Image 
                         // onClick={}
-                        src={require("./assest/close.png")} 
+                        src={require("../../assest/close.png")} 
                         height={"32px"}
                         width={'32px'}
                         alt="close image"
