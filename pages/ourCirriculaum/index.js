@@ -36,7 +36,9 @@ const OurCirriculum = () =>{
                         <Box>  
                         </Box>
                         <Box sx ={{mt:2,mb:3}} >
-                            <Grid container  >
+                            {isActive&&
+                            <Container>
+                            <Box>
                                 <Grid item display={'flex'} mb={isActive&&"16px"}>
                                     <Box  >
                                         <Image 
@@ -47,12 +49,14 @@ const OurCirriculum = () =>{
                                             />
                                     </Box>
                                     <Box sx={{ml:1,mr:1}}>
-                                        <Typography variant="body1" sx={{mt:0.3, mr:!isActive?"16px":"60px", mb:0.3}}>
+                                        <Typography variant="body1" sx={{mt:0.3, mr:"16px", mb:0.3}}>
                                             16 Classes
                                         </Typography>
                                     </Box>
-                                    
+                                
                                 </Grid>
+                            </Box>
+                            <Box>
                                 <Grid item mb={isActive&&"16px"} display={'flex'}>
                                     <Box >
                                 
@@ -65,7 +69,69 @@ const OurCirriculum = () =>{
                                         />
                                     </Box>
                                     <Box sx={{ml:1,mr:1}} >
-                                        <Typography variant="body1" sx={{mr:!isActive?"16px":"70px", mt:0.3, mb:0.3}} >
+                                        <Typography variant="body1" sx={{mr:"16px", mt:0.3, mb:0.3}} >
+                                            Video Content
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                                
+
+                            </Box>
+                            <Box>
+                            <Grid item  display={'flex'}>
+                                <Box  >
+                                
+                                    <Image 
+                                        
+                                        src={require("../../assest/assigments.png")} 
+                                        height={"30.54px"}
+                                        width={'28.67px'}
+                                        alt="Regular Assignments logo img"   
+                                    
+                                        />
+                                </Box>
+                                <Box sx={{ml:1}}>
+                                    <Typography variant="body1"  mt={0.3} >
+                                        Assignments
+                                    </Typography>
+                                </Box>
+                                
+                            </Grid>
+
+                            </Box>
+                            </Container>
+                        }
+
+                            {!isActive&&<Grid container  >
+                                <Grid item display={'flex'} >
+                                    <Box  >
+                                        <Image 
+                                            src={require("../../assest/classes.png")} 
+                                            className={classes.Icons}
+                                            alt="laptop logo img"
+                                            
+                                            />
+                                    </Box>
+                                    <Box sx={{ml:1,mr:1}}>
+                                        <Typography variant="body1" sx={{mt:0.3, mr:"16px", mb:0.3}}>
+                                            16 Classes
+                                        </Typography>
+                                    </Box>
+                                    
+                                </Grid>
+                                <Grid item  display={'flex'}>
+                                    <Box >
+                                
+                                        <Image 
+                                            
+                                            src={require("../../assest/video.png")} 
+                                            className={classes.Icons}
+                                            alt="Video Content logo img"
+                                        
+                                        />
+                                    </Box>
+                                    <Box sx={{ml:1,mr:1}} >
+                                        <Typography variant="body1" sx={{mr:"16px", mt:0.3, mb:0.3}} >
                                             Video Content
                                         </Typography>
                                     </Box>
@@ -88,7 +154,7 @@ const OurCirriculum = () =>{
                                         </Typography>
                                     </Box>
                                 </Grid>
-                            </Grid>
+                            </Grid>}
                         </Box>
                         {ClassesData.map((value, index)=>{
                             return(
