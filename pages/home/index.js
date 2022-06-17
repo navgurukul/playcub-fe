@@ -18,20 +18,43 @@ import DailogBox from '../../common/RegistrationTeacher'
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const classes = Styles();
-    const[email,setEmail]=useState('')
+    const[email,setEmail]=useState({
+        value:'',
+        error:false,
+        helperText:''
+    })
     const[name,setName]=useState('')
-    
+    const checkEmail=()=>{
+        var instance=email
+        if (!instance.value.includes('@') || !instance.value.includes('.')){
+          instance.error=true
+          instance.helperText='Enter correct mail id'
+        }else{
+          instance.error=false
+          instance.helperText=''
+        }
+        setEmail({...instance})
+        return instance.error
+
+    }
     const submit = async () =>{
-        const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
-            method:"POST",
-            body:JSON.stringify({name,email}),
-            headers:{
-                "Content-Type":"application/json"
-            }
+        if (checkEmail()){
+            const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
+                method:"POST",
+                body:JSON.stringify({name,email}),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            })
+            const data = await response.json()
+            console.log(data)
+        }
+        
+        setEmail({
+            value:'',
+            error:false,
+            helperText:''
         })
-        const data = await response.json()
-        console.log(data)
-        setEmail('')
         setName('')
 
     }
@@ -167,10 +190,12 @@ const HomePage = ()=>{
                 <Container maxWidth="sm"  >          
                
                 <TextField fullWidth label="Enter your email"
-                 
+                 onBlur={()=>checkEmail()}
                  margin="normal"
-                 value={email}
-                 onChange={e=>setEmail(e.target.value)}
+                 value={email.value}
+                 helperText={email.helperText}
+                 error={email.error}
+                 onChange={e=>setEmail({...email,value:e.target.value})}
                  name="email"
                  autoComplete="email" 
                  InputProps={{
