@@ -18,7 +18,7 @@ import { useState } from "react";
 import * as React from 'react';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../styles/styles";
+import Styles from "../../theme/styles";
 
 const Reg =(props) =>{
     const classes = Styles();
@@ -28,13 +28,13 @@ const Reg =(props) =>{
         Email:{error:false,errorMsg:'',value:''},
         age:{error:false,errorMsg:'',value:''},
         phonenumber:{error:false,errorMsg:'',value:''},
-        // slot:{error:false,errorMsg:'',value:0},
+        slot:{error:false,errorMsg:'',value:1},
         fetching:{value:false,success:false,failure:false},
       })
       const fetchData=async()=>{
         try{
           const serverStatus= await fetch('https://playcub.deta.dev/ping')
-  
+          let slot = registerdata['slot'].value
           console.log(serverStatus,"status")
           if (serverStatus.statusText=='OK'){
           const response= await fetch('https://playcub.deta.dev/form/submit/demoClass',
@@ -49,12 +49,7 @@ const Reg =(props) =>{
               email:registerdata['Email'].value,
               childAge:parseInt(registerdata['age'].value),
               phoneNumber:registerdata['phonenumber'].value,
-              Morning:state['Morning'].value,
-              Afternoon: state['Afternoon'].value,
-              Evening: state['Evening'].value,
-              
-    
-
+              slot: slot==1?'Morning (9 AM to 12 PM)':slot==2?'Afternoon (12 PM to 1 PM)':'Evening (3 PM to 6 PM)',
             })
         }).then(e=>{
           if (e.status===201){
@@ -78,7 +73,7 @@ const Reg =(props) =>{
         }
       }
       const handleChange=(e,id)=>{
-        const value = e.target.value
+        var value = e.target.value
         if (id=='phonenumber'){
           if (value.length>13){
             return 
@@ -91,14 +86,49 @@ const Reg =(props) =>{
         }
         setRegisterData({...registerdata,[id]:{...registerdata[id],value}})
       }
+      const checkEmail=()=>{
+        var register=registerdata
+        if (!register['Email'].value.includes('@') || !register['Email'].value.includes('.')){
+          register['Email'].error=true
+          register['Email'].errorMsg='Enter correct mail id'
+        }else{
+          register['Email'].error=false
+          register['Email'].errorMsg=''
+        }
+        setRegisterData({...register})
+
+      }
+      const checkAge=()=>{
+        var register=registerdata
+        if (register['age'].value<8 || register['age'].value>17){
+          register['age'].error=true
+          register['age'].errorMsg='between 8 and 17'
+        }else{
+          register['age'].error=false
+          register['age'].errorMsg=''
+        }
+        setRegisterData({...register})
+      }
+      
+      const checkPhonenumber=()=>{
+        var register=registerdata
+        if (register['phonenumber'].value.length<9 || register['phonenumber'].value.length>13){
+            register['phonenumber'].error=true
+            register['phonenumber'].errorMsg='Phone number should be 10 digit number.'
+          }else{
+            register['phonenumber'].error=false
+            register['phonenumber'].errorMsg=''
+          }
+        setRegisterData({...register})
+      }
       const onSubmit=(e)=>{
         var error=false
         var register=registerdata
         console.log(register['age'].value<8,"submited");
-        if (register['Name'].value.length<=2){
+        if (register['Name'].value.length<=0){
           error=true
           register['Name'].error=true
-          register['Name'].errorMsg='name should be grater than 2 letters'
+          register['Name'].errorMsg='name can not be empty'
         }else{
           register['Name'].error=false
           register['Name'].errorMsg=''
@@ -114,7 +144,7 @@ const Reg =(props) =>{
         if (register['age'].value<8 || register['age'].value>17){
           error=true
           register['age'].error=true
-          register['age'].errorMsg='betwee 8 and 17'
+          register['age'].errorMsg='between 8 and 17'
         }else{
           register['age'].error=false
           register['age'].errorMsg=''
@@ -132,7 +162,6 @@ const Reg =(props) =>{
           fetchData()
         } 
         setRegisterData({...register})
-        
       }
 
       const [state, setState] = React.useState({
@@ -205,6 +234,9 @@ const Reg =(props) =>{
 
                       <TextField
                           label="Email"
+                          onBlur={()=>{
+                            console.log("hello i am working")
+                            checkEmail()}}
                           type="text"
                           color="warning"
                           value={registerdata.Email.value} 
@@ -218,6 +250,7 @@ const Reg =(props) =>{
                           
                       />
                       <TextField
+                          onBlur={()=>checkAge()}
                           label="Child age"
                           type="number"
                           maxLength={2}
@@ -233,6 +266,7 @@ const Reg =(props) =>{
                       />
 
                       <TextField
+                          onBlur={()=>checkPhonenumber()}
                           label="Phone Number"
                           type="number"
                           pattern="^[0-9]{10}$"
@@ -261,9 +295,9 @@ const Reg =(props) =>{
                           Preferred slot for the demo class
                       </Typography>
                       <FormGroup>
-                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={Morning} onChange={handleChange1} name="Morning"/>} label="Morning (9 AM to 12 PM)" />
-                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={Afternoon} onChange={handleChange1} name="Afternoon"/>} label="Afternoon (12 PM to 1 PM)" />
-                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={Evening} onChange={handleChange1} name="Evening" />} label="Evening (3 PM to 6 PM)" />
+                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={registerdata.slot.value==1} onChange={()=>handleChange({target:{value:1}},'slot')} name="Morning"/>} label="Morning (9 AM to 12 PM)" />
+                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={registerdata.slot.value==2} onChange={()=>handleChange({target:{value:2}},"slot")} name="Afternoon"/>} label="Afternoon (12 PM to 1 PM)" />
+                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={registerdata.slot.value==3} onChange={()=>handleChange({target:{value:3}},'slot')} name="Evening" />} label="Evening (3 PM to 6 PM)" />
                       
                       </FormGroup>
                       <Box

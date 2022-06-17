@@ -12,10 +12,10 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../common/cardComponent";
 import ClassesData from "../../uitls/ClassesData";
 import Image from 'next/image'
-import BookAFreeDemoClassButton from "../../common/model";
+import BookAFreeDemoClassButton from "../../common/RegistrationStudent";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../styles/styles";
+import Styles from "../../theme/styles";
 
 const OurCirriculum = () =>{
     const classes = Styles();

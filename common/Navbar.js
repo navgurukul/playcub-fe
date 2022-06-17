@@ -13,7 +13,7 @@ import Logo from "../assest/Playcub 1.svg";
 import Button from "@mui/material/Button";
 import Link from '@mui/material/Link';
 import Image from 'next/image';
-import BookAFreeDemoClassButton from "./model"
+import BookAFreeDemoClassButton from "./RegistrationStudent"
 
 function ElevationScroll(props) {
   

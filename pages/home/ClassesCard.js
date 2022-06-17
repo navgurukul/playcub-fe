@@ -14,7 +14,7 @@ import CardStyle from "../../common/cardComponent";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import { Link } from '@mui/material';
-import BookAFreeDemoClassButton from '../../common/model';
+import BookAFreeDemoClassButton from '../../common/RegistrationStudent';
 
 const ClassesCard =()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");

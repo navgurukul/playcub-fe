@@ -8,19 +8,19 @@ import {
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
-import Styles from "../../styles/styles";
+import Styles from "../../theme/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import BookAFreeDemoClassButton from "../../common/model"
+import BookAFreeDemoClassButton from "../../common/RegistrationStudent"
 import { useState } from 'react';
-import DailogBox from '../../common/dailog'
+import DailogBox from '../../common/RegistrationTeacher'
 
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const classes = Styles();
     const[email,setEmail]=useState('')
     const[name,setName]=useState('')
-
+    
     const submit = async () =>{
         const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
             method:"POST",

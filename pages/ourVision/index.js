@@ -5,12 +5,12 @@ import {
     Grid,
     Box,
   } from "@mui/material";
-import BookAFreeDemoClassButton from '../../common/model';
+import BookAFreeDemoClassButton from '../../common/RegistrationStudent';
 /* eslint-disable */
 import useMediaQuery from "@mui/material/useMediaQuery";
 /* eslint-disable */
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../styles/styles";
+import Styles from "../../theme/styles";
 
 
 const ourVision = ()=>{

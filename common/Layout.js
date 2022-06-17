@@ -9,6 +9,7 @@ const Layout =({children})=>{
     return(
         <>
         <Head>
+            <link  rel="shortcut icon" href="/Playcub-1.ico" type="image/x-icon"/>
             <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"></link>
         </Head>
         <ThemeProvider theme={theme}>
