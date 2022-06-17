@@ -16,6 +16,9 @@ import BookAFreeDemoClassButton from "../../common/RegistrationStudent";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import Styles from "../../theme/styles";
+import LaptopLogo from "../../common/LaptopLogo";
+import VideoLogo from "../../common/VideoLogo";
+import AssignmentsLogo from "../../common/AssignmentsLogo";
 
 const OurCirriculum = () =>{
     const classes = Styles();
@@ -39,121 +42,22 @@ const OurCirriculum = () =>{
                             {isActive&&
                             <Container>
                             <Box>
-                                <Grid item display={'flex'} mb={isActive&&"16px"}>
-                                    <Box  >
-                                        <Image 
-                                            src={require("../../assest/classes.png")} 
-                                            className={classes.Icons}
-                                            alt="laptop logo img"
-                                            
-                                            />
-                                    </Box>
-                                    <Box sx={{ml:1,mr:1}}>
-                                        <Typography variant="body1" sx={{mt:0.3, mr:"16px", mb:0.3}}>
-                                            16 Classes
-                                        </Typography>
-                                    </Box>
-                                
-                                </Grid>
+                                <LaptopLogo  />                               
                             </Box>
                             <Box>
-                                <Grid item mb={isActive&&"16px"} display={'flex'}>
-                                    <Box >
-                                
-                                        <Image 
-                                            
-                                            src={require("../../assest/video.png")} 
-                                            className={classes.Icons}
-                                            alt="Video Content logo img"
-                                        
-                                        />
-                                    </Box>
-                                    <Box sx={{ml:1,mr:1}} >
-                                        <Typography variant="body1" sx={{mr:"16px", mt:0.3, mb:0.3}} >
-                                            Video Content
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                
-
+                                <VideoLogo />
                             </Box>
                             <Box>
-                            <Grid item  display={'flex'}>
-                                <Box  >
-                                
-                                    <Image 
-                                        
-                                        src={require("../../assest/assigments.png")} 
-                                        height={"30.54px"}
-                                        width={'28.67px'}
-                                        alt="Regular Assignments logo img"   
-                                    
-                                        />
-                                </Box>
-                                <Box sx={{ml:1}}>
-                                    <Typography variant="body1"  mt={0.3} >
-                                        Assignments
-                                    </Typography>
-                                </Box>
-                                
-                            </Grid>
-
+                                <AssignmentsLogo /> 
                             </Box>
                             </Container>
                         }
 
                             {!isActive&&<Grid container  >
-                                <Grid item display={'flex'} >
-                                    <Box  >
-                                        <Image 
-                                            src={require("../../assest/classes.png")} 
-                                            className={classes.Icons}
-                                            alt="laptop logo img"
-                                            
-                                            />
-                                    </Box>
-                                    <Box sx={{ml:1,mr:1}}>
-                                        <Typography variant="body1" sx={{mt:0.3, mr:"16px", mb:0.3}}>
-                                            16 Classes
-                                        </Typography>
-                                    </Box>
-                                    
-                                </Grid>
-                                <Grid item  display={'flex'}>
-                                    <Box >
+                                <LaptopLogo />
+                                <VideoLogo />
+                                <AssignmentsLogo />      
                                 
-                                        <Image 
-                                            
-                                            src={require("../../assest/video.png")} 
-                                            className={classes.Icons}
-                                            alt="Video Content logo img"
-                                        
-                                        />
-                                    </Box>
-                                    <Box sx={{ml:1,mr:1}} >
-                                        <Typography variant="body1" sx={{mr:"16px", mt:0.3, mb:0.3}} >
-                                            Video Content
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid item  display={'flex'}>
-                                    <Box  >
-                                
-                                        <Image 
-                                            
-                                            src={require("../../assest/assigments.png")} 
-                                            height={"30.54px"}
-                                            width={'28.67px'}
-                                            alt="Regular Assignments logo img"   
-                                        
-                                            />
-                                    </Box>
-                                    <Box sx={{ml:1}}>
-                                        <Typography variant="body1"  mt={0.3} >
-                                            Assignments
-                                        </Typography>
-                                    </Box>
-                                </Grid>
                             </Grid>}
                         </Box>
                         {ClassesData.map((value, index)=>{
