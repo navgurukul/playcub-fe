@@ -38,24 +38,31 @@ const HomePage = ()=>{
 
     }
     const submit = async () =>{
-        if (checkEmail()){
+        var instance=email
+        if (!instance.value.includes('@') || !instance.value.includes('.')){
+          instance.error=true
+          instance.helperText='Enter correct mail id'
+        setEmail({...instance})
+
+        }
+        else{
             const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
                 method:"POST",
-                body:JSON.stringify({name,email}),
+                body:JSON.stringify({name,email:email.value}),
                 headers:{
                     "Content-Type":"application/json"
                 }
             })
             const data = await response.json()
             console.log(data)
+            setEmail({
+                value:'',
+                error:false,
+                helperText:''
+            })
+            setName('')
         }
         
-        setEmail({
-            value:'',
-            error:false,
-            helperText:''
-        })
-        setName('')
 
     }
       
