@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 import Link from '@mui/material/Link';
 import Image from 'next/image';
 import BookAFreeDemoClassButton from "./RegistrationStudent"
-
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 function ElevationScroll(props) {
   
   const { children, window } = props;
@@ -50,43 +50,42 @@ const Navbar =(props) => {
   
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
-    <Menu
+    <SwipeableDrawer
+
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right"
-      }}
+
       id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right"
-      }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+      <Box sx={{width:'500px',
+          bgcolor:'#FFF5CC'}}>
+      <Link href="/" underline="none" sx={{mt:2}}>
+            <Image  src={Logo}></Image>
+          </Link>
       
       <MenuItem> 
-          <Button sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
+          {/* <Button sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  > */}
             <Link href="/ourVision" underline="none" sx={{color:"#2E2E2E"}}>
               Our Vision
             </Link>
-          </Button>
+          {/* </Button> */}
         
       </MenuItem>
       <MenuItem>
         
-        <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  >
+        {/* <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  > */}
           <Link href="/ourCirriculaum" underline="none" sx={{color:"#2E2E2E"}}>
             Curriculum  
           </Link>
-        </Button>
+        {/* </Button> */}
       </MenuItem>
       <MenuItem >
         
         <BookAFreeDemoClassButton buttonstyle={{mt:0.4, p:"8px,16px"}}/>
       </MenuItem>
-    </Menu>
+      </Box>
+    </SwipeableDrawer>
     
   );
 
@@ -127,7 +126,7 @@ const Navbar =(props) => {
               color="inherit"
               
             >
-              <MoreIcon />
+              <Image   src={require("../assest/menu.png")}/>
             </IconButton>
           </Box>
         </Toolbar>
