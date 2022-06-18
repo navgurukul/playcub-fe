@@ -38,24 +38,20 @@ ElevationScroll.propTypes = {
 
 const Navbar =(props) => {
  
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null); 
+  const [isMobileMenuOpen, setisMobileMenuOpen] = React.useState(true); 
 
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
+    setisMobileMenuOpen(false);
   };
 
   const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
+    setisMobileMenuOpen(true);
   };
   
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <SwipeableDrawer
-
-      anchorEl={mobileMoreAnchorEl}
-
       id={mobileMenuId}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
@@ -71,9 +67,9 @@ const Navbar =(props) => {
               </Box>
               <Box   sx={{ml:20}}>
                 <Image 
-                  //  onClick={()=>{
-                  //   handleClose()
-                  //   }}
+                   onClick={()=>{
+                    handleMobileMenuClose()
+                    }}
                     
                       src={require("../assest/close.png")} 
                       sx={{height:"16px",width:"16px"}}
