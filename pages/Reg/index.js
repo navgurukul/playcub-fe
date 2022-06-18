@@ -11,9 +11,10 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../common/cardComponent";
 import Image from 'next/image'
 import TextField from "@mui/material/TextField";
-import FormGroup from '@mui/material/FormGroup';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
 import * as React from 'react';
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -102,7 +103,7 @@ const Reg =(props) =>{
         var register=registerdata
         if (register['age'].value<8 || register['age'].value>17){
           register['age'].error=true
-          register['age'].errorMsg='between 8 and 17'
+          register['age'].errorMsg='Please enter an age between 8 and 17'
         }else{
           register['age'].error=false
           register['age'].errorMsg=''
@@ -114,7 +115,7 @@ const Reg =(props) =>{
         var register=registerdata
         if (register['phonenumber'].value.length<9 || register['phonenumber'].value.length>13){
             register['phonenumber'].error=true
-            register['phonenumber'].errorMsg='Phone number should be 10 digit number.'
+            register['phonenumber'].errorMsg='Please enter a 10 digit number.'
           }else{
             register['phonenumber'].error=false
             register['phonenumber'].errorMsg=''
@@ -162,22 +163,7 @@ const Reg =(props) =>{
           fetchData()
         } 
         setRegisterData({...register})
-      }
-
-      const [state, setState] = React.useState({
-        Morning: false,
-        Afternoon: false,
-        Evening: false,
-      });
-      console.log(state)
-      const handleChange1 = (event) => {
-        setState({
-          ...state,
-          [event.target.name]: event.target.checked,
-        });
-      };
-    
-      const { Morning , Afternoon, Evening } = state;
+      }      
     return(
         <>
         <Container sx={{mt: 4,ml:0 }} maxWidth="lg" >
@@ -204,7 +190,7 @@ const Reg =(props) =>{
                   <Typography variant="h3">
                       Get started with Playcub
                   </Typography>
-                  <Typography variant="body1">
+                  <Typography variant="body1" mt={isActive&&2}>
                       Please share a request for a demo class and our team will reach out to you to connect you with a teacher
                   </Typography>
                   <Box
@@ -294,12 +280,17 @@ const Reg =(props) =>{
                       <Typography variant="subtitle1">
                           Preferred slot for the demo class
                       </Typography>
-                      <FormGroup>
-                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={registerdata.slot.value==1} onChange={()=>handleChange({target:{value:1}},'slot')} name="Morning"/>} label="Morning (9 AM to 12 PM)" />
-                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={registerdata.slot.value==2} onChange={()=>handleChange({target:{value:2}},"slot")} name="Afternoon"/>} label="Afternoon (12 PM to 1 PM)" />
-                          <FormControlLabel variant="body1" control={<Checkbox color='warning' checked={registerdata.slot.value==3} onChange={()=>handleChange({target:{value:3}},'slot')} name="Evening" />} label="Evening (3 PM to 6 PM)" />
-                      
-                      </FormGroup>
+                      <FormControl>
+                            <RadioGroup
+                                aria-labelledby="demo-controlled-radio-buttons-group"
+                                name="controlled-radio-buttons-group"
+                            >
+                                <Typography variant="body1"> <FormControlLabel   control={<Radio color='warning' checked={registerdata.slot.value==1} onChange={()=>handleChange({target:{value:1}},'slot')} name="Morning"/>} label="Morning (9 AM to 12 PM)" /></Typography>
+                                <Typography variant="body1"><FormControlLabel  control={<Radio color='warning' checked={registerdata.slot.value==2} onChange={()=>handleChange({target:{value:2}},"slot")} name="Afternoon"/>} label="Afternoon (12 PM to 1 PM)" /></Typography>
+                                <Typography variant="body1"><FormControlLabel control={<Radio color='warning' checked={registerdata.slot.value==3} onChange={()=>handleChange({target:{value:3}},'slot')} name="Evening" />} label="Evening (3 PM to 6 PM)" /></Typography>
+                            </RadioGroup>
+                        </FormControl>
+
                       <Box
                           sx={{
                               display: "grid",
@@ -316,12 +307,10 @@ const Reg =(props) =>{
                       </Box>
 
                   </Box>
-              </Box>
-
-                  
+              </Box>   
               </Grid>
 
-              <Grid item xs={12} sm={6} md={6} >
+              {!isActive&&<Grid item xs={12} sm={6} md={6} >
                   <CardStyle style={{mb:5,maxWidth:"500px"}}>
                       <CardContent >
                           
@@ -380,7 +369,7 @@ const Reg =(props) =>{
                   </CardStyle>
               
                   
-              </Grid>
+              </Grid>}
           </Grid>
         </Container>
         </>

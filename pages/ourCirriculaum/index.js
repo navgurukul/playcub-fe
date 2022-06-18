@@ -27,7 +27,7 @@ const OurCirriculum = () =>{
         
         <>
             <Container maxWidth='lg'  sx={{mt:13,mb:2}}  >
-                <Typography variant="h4" align="center">
+                <Typography variant="h4" align={!isActive?"center":"left"}>
                     Curriculum Overview
                 </Typography>
                 <Box >

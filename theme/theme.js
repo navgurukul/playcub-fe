@@ -48,7 +48,7 @@ theme = createTheme(theme, {
     h1: {
       fontWeight: 700,
       fontSize: "96px",
-      lineHeight: 1.3,
+      lineHeight:"130%",
       fontFamily: "Noto Sans",
       [theme.breakpoints.down("sm")]: {
         fontSize: "4.875rem",
@@ -57,7 +57,7 @@ theme = createTheme(theme, {
 
     h2: {
       fontSize: "72px",
-      lineHeight: "93.6px",
+      lineHeight:"130%",
       fontFamily: "Noto Sans",
       letterSpacing:"-0.5px",
       [theme.breakpoints.down("sm")]: {
@@ -71,10 +71,11 @@ theme = createTheme(theme, {
       fontSize: "56px",
       [theme.breakpoints.down("sm")]: {
         fontSize: "2.75rem",
+        
       },
       fontWeight: 700,
       fontFamily: "Noto Sans",
-      lineHeight: "72.8px",
+      lineHeight:"130%"
     },
 
 
@@ -85,7 +86,7 @@ theme = createTheme(theme, {
         fontSize: "	2rem",
       },
       fontFamily: "Noto Sans",
-      lineHeight: "54.6px",
+      lineHeight:"130%",
     },
 
 
@@ -94,9 +95,10 @@ theme = createTheme(theme, {
       fontWeight: 700,
       fontSize: "32px",
       [theme.breakpoints.down("sm")]: {
-        fontSize: "	1.5rem",
+        fontSize: "24px",
+       
       },
-      lineHeight: "48px",
+      lineHeight: "150%",
       fontFamily: "Noto Sans",
     },
 
@@ -105,7 +107,7 @@ theme = createTheme(theme, {
       [theme.breakpoints.down("sm")]: {
         fontSize: "	1.125rem",
       },
-      lineHeight: "36px",
+      lineHeight: "150%",
       fontWeight: 700,
       fontFamily: "Noto Sans",
     },
@@ -116,9 +118,9 @@ theme = createTheme(theme, {
       fontFamily: "Noto Sans",
       color:"#6D6D6D",
       [theme.breakpoints.down("sm")]: {
-        fontSize: "0.875rem",
+        fontSize: "24px",
       },
-      lineHeight: "48px",
+      lineHeight: "150%",
       fontWeight: 400,
     },
 
@@ -131,7 +133,7 @@ theme = createTheme(theme, {
         fontSize: "0.75rem",
       },
       fontWeight: 700,
-      lineHeight: "27px",
+      lineHeight: "150%",
     },
 
 
@@ -142,13 +144,13 @@ theme = createTheme(theme, {
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
       },
-      lineHeight: "27px",
+      lineHeight: "150%",
     },
 
     overline: {
       fontFamily: "Noto Sans",
       fontSize: "12px",
-      lineHeight: '18px',
+      lineHeight: "150%",
       fontWeight:400,
       color:'#666699',
       [theme.breakpoints.down("sm")]: {
@@ -164,7 +166,7 @@ theme = createTheme(theme, {
       [theme.breakpoints.down("sm")]: {
         fontSize: "0.875rem",
       },
-      lineHeight: "27px",
+      lineHeight: "150%",
       fontWeight: 700,
       textTransform: "none",
     },    

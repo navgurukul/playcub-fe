@@ -68,7 +68,7 @@ const HomePage = ()=>{
       
     return (
         <>
-            <Container  align="center" sx={{mt:13}}>
+            <Container  align={!isActive&&"center"} sx={{mt:13}}>
                 <Typography variant="h3" mb="16px" >
                     Interactive Coding Classes for Kids
                 </Typography>
@@ -96,7 +96,7 @@ const HomePage = ()=>{
                                             
                                 />
                                 <Typography variant="body1">
-                                    Cirriculum designed by experts 
+                                    Curriculum designed by experts 
                                 </Typography>
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>

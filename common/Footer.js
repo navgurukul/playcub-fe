@@ -8,11 +8,11 @@ const Footer =()=>{
     return(
         <>
         <BottomNavigation
-        sx={{ bgcolor:"#2E2E2E",position: 'fixed',justifyContent:'space-around',alignItems:'center',height:90, bottom: 0, left: 0, right: 0 }} elevation={3}
+        sx={{ bgcolor:"#2E2E2E",position:'relative',justifyContent:'space-around',alignItems:'center',height:90, bottom: 0, left: 0, right: 0 }} elevation={3}
         showLabels
         >        
             <Link href="/" underline="none" sx={{mt:2}}>
-                <Image src={Logo} height={100} width={100}></Image>
+                <Image src={Logo} pt="16px" pb="16px"></Image>
             </Link>
             <Typography variant="subtitle1" color={"white"} align="right">
                 Made with ❤️ for our students

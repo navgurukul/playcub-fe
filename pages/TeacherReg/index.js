@@ -30,7 +30,7 @@ const TeacherReg =() =>{
         <Container  maxWidth="sm"   >
             
             <Box sx={{mt:5}} >
-                <Box display="flex" justifyContent="flex-end"  sx={{mr:6,mb:2}}>
+                <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive&&6,mb:2}}>
                     
                     <Image 
                         // onClick={}
@@ -42,7 +42,7 @@ const TeacherReg =() =>{
                         
                     />
                 </Box>
-                <Box sx={{ml:5,mr:5}}>
+                <Box sx={{ml:!isActive&&5,mr:!isActive&&5}}>
                     <Typography variant="h4" >
                         Join Our Teaching Pool
                     </Typography>

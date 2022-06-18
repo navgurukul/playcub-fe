@@ -20,7 +20,7 @@ const ourVision = ()=>{
     /* eslint-disable */
     return(
         <>
-        <Container  maxWidth="lg" sx={{mt:13}} >
+        <Container  maxWidth="lg" sx={{mt:13,mb:!isActive&&35.2}} >
             <Grid container  spacing={!isActive?12:2} >
                 {isActive&&<Grid  item xs={12} sm={6} md={6} >   
                         <Image 
@@ -35,7 +35,7 @@ const ourVision = ()=>{
                                             
                     </Grid>}
                 <Grid item xs={12} sm={6} md={6} mb={isActive&&16} >
-                    <Typography variant="h3" sx ={!isActive?{mb:3}:{mb:2}} textAlign={isActive&&"center"} >
+                    <Typography variant="h3" sx ={!isActive?{mb:3}:{mb:2}}  >
                     From Cubs to Fearless Developers
 
                     </Typography>
