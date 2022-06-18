@@ -38,7 +38,7 @@ ElevationScroll.propTypes = {
 
 const Navbar =(props) => {
  
-  const [isMobileMenuOpen, setisMobileMenuOpen] = React.useState(true); 
+  const [isMobileMenuOpen, setisMobileMenuOpen] = React.useState(false); 
 
 
   const handleMobileMenuClose = () => {
