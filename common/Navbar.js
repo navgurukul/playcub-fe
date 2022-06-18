@@ -15,6 +15,7 @@ import Link from '@mui/material/Link';
 import Image from 'next/image';
 import BookAFreeDemoClassButton from "./RegistrationStudent"
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import { Container } from '@mui/system';
 function ElevationScroll(props) {
   
   const { children, window } = props;
@@ -36,6 +37,7 @@ ElevationScroll.propTypes = {
 
 
 const Navbar =(props) => {
+ 
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null); 
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -58,33 +60,61 @@ const Navbar =(props) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Box sx={{width:'500px',
-          bgcolor:'#FFF5CC'}}>
-      <Link href="/" underline="none" sx={{mt:2}}>
-            <Image  src={Logo}></Image>
-          </Link>
-      
-      <MenuItem> 
-          {/* <Button sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  > */}
-            <Link href="/ourVision" underline="none" sx={{color:"#2E2E2E"}}>
-              Our Vision
+      <Container sx={{height:'100%',width:'420px',backgroundColor:'#FFF5CC'}}>
+        <Box >
+            
+            <Box sx={{mt:3,display:"flex"}}>
+              <Box  >
+                <Link href="/" underline="none" sx={{ml:2}}>
+                  <Image  src={Logo}></Image>
+                </Link>
+              </Box>
+              <Box   sx={{ml:20}}>
+                <Image 
+                  //  onClick={()=>{
+                  //   handleClose()
+                  //   }}
+                    
+                      src={require("../assest/close.png")} 
+                      sx={{height:"16px",width:"16px"}}
+                      alt="close icon"        
+                      
+                  />
+              </Box>
+            </Box>
+        
+        <MenuItem> 
+            <Button sx={{background:'#FFF5CC'}}   > 
+              <Link href="/ourVision" underline="none" sx={{color:"#2E2E2E"}}>
+                Our Vision
+              </Link>
+            </Button>
+          
+        </MenuItem>
+        <MenuItem>
+          
+          <Button  sx={{background:'#FFF5CC' }} >
+            <Link href="/ourCirriculaum" underline="none" sx={{color:"#2E2E2E"}}>
+              Curriculum  
             </Link>
-          {/* </Button> */}
-        
-      </MenuItem>
-      <MenuItem>
-        
-        {/* <Button  sx={{background:'#FFF',mt:0.4,mr:3, p:"8px,16px"}} height="40px"  > */}
-          <Link href="/ourCirriculaum" underline="none" sx={{color:"#2E2E2E"}}>
-            Curriculum  
-          </Link>
-        {/* </Button> */}
-      </MenuItem>
-      <MenuItem >
-        
-        <BookAFreeDemoClassButton buttonstyle={{mt:0.4, p:"8px,16px"}}/>
-      </MenuItem>
-      </Box>
+          </Button>
+        </MenuItem>
+        <MenuItem >
+          <Box
+              sx={{
+                  display: "grid",
+                  // gap: 2,
+                  mt:1,
+                  width:"86%",
+                  mb:2
+                      
+              }} 
+          >
+            <BookAFreeDemoClassButton buttonstyle={{ p:"8px,16px"}}/>
+          </Box>
+        </MenuItem>
+        </Box>
+      </Container>
     </SwipeableDrawer>
     
   );
