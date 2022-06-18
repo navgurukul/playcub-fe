@@ -91,7 +91,7 @@ const Reg =(props) =>{
         var register=registerdata
         if (!register['Email'].value.includes('@') || !register['Email'].value.includes('.')){
           register['Email'].error=true
-          register['Email'].errorMsg='Enter correct mail id'
+          register['Email'].errorMsg='Please enter correct mail id'
         }else{
           register['Email'].error=false
           register['Email'].errorMsg=''
@@ -113,7 +113,7 @@ const Reg =(props) =>{
       
       const checkPhonenumber=()=>{
         var register=registerdata
-        if (register['phonenumber'].value.length<9 || register['phonenumber'].value.length>13){
+        if (register['phonenumber'].value.length<10 || register['phonenumber'].value.length>13){
             register['phonenumber'].error=true
             register['phonenumber'].errorMsg='Please enter a 10 digit number.'
           }else{
@@ -168,7 +168,8 @@ const Reg =(props) =>{
         <>
         <Container sx={{mt: 4,ml:0 }} maxWidth="lg" >
 
-          <Box sx={{mt:!isActive?5:2}} >
+      
+          <Box sx={{mt:!isActive?5:2,}} >
             <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive?1:2,mb:!isActive?5:1}}>
                 
                 <Image 

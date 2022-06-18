@@ -26,6 +26,9 @@ const HomePage = ()=>{
     const[name,setName]=useState('')
     const checkEmail=()=>{
         var instance=email
+        if (instance.value==''){
+            return false
+        }
         if (!instance.value.includes('@') || !instance.value.includes('.')){
           instance.error=true
           instance.helperText='Enter correct mail id'
@@ -199,6 +202,7 @@ const HomePage = ()=>{
                 <TextField fullWidth label="Enter your email"
                  onBlur={()=>checkEmail()}
                  margin="normal"
+                 color="warning"
                  value={email.value}
                  helperText={email.helperText}
                  error={email.error}
@@ -208,7 +212,7 @@ const HomePage = ()=>{
                  InputProps={{
                     endAdornment: (
                         <Box sx={{position: 'relative'}} >
-                        <Button onClick={submit}  fullwidth={true} sx={{width:"150px",  backgroundColor:'#FFCC00', p:3,}}  >
+                        <Button onClick={submit}   fullwidth={true} sx={{width:"150px",  backgroundColor:'#FFCC00', p:3,}}  >
                             Subscribe
                         </Button>
                         </Box>                      

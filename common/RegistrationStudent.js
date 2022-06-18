@@ -32,6 +32,9 @@ const BookAFreeDemoClassButton = (props)=>{
       ml:isActive&&0,
       maxWidth: "1140px",  // Set your width here
     },
+    ":after":{
+      display:"inline"
+    }
   },
 }}
   open={open}

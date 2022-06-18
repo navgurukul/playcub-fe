@@ -52,7 +52,7 @@ export default function ScrollDialog() {
           aria-labelledby="scroll-dialog-title"
           aria-describedby="scroll-dialog-description"
         >
-            <Form/>
+            <Form handleClose={handleClose}/>
         </Dialog>
       </div>
     );
