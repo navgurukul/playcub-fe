@@ -8,7 +8,7 @@ import {
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ClassesCard from "./ClassesCard";
-import Styles from "../../theme/styles";
+import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../common/RegistrationStudent"

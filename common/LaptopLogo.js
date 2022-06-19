@@ -4,7 +4,7 @@ import {
     Box,
   } from "@mui/material";
 import Image from 'next/image'
-import Styles from "../theme/styles";
+import Styles from "../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../theme/constant";
 

@@ -15,7 +15,7 @@ import Image from 'next/image'
 import BookAFreeDemoClassButton from "../../common/RegistrationStudent";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../theme/styles";
+import Styles from "../../styles/styles";
 import LaptopLogo from "../../common/LaptopLogo";
 import VideoLogo from "../../common/VideoLogo";
 import AssignmentsLogo from "../../common/AssignmentsLogo";

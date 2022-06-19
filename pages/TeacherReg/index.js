@@ -14,7 +14,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../theme/styles";
+import Styles from "../../styles/styles";
 
 const TeacherReg =(props) =>{
     const classes = Styles();

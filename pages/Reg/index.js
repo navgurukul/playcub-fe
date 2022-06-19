@@ -19,7 +19,7 @@ import { useState } from "react";
 import * as React from 'react';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../theme/styles";
+import Styles from "../../styles/styles";
 
 const Reg =(props) =>{
     const classes = Styles();

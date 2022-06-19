@@ -10,7 +10,7 @@ import BookAFreeDemoClassButton from '../../common/RegistrationStudent';
 import useMediaQuery from "@mui/material/useMediaQuery";
 /* eslint-disable */
 import { breakpoints } from "../../theme/constant";
-import Styles from "../../theme/styles";
+import Styles from "../../styles/styles";
 
 
 const ourVision = ()=>{
