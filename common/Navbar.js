@@ -122,8 +122,8 @@ const Navbar =(props) => {
       <AppBar sx={{ backgroundColor:"white",height:80,width:"100%"}}
        >
         <Toolbar>
-          <Link href="/" underline="none" sx={{mt:2}}>
-            <Image  src={Logo}></Image>
+          <Link href="/" underline="none" sx={{mt:2}} aria-label="playcub logo">
+            <Image  src={Logo} sx={{width:'152px',height:'48px'}}  alt='playcub logo'></Image>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
