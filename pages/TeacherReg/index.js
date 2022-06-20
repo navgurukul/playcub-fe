@@ -179,14 +179,14 @@ const TeacherReg =(props) =>{
             <Box sx={{mt:5}} >
                 <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive&&6,mb:2}}>
                     
-                    <Image 
+                   <Image 
                      onClick={()=>{
                       props.handleClose()
                       }}
                         src={require("../../assest/close.png")} 
-                        className={classes.Icons}
+                        className={classes.closeIcon}
                         alt="close image"
-                    
+                        
                         
                         
                     />
@@ -195,7 +195,7 @@ const TeacherReg =(props) =>{
                     <Typography variant="h4" >
                         Join Our Teaching Pool
                     </Typography>
-                    <Typography variant="body1">
+                    <Typography variant="body1" mt={2}>
                     We are always looking for skilled and passionate teachers. Please express your interest here. In case of any issues applying here, you can also write to us at 
         
                     </Typography>
@@ -210,10 +210,10 @@ const TeacherReg =(props) =>{
                         component="form"
                         sx={{
                             display: "grid",
-                            gap: 2,
+                            gap: 5,
                             width: "100%",
                             mt:4,
-                            mb:4,
+                            mb:5,
                         }}
                         
                     >
@@ -319,6 +319,38 @@ const TeacherReg =(props) =>{
                             </RadioGroup>
                         </FormControl>
                     </Box>
+                    {value.hasTeachingExperience.value==true&&
+                      <Box
+                          component="form"
+                          sx={{
+                              display: "grid",
+                              gap: 2,
+                              width: "100%",
+                              mt:4,
+                              mb:4,
+                          }}
+                          
+                      >
+                          <Typography variant="subtitle1">
+                              If yes, what have you taught previously?
+                          </Typography>
+                          <TextField
+                              label="Your Answer"
+                              
+                              type="text"
+                              name="yourAnswer"    
+                              id="yourAnswer"
+                              variant="outlined"
+                              color="warning"
+                              onChange={(e)=>handleChange(e,'teachingExperience')}
+                              
+                              value={value.teachingExperience.value} 
+                              helperText={value.teachingExperience.helperText}
+                              error={value.teachingExperience.error}
+                              // onChange={} 
+                          />
+                      </Box>
+                    }
                     <Box
                         component="form"
                         sx={{
@@ -326,37 +358,7 @@ const TeacherReg =(props) =>{
                             gap: 2,
                             width: "100%",
                             mt:4,
-                            mb:4,
-                        }}
-                        
-                    >
-                        <Typography variant="subtitle1">
-                            If yes, what have you taught previously?
-                        </Typography>
-                        <TextField
-                            label="Your Answer"
-                            
-                            type="text"
-                            name="yourAnswer"    
-                            id="yourAnswer"
-                            variant="outlined"
-                            color="warning"
-                            onChange={(e)=>handleChange(e,'teachingExperience')}
-                            
-                            value={value.teachingExperience.value} 
-                            helperText={value.teachingExperience.helperText}
-                            error={value.teachingExperience.error}
-                            // onChange={} 
-                        />
-                    </Box>
-                    <Box
-                        component="form"
-                        sx={{
-                            display: "grid",
-                            gap: 2,
-                            width: "100%",
-                            mt:4,
-                            mb:4,
+                            mb:5,
                         }}
                         
                     >

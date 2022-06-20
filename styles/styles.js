@@ -10,8 +10,22 @@ const Styles = makeStyles((theme) => ({
     visionImg:{
         height:"507px",
         width:"544px",
+    },
+    closeIcon:{
+        height:'32px',
+        width:'32px',
+        '&:hover': {
+            background: "#FFF5CC",
+          }
+    },
+    closeIcon1:{
+        height:'16px',
+        width:'16px',
+        '&:hover': {
+            // background: "#FFCC00",
+            background: "#FFF5CC",
+          }
     }
-    
     
     
     

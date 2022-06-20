@@ -7,8 +7,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import MoreIcon from "@mui/icons-material/MoreVert";
 import Logo from "../assest/Playcub 1.svg";
 import Button from "@mui/material/Button";
 import Link from '@mui/material/Link';
@@ -16,7 +14,10 @@ import Image from 'next/image';
 import BookAFreeDemoClassButton from "./RegistrationStudent"
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Container } from '@mui/system';
+import Styles from "../styles/styles";
+
 function ElevationScroll(props) {
+
   
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -37,6 +38,7 @@ ElevationScroll.propTypes = {
 
 
 const Navbar =(props) => {
+  const classes = Styles();
  
   const [isMobileMenuOpen, setisMobileMenuOpen] = React.useState(false); 
 
@@ -72,7 +74,8 @@ const Navbar =(props) => {
                     }}
                     
                       src={require("../assest/close.png")} 
-                      sx={{height:"16px",width:"16px"}}
+                      // sx={{height:"16px",width:"16px"}}
+                      className={classes.closeIcon1}
                       alt="close icon"        
                       
                   />

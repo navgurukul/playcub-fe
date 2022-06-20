@@ -177,21 +177,18 @@ const Reg =(props) =>{
                       props.handleClose()
                       }}
                     src={require("../../assest/close.png")} 
-                    className={classes.Icons}
-                    alt="close image"
-                
-                    
-                    
+                    className={classes.closeIcon}
+                    alt="close image"                
                 />
             </Box>
           </Box>
               
-          <Grid container spacing={isActive?1:8}>
+          <Grid container spacing={isActive?1:5}>
               <Grid item xs={12} sm={6} md={6}  >
                   <Typography variant="h3">
                       Get started with Playcub
                   </Typography>
-                  <Typography variant="body1" mt={isActive&&2}>
+                  <Typography variant="body1" mt={2}>
                       Please share a request for a demo class and our team will reach out to you to connect you with a teacher
                   </Typography>
                   <Box

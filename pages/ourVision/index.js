@@ -20,7 +20,7 @@ const ourVision = ()=>{
     /* eslint-disable */
     return(
         <>
-        <Container  maxWidth="lg" sx={{mt:13,mb:!isActive&&35.2}} >
+        <Container  maxWidth="lg" sx={{mt:13,mb:!isActive&&'15.8%'}} >
             <Grid container  spacing={!isActive?12:2} >
                 {isActive&&<Grid  item xs={12} sm={6} md={6} >   
                         <Image 

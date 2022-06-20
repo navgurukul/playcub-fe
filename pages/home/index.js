@@ -197,30 +197,100 @@ const HomePage = ()=>{
                         Get regular updates about PlayCub’s initiatives
                     </Typography> 
                 </Box> 
-                <Container maxWidth="sm"  >          
-               
-                <TextField fullWidth label="Enter your email"
-                 onBlur={()=>checkEmail()}
-                 margin="normal"
-                 color="warning"
-                 value={email.value}
-                 helperText={email.helperText}
-                 error={email.error}
-                 onChange={e=>setEmail({...email,value:e.target.value})}
-                 name="email"
-                 autoComplete="email" 
-                 InputProps={{
-                    endAdornment: (
-                        <Box sx={{position: 'relative'}} >
-                        <Button onClick={submit}   fullwidth={true} sx={{width:"150px",  backgroundColor:'#FFCC00', p:3,}}  >
+                <Container maxWidth="sm"  >  
+                <Box display="flex" p={1} >
+                    <Box sx={{mb:!isActive?9:6}}>
+                        <TextField
+                                label="Enter your email"
+                                type="text"
+                                name="email"    
+                                id="email"
+                                variant="outlined"
+                                color="warning"
+                                onBlur={()=>checkEmail()}
+                                value={email.value}
+                                helperText={email.helperText}
+                                error={email.error}
+                                onChange={e=>setEmail({...email,value:e.target.value})}
+                                sx={{width:!isActive?"430px":"150%",backgroundColor:"white"}}
+                                // onChange={} 
+                            />
+                    </Box>
+                    <Box  flexGrow={0} >
+                        <Button onClick={submit}    sx={{width:!isActive?"150px":"120%", height:!isActive?"45%":"51%",padding:' 8px 16px 8px 16px', backgroundColor:'#FFCC00',}}  >
                             Subscribe
                         </Button>
-                        </Box>                      
-                    ),
+                    </Box>
+                    
+                </Box>
+
+
+                {/* <Box display={'flex'} sx={{mb:!isActive?9:6}}
+                >       
+                    <Box
+                    component="form"
+                    sx={{
+                        display: "grid",
+                        gap: 5,
+                        width: "430px",
+                        height:10,
+                        backgroundColor:"white",
+                       
+                        mb:5,
                     }}
-                    sx={{mb:!isActive?20:17,backgroundColor:"white"}}
-                   >
-                   </TextField>
+                     >
+                   
+                        <TextField
+                            label="Enter your email"
+                            type="text"
+                            name="email"    
+                            id="email"
+                            variant="outlined"
+                            color="warning"
+                            onBlur={()=>checkEmail()}
+                            value={email.value}
+                            helperText={email.helperText}
+                            error={email.error}
+                            onChange={e=>setEmail({...email,value:e.target.value})}
+                            // sx={{width:"430px",backgroundColor:"white"}}
+                            // onChange={} 
+                        /> */}
+                        {/* <TextField fullWidth label="Enter your email"
+                        onBlur={()=>checkEmail()}
+                        margin="normal"
+                        color="warning"
+                        value={email.value}
+                        helperText={email.helperText}
+                        error={email.error}
+                        onChange={e=>setEmail({...email,value:e.target.value})}
+                        sx={{width:"430px",height:"48px",backgroundColor:"white"}}
+                        name="email"
+                        autoComplete="email" 
+                        //  InputProps={{
+                        //     endAdornment: (
+                        //         <Box sx={{position: 'relative'}} >
+                        //         <Button onClick={submit}   fullwidth={true} sx={{width:"150px",  backgroundColor:'#FFCC00', p:3,}}  >
+                        //             Subscribe
+                        //         </Button>
+                        //         </Box>                      
+                        //     ),
+                        //     }}
+                        
+                            // sx={{mb:!isActive?9:6}}
+                        >
+                        </TextField> */}
+                    {/* </Box>
+                    <Box
+                        // sx={{
+                        //     display: "grid",                                                                                                           
+                        // }}
+                        // width={isActive?"100%":"238px"}
+                         >
+                        <Button onClick={submit}    sx={{width:"150px", height:"48px",padding:' 8px 16px 8px 16px', backgroundColor:'#FFCC00',}}  >
+                            Subscribe
+                        </Button>
+                    </Box>
+                </Box>  */}
                 
                 </Container>  
                 
