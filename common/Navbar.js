@@ -152,7 +152,7 @@ const Navbar =(props) => {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
+             
               
             >
               <Image   src={require("../assest/menu.png")}/>

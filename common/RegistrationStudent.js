@@ -27,8 +27,8 @@ const BookAFreeDemoClassButton = (props)=>{
  sx={{
   "& .MuiDialog-container": {
     "& .MuiPaper-root": {
-      width:isActive&&"100%",
-      // padding:!isActive&&2,
+      width: "100%",
+      padding:!isActive&&2,
       ml:isActive&&0,
       maxWidth: "1140px",  // Set your width here
     },
