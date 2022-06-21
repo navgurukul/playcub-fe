@@ -168,7 +168,7 @@ const HomePage = ()=>{
             <Container sx={{mt:!isActive?12:6,mb:!isActive?12:6}} >
                     <Grid container spacing={!isActive?8:6}>
                         <Grid item xs={12} sm={6} md={6}  >                                        
-                            <Typography variant="h5" textAlign={isActive&&"center"} >
+                            <Typography variant="h5"  >
                             Are you a Professional who wants to share their web dev expertise?
                             </Typography>
                            
