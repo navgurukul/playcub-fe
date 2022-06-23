@@ -58,7 +58,9 @@ const Navbar =(props) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Container sx={{height:'100%',width:'420px',backgroundColor:'#FFF5CC'}}>
+      <Container sx={{height:'100%',
+      // width:'420px',
+      backgroundColor:'#FFF5CC'}}>
         <Box >
             
             <Box sx={{mt:3,display:"flex"}}>
