@@ -59,7 +59,7 @@ const Navbar =(props) => {
       onClose={handleMobileMenuClose}
     >
       <Container sx={{height:'100%',
-      // width:'420px',
+      width:'420px',
       backgroundColor:'#FFF5CC'}}>
         <Box >
             
