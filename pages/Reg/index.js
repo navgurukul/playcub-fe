@@ -6,6 +6,7 @@ import {
     Grid,
     Box,
   } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../common/cardComponent";
@@ -34,6 +35,8 @@ const Reg =(props) =>{
       })
       const fetchData=async()=>{
         try{
+          setRegisterData({...registerdata,fetching:{...registerdata.fetching,success:false,value:true}})
+
           const serverStatus= await fetch('https://playcub.deta.dev/ping')
           let slot = registerdata['slot'].value
           console.log(serverStatus,"status")
@@ -299,9 +302,18 @@ const Reg =(props) =>{
                               
                           }} 
                       >
-                      <Button onClick={()=>onSubmit()} >
-                          Get Your Free Demo Class
-                      </Button>
+                        
+                        {
+                          registerdata.fetching.value
+                          ?<Box sx={{display:'flex',justifyContent:'center'}}>
+                            <CircularProgress sx={{color:"#FFCC00"}} />
+                          </Box>
+                          :
+                          <Button onClick={()=>onSubmit()} >
+                            Get Your Free Demo Class
+                          </Button>
+                        }
+                      
                       </Box>
 
                   </Box>
