@@ -13,7 +13,7 @@ import Link from '@mui/material/Link';
 import Image from 'next/image';
 import BookAFreeDemoClassButton from "./RegistrationStudent"
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import { Container } from '@mui/system';
+import { Container } from '@mui/material';
 import Styles from "../styles/styles";
 
 function ElevationScroll(props) {
