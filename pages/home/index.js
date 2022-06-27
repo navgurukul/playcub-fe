@@ -71,13 +71,15 @@ const HomePage = ()=>{
       
     return (
         <>
-            <Container  align={!isActive&&"center"} sx={{mt:13}}>
+            <Container  align={!isActive&&"center"}  sx={{mt:13}}>
+                <Box ml={isActive&&2}>
                 <Typography variant="h3" mb="16px" >
                     Interactive Coding Classes for Kids
                 </Typography>
-                <Typography variant="subtitle" color="#6D6D6D">
+                <Typography variant="subtitle" color="#6D6D6D" >
                     Teach your kids how to build websites with fun
                 </Typography>
+                </Box>
                 <Container sx={ isActive?{mt: 6 }:{ mt: 6}} >
                     <Grid container spacing={isActive?5:4}>
                         <Grid item xs={12} sm={6} md={6}  >
@@ -198,8 +200,8 @@ const HomePage = ()=>{
                     </Typography> 
                 </Box> 
                 <Container maxWidth="sm"  >  
-                <Box display="flex" p={1} >
-                    <Box sx={{mb:!isActive?9:6}}>
+                <Box display={!isActive?"flex":"grid"} p={1} >
+                    <Box sx={{mb:!isActive?9:3}}>
                         <TextField
                                 label="Enter your email"
                                 type="text"
@@ -212,12 +214,12 @@ const HomePage = ()=>{
                                 helperText={email.helperText}
                                 error={email.error}
                                 onChange={e=>setEmail({...email,value:e.target.value})}
-                                sx={{width:!isActive?"430px":"150%",backgroundColor:"white"}}
+                                sx={{width:!isActive?"430px":"100%",backgroundColor:"white"}}
                                 // onChange={} 
                             />
                     </Box>
-                    <Box  flexGrow={0} >
-                        <Button onClick={submit}    sx={{width:!isActive?"150px":"120%", height:!isActive?"45%":"51%",padding:' 8px 16px 8px 16px', backgroundColor:'#FFCC00',}}  >
+                    <Box  flexGrow={0} mb={isActive&&6} >
+                        <Button onClick={submit}    sx={{width:!isActive?"150px":"100%", height:!isActive?"45%":"150%",padding:' 8px 16px 8px 16px', backgroundColor:'#FFCC00',}}  >
                             Subscribe
                         </Button>
                     </Box>
