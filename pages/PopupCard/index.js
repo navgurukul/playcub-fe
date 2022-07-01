@@ -12,7 +12,7 @@ import {
   import CardMedia from '@mui/material/CardMedia';
   import Image from 'next/image'
 
-const PopupCard = ()=>{
+const PopupCard = (props)=>{
     return(
         <>
         <Container sx={{mt:25,}} maxWidth="sm" >
@@ -32,15 +32,16 @@ const PopupCard = ()=>{
                     />  
                 </Box>
                 <CardContent align="center">
-                    <Typography variant="body1">
-                    Thank you for interest in the free demo class 
-                    </Typography>
-                    <Typography variant="body1">
-                     with Playcub. We will reach you within 24 hours.
-                    </Typography>
+                    
+                     {
+                         props.children
+                     }
+                     
+                    
                 </CardContent>
                 <Box sx={{mt:3,mb:3}} textAlign={'center'} >
                     <Button 
+                        onClick={()=>props.handleClose()}
                         textAlign={'center'}  
                         sx={{ backgroundColor: 'white',border:'none',width: '176px',
                         height: '48px', }} >

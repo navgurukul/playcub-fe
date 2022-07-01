@@ -12,11 +12,14 @@ import Styles from "../../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import BookAFreeDemoClassButton from "../../common/RegistrationStudent"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DailogBox from '../../common/RegistrationTeacher'
-
+import CircularProgress from '@mui/material/CircularProgress';
+import PopupCardWithModel from '../../common/Popup';
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
+    const [successMessage,setSuccessMessage]=useState(false)
+    const [loading,setLoading]=useState(false)
     const classes = Styles();
     const[email,setEmail]=useState({
         value:'',
@@ -24,6 +27,9 @@ const HomePage = ()=>{
         helperText:''
     })
     const[name,setName]=useState('')
+    useEffect(()=>{
+
+    },[successMessage])
     const checkEmail=()=>{
         var instance=email
         if (instance.value==''){
@@ -49,21 +55,24 @@ const HomePage = ()=>{
 
         }
         else{
+        setLoading(true)
+
             const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
                 method:"POST",
                 body:JSON.stringify({name,email:email.value}),
                 headers:{
                     "Content-Type":"application/json"
                 }
+            }).then(()=>{
+                setLoading(false)
+                setSuccessMessage(true)
+                setEmail({
+                    value:'',
+                    error:false,
+                    helperText:''
+                })
+                setName('')
             })
-            const data = await response.json()
-            console.log(data)
-            setEmail({
-                value:'',
-                error:false,
-                helperText:''
-            })
-            setName('')
         }
         
 
@@ -71,6 +80,14 @@ const HomePage = ()=>{
       
     return (
         <>
+            <PopupCardWithModel
+                open={successMessage}
+                close={()=>setSuccessMessage(false)}
+                >
+                    <Typography variant="body1" color="green">
+                    You have been subscribed successfully.
+                </Typography>
+            </PopupCardWithModel>
             <Container  align={!isActive&&"center"}  sx={{mt:13}}>
                 <Box ml={isActive&&2}>
                 <Typography variant="h3" mb="16px" >
@@ -219,9 +236,18 @@ const HomePage = ()=>{
                             />
                     </Box>
                     <Box  flexGrow={0} mb={isActive&&6} >
-                        <Button onClick={submit}    sx={{width:!isActive?"150px":"100%", height:!isActive?"45%":"150%",padding:' 8px 16px 8px 16px', backgroundColor:'#FFCC00',}}  >
-                            Subscribe
-                        </Button>
+                        
+                    {
+                         loading
+                          ?<Box sx={{display:'flex',justifyContent:'center'}}>
+                            <CircularProgress sx={{color:"#FFCC00"}} />
+                          </Box>
+                          :
+                        
+                            <Button onClick={()=>submit()}    sx={{width:!isActive?"150px":"100%", height:!isActive?"45%":"150%",padding:' 8px 16px 8px 16px', backgroundColor:'#FFCC00',}}  >
+                                Subscribe
+                            </Button>
+                    }
                     </Box>
                     
                 </Box>

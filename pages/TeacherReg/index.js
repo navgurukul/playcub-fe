@@ -15,6 +15,7 @@ import FormControl from '@mui/material/FormControl';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
 import Styles from "../../styles/styles";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const TeacherReg =(props) =>{
     const classes = Styles();
@@ -63,14 +64,14 @@ const TeacherReg =(props) =>{
             temp['linkedIn'].error=true
             temp['linkedIn'].helperText='Please enter proper linked In id'
           }
-          if (error){
-              setValue({...temp})
-
-          }else{
-              fetchData()
+          if (!error){
+            temp.fetching.value=true
+            fetchData()
           }
+          setValue({...temp})
         }
       const fetchData=async()=>{
+
         try{
           const serverStatus= await fetch('https://playcub.deta.dev/ping')
           console.log(serverStatus,"status")
@@ -93,6 +94,8 @@ const TeacherReg =(props) =>{
             })
         }).then(e=>{
           if (e.status===201){
+          props.handleSuccessMessageOpen()
+          
             setValue({
                 "name": {value:"",error:false,helperText:''},
                 "email": {value:"",error:false,helperText:''},
@@ -102,7 +105,7 @@ const TeacherReg =(props) =>{
                 "teachingExperience": {value:"",error:false,helperText:''},
                 "notes": {value:"",error:false,helperText:''}
                 ,fetching:{...value.fetching,success:true,value:false}})
-  
+          props.handleClose()
           }else{
             setValue({...value,fetching:{...value.fetching,failure:true,value:false}})
   
@@ -122,7 +125,6 @@ const TeacherReg =(props) =>{
       };
       
       const checkEmail=()=>{
-          console.log("logging");
         var temp=value
         if (!temp['email'].value.includes('@') || !temp['email'].value.includes('.')){
           temp['email'].error=true
@@ -171,11 +173,9 @@ const TeacherReg =(props) =>{
         setValue({...value,[id]:{...value[id],value:event.target.value}})
     //   setValue(event.target.value);
     };
-    console.log(value)
     return(
         <>
         <Container  maxWidth="sm"   >
-            
             <Box sx={{mt:5}} >
                 <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive&&6,mb:2}}>
                     
@@ -241,7 +241,6 @@ const TeacherReg =(props) =>{
                             error={value.email.error}
                             
                           onBlur={()=>{
-                            console.log("hello i am working")
                             checkEmail()}}
                             // onChange={} 
                             name="email"
@@ -265,7 +264,6 @@ const TeacherReg =(props) =>{
                             // onChange={} 
                             
                           onBlur={()=>{
-                            console.log("hello i am ph")
                             checkPhonenumber()}}
                             id="phoneNumber"
                             variant="outlined"
@@ -280,7 +278,6 @@ const TeacherReg =(props) =>{
                             variant="outlined"
                             color="warning"
                             onBlur={()=>{
-                              console.log("hello i am ln")
                               checkLinkedIn()}}
                             required
                             onChange={(e)=>handleChange(e,'linkedIn')}
@@ -390,9 +387,18 @@ const TeacherReg =(props) =>{
                                
                         }} 
                     >
-                        <Button onClick={()=>onSubmit()} sx={{mb:4}}>
+                        
+                        
+                        {
+                          value.fetching.value
+                          ?<Box sx={{display:'flex',justifyContent:'center'}}>
+                            <CircularProgress sx={{color:"#FFCC00"}} />
+                          </Box>
+                          :
+                          <Button onClick={()=>onSubmit()} sx={{mb:4}}>
                             Join Playcub
-                        </Button>
+                          </Button>
+                        }
                     </Box>
                 
                 

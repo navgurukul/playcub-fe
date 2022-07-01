@@ -31,11 +31,10 @@ const Reg =(props) =>{
         age:{error:false,errorMsg:'',value:''},
         phonenumber:{error:false,errorMsg:'',value:''},
         slot:{error:false,errorMsg:'',value:1},
-        fetching:{value:false,success:false,failure:false},
+        fetching:{value:false,success:true,failure:false},
       })
       const fetchData=async()=>{
         try{
-          setRegisterData({...registerdata,fetching:{...registerdata.fetching,success:false,value:true}})
 
           const serverStatus= await fetch('https://playcub.deta.dev/ping')
           let slot = registerdata['slot'].value
@@ -58,7 +57,8 @@ const Reg =(props) =>{
         }).then(e=>{
           if (e.status===201){
             setRegisterData({...registerdata,fetching:{...registerdata.fetching,success:true,value:false}})
-  
+            props.handleSuccessMessageOpen()
+            props.handleClose()
           }else{
           setRegisterData({...registerdata,fetching:{...registerdata.fetching,failure:true,value:false}})
   
@@ -70,7 +70,6 @@ const Reg =(props) =>{
           setRegisterData({...registerdata,fetching:{...registerdata.fetching,failure:true,value:false}})
           return e
         })
-            console.log(response,"response.data")
           }
         }catch(err){
           console.log(err);
@@ -128,7 +127,6 @@ const Reg =(props) =>{
       const onSubmit=(e)=>{
         var error=false
         var register=registerdata
-        console.log(register['age'].value<8,"submited");
         if (register['Name'].value.length<=0){
           error=true
           register['Name'].error=true
@@ -222,7 +220,6 @@ const Reg =(props) =>{
                       <TextField
                           label="Email"
                           onBlur={()=>{
-                            console.log("hello i am working")
                             checkEmail()}}
                           type="text"
                           color="warning"
