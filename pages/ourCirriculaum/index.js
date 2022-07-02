@@ -161,7 +161,19 @@ const OurCirriculum = () =>{
                                 href='/playcub.pdf' download={"curriculum.pdf"}
                                 height={"715px"}  variant="outlined"  
                                     sx={{ backgroundColor: 'white', borderColor: 'black' }} >
-                                    Get Detailed Curriculum
+                                        <Image 
+                                            onClick={()=>{
+                                            props.handleClose()
+                                            }}
+                                                src={require("../../assest/Download.png")} 
+                                                className={classes.closeIcon}
+                                                alt="download img"
+                                                sx={{ml:1}}
+                                                
+                                                
+                                                
+                                            />
+                                        Get Detailed Curriculum
                                 </Button>
 
                                 </Box>

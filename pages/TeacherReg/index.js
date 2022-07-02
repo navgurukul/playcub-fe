@@ -224,12 +224,11 @@ const TeacherReg =(props) =>{
                             id="name"
                             variant="outlined"
                             color="warning"
-                            required
                             onChange={(e)=>handleChange(e,'name')}
                             value={value.name.value} 
                             helperText={value.name.helperText}
                             error={value.name.error}
-                            // onChange={} 
+                            
                         />
 
                         <TextField
@@ -242,12 +241,11 @@ const TeacherReg =(props) =>{
                             
                           onBlur={()=>{
                             checkEmail()}}
-                            // onChange={} 
                             name="email"
                             id="email"
                             variant="outlined"
                             color="warning"
-                            required
+                            
                             
                         />
                     
@@ -257,18 +255,16 @@ const TeacherReg =(props) =>{
                             pattern="^[0-9]{10}$"
                             maxLength={13}
                             value={value.phoneNumber.value} 
-                            // helperText={"pls enter phone number"}
                             helperText={value.phoneNumber.helperText}
                             error={value.phoneNumber.error}
-                            onChange={(e)=>handleChange(e,'phoneNumber')}
-                            // onChange={} 
+                            onChange={(e)=>handleChange(e,'phoneNumber')} 
                             
                           onBlur={()=>{
                             checkPhonenumber()}}
                             id="phoneNumber"
                             variant="outlined"
                             color="warning"
-                            required
+                           
                         />
                         <TextField
                             label="LinkedIn Profile"
@@ -279,12 +275,10 @@ const TeacherReg =(props) =>{
                             color="warning"
                             onBlur={()=>{
                               checkLinkedIn()}}
-                            required
                             onChange={(e)=>handleChange(e,'linkedIn')}
                             value={value.linkedIn.value} 
                             helperText={value.linkedIn.helperText}
                             error={value.linkedIn.error}
-                            // onChange={} 
                         />
 
                 
@@ -344,7 +338,6 @@ const TeacherReg =(props) =>{
                               value={value.teachingExperience.value} 
                               helperText={value.teachingExperience.helperText}
                               error={value.teachingExperience.error}
-                              // onChange={} 
                           />
                       </Box>
                     }
@@ -363,19 +356,16 @@ const TeacherReg =(props) =>{
                             Anything else you’d like us to know?
                         </Typography>
                         <TextField
-                            label="Your Answer"
-                            
+                            label="Your Answer (Optional)"                    
                             type="text"
                             name="yourAnswer"    
                             id="yourAnswer"
                             variant="outlined"
                             color="warning"
-                            onChange={(e)=>handleChange(e,'notes')}
-                            
+                            onChange={(e)=>handleChange(e,'notes')}             
                             value={value.notes.value} 
                             helperText={value.notes.helperText}
                             error={value.notes.error}
-                            // onChange={} 
                         />
                     </Box>
                         <Box
