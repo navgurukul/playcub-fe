@@ -100,7 +100,7 @@ const ClassesCard =()=>{
                             <Box  sx={{display:"flex"}}>
                                 <CurrencyRupeeIcon variant="h5" sx={{mt:1.5}}/>
                                 <Typography variant="h5">
-                                    120 / week
+                                    250 / class
                                 </Typography>
                                 
                             </Box>
