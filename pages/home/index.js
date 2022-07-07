@@ -3,6 +3,7 @@ import {
     Typography,
     Container,
     Button,
+    Card,
     Grid,
   } from "@mui/material";
 import Box from '@mui/material/Box';
@@ -97,16 +98,20 @@ const HomePage = ()=>{
                     Teach your kids how to build websites with fun
                 </Typography>
                 </Box>
-                <Container sx={ isActive?{mt: 6 }:{ mt: 6}} >
-                    <Grid container spacing={isActive?5:4}>
-                        <Grid item xs={12} sm={6} md={6}  >
+                <Container sx={ isActive?{mt: 6 }:{ mt: 6} }    >
+                    <Grid container spacing={isActive?5:4} >
+                        <Grid item xs={12} sm={6} md={6}   >
+                            <Card sx={{borderRadius:'3%', height:"98.1%",position:!isActive&&'relative' ,right:!isActive&&"20px"}}>
                             <Image 
                                 
-                                src={require("../../assest/Coding1.png")} 
-                                // height={isActive&&550}
+                                src={require("../../assest/Coding.png")} 
+                                width= {'696px'}
+                                height={'460px'}
+                                
                                 alt="Picture of the student who is doing coding"
                                 
                                 />
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} align="left">

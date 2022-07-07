@@ -330,7 +330,7 @@ const Reg =(props) =>{
                           <Box sx={{display:"flex",ml:3}}>
                               <CurrencyRupeeIcon  sx={{mt:0.2,height:45}}/>
                               <Typography variant="h5">
-                                  120 / week
+                                250 / class
                               </Typography>        
                           </Box>
                           <Typography variant="body1" ml={4}>
