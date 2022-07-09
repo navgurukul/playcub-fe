@@ -16,12 +16,23 @@ import BookAFreeDemoClassButton from "../../common/RegistrationStudent"
 import { useEffect, useState } from 'react';
 import DailogBox from '../../common/RegistrationTeacher'
 import CircularProgress from '@mui/material/CircularProgress';
+import Alert from '@mui/material/Alert';
 import PopupCardWithModel from '../../common/Popup';
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [successMessage,setSuccessMessage]=useState(false)
     const [loading,setLoading]=useState(false)
+    const[ SubScribe , setSubScribe]= useState(false)
+    const [timeOut, setTimeOut] = useState(null)
+    
+    setTimeout(() => {
+      setTimeOut(1)
+    }, 3000)
+   
+
     const classes = Styles();
+
+   
     const[email,setEmail]=useState({
         value:'',
         error:false,
@@ -48,6 +59,8 @@ const HomePage = ()=>{
 
     }
     const submit = async () =>{
+        setSubScribe(localStorage.getItem('Subscrib'))
+
         var instance=email
         if (!instance.value.includes('@') || !instance.value.includes('.')){
           instance.error=true
@@ -56,7 +69,7 @@ const HomePage = ()=>{
 
         }
         else{
-        setLoading(true)
+            setLoading(true)
 
             const response = await fetch('https://playcub.deta.dev/form/submit/newsletter',{
                 method:"POST",
@@ -64,7 +77,11 @@ const HomePage = ()=>{
                 headers:{
                     "Content-Type":"application/json"
                 }
-            }).then(()=>{
+            }).then((e)=>{
+                if (e.status===201){
+                    localStorage.setItem("Subscrib",true)
+
+                }
                 setLoading(false)
                 setSuccessMessage(true)
                 setEmail({
@@ -78,18 +95,13 @@ const HomePage = ()=>{
         
 
     }
-      
+    
     return (
         <>
-            <PopupCardWithModel
-                open={successMessage}
-                close={()=>setSuccessMessage(false)}
-                >
-                    <Typography variant="body1" color="green">
-                    You have been subscribed successfully.
-                </Typography>
-            </PopupCardWithModel>
+            
+            
             <Container  align={!isActive&&"center"}  sx={{mt:13}}>
+              
                 <Box ml={isActive&&2}>
                 <Typography variant="h3" mb="16px" >
                     Interactive Coding Classes for Kids
@@ -175,7 +187,7 @@ const HomePage = ()=>{
                             <Box
                             sx={{
                                 display: "grid",  
-                                // buttonstyle={{mt:2, p:"8px,16px",height:"48px"}}                                                                                                         
+                                                                                                                                        
                             }}
                             width={isActive?"100%":"238px"}
                             >
@@ -205,14 +217,13 @@ const HomePage = ()=>{
                             <Image 
                                 
                                 src={require("../../assest/teacher.png")} 
-                                // height={isActive&&550}
                                 alt="Picture of the student who is doing coding"
                                 
                             />   
                         </Grid>
                     </Grid>
                 </Container>
-            <Box  sx={{backgroundColor:"#F5F5F5" }}>
+            <Box  sx={{backgroundColor:"#F5F5F5"}}>
                 <Box  sx={{textAlign:"center",  }}>
                     <Typography variant="h4"pt={!isActive?8:4} >
                         Get involved
@@ -221,7 +232,9 @@ const HomePage = ()=>{
                         Get regular updates about PlayCub’s initiatives
                     </Typography> 
                 </Box> 
-                <Container maxWidth="sm"  >  
+                <Container maxWidth="sm" sx={{pb:!isActive?9:3}} >
+                {SubScribe === true?
+                  
                 <Box display={!isActive?"flex":"grid"} p={1} >
                     <Box sx={{mb:!isActive?9:3}}>
                         <TextField
@@ -237,7 +250,7 @@ const HomePage = ()=>{
                                 error={email.error}
                                 onChange={e=>setEmail({...email,value:e.target.value})}
                                 sx={{width:!isActive?"430px":"100%",backgroundColor:"white"}}
-                                // onChange={} 
+                                 
                             />
                     </Box>
                     <Box  flexGrow={0} mb={isActive&&6} >
@@ -259,7 +272,18 @@ const HomePage = ()=>{
 
 
                 
-                </Container>  
+                : timeOut !== 1 && 
+               
+                <Box   >
+                    
+                        <Alert severity="success"  ><Typography  ml={!isActive&&10}>You have been subscribed successfully. </Typography></Alert>
+                    
+                </Box>
+                        
+                    
+                    
+                  }
+                </Container>
                 
             </Box>
         </>
