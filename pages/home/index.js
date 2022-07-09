@@ -233,7 +233,7 @@ const HomePage = ()=>{
                     </Typography> 
                 </Box> 
                 <Container maxWidth="sm" sx={{pb:!isActive?9:3}} >
-                {SubScribe === true?
+                {SubScribe === false?
                   
                 <Box display={!isActive?"flex":"grid"} p={1} >
                     <Box sx={{mb:!isActive?9:3}}>
