@@ -27,6 +27,7 @@ const BookAFreeDemoClassButton = (props)=>{
         
         <PopupCardWithModel 
         open={successMessage}
+        
         >
           <Typography variant="body1">
           Thank you for interest in the free demo class with Playcub. We will reach you within 24 hours.

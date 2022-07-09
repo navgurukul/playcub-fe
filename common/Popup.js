@@ -27,6 +27,7 @@ const PopupCardWithModel = (props)=>{
     return <>
     <Modal
     open={open}
+    onClose={handleClose}
     >
 
     <PopupCard handleClose={handleClose} text={props.text}>

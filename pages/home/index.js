@@ -232,7 +232,7 @@ const HomePage = ()=>{
                         Get regular updates about PlayCub’s initiatives
                     </Typography> 
                 </Box> 
-                <Container maxWidth="sm" sx={{pb:!isActive?9:3}} >
+                <Container maxWidth="sm"  >
                 {SubScribe === false?
                   
                 <Box display={!isActive?"flex":"grid"} p={1} >
@@ -275,7 +275,7 @@ const HomePage = ()=>{
                 : 
                 // timeOut !== 1 && 
                
-                <Box   >
+                <Box sx={{pb:!isActive?9:3}}>
                     
                         <Alert severity="success"  ><Typography  ml={!isActive&&10}>You have been subscribed successfully. </Typography></Alert>
                     
