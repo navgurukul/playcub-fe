@@ -272,7 +272,8 @@ const HomePage = ()=>{
 
 
                 
-                : timeOut !== 1 && 
+                : 
+                // timeOut !== 1 && 
                
                 <Box   >
                     
