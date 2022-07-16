@@ -21,18 +21,9 @@ import PopupCardWithModel from '../../common/Popup';
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [successMessage,setSuccessMessage]=useState(false)
-    const [loading,setLoading]=useState(false)
-    const[ SubScribe , setSubScribe]= useState(false)
-    const [timeOut, setTimeOut] = useState(null)
-    
-    setTimeout(() => {
-      setTimeOut(1)
-    }, 3000)
-   
-
+    const [loading,setLoading]=useState(false)  
     const classes = Styles();
-
-   
+ 
     const[email,setEmail]=useState({
         value:'',
         error:false,
@@ -59,7 +50,6 @@ const HomePage = ()=>{
 
     }
     const submit = async () =>{
-        setSubScribe(localStorage.getItem('Subscrib'))
 
         var instance=email
         if (!instance.value.includes('@') || !instance.value.includes('.')){
@@ -78,18 +68,30 @@ const HomePage = ()=>{
                     "Content-Type":"application/json"
                 }
             }).then((e)=>{
-                if (e.status===201){
-                    localStorage.setItem("Subscrib",true)
-
-                }
                 setLoading(false)
-                setSuccessMessage(true)
-                setEmail({
-                    value:'',
-                    error:false,
-                    helperText:''
-                })
-                setName('')
+                if(e.status === 400){
+                    setEmail({
+                        value:'',
+                        error:true,
+                        helperText:'This email is already exists.Please try again.'
+                    })
+                
+                    setSuccessMessage(false)
+                    
+                }
+                else{
+   
+                    if (e.status===201){
+                        
+                        setSuccessMessage(true)
+                        setEmail({
+                            value:'',
+                            error:false,
+                            helperText:''
+                        })
+                        setName('')
+                    }      
+               }              
             })
         }
         
@@ -233,8 +235,8 @@ const HomePage = ()=>{
                     </Typography> 
                 </Box> 
                 <Container maxWidth="sm"  >
-                {SubScribe === false?
-                  
+                
+                {successMessage ===false?
                 <Box display={!isActive?"flex":"grid"} p={1} >
                     <Box sx={{mb:!isActive?9:3}}>
                         <TextField
@@ -268,22 +270,17 @@ const HomePage = ()=>{
                     }
                     </Box>
                     
-                </Box>
-
-
-                
-                : 
-                // timeOut !== 1 && 
-               
+                </Box>:
                 <Box sx={{pb:!isActive?9:3}}>
                     
                         <Alert severity="success"  ><Typography  ml={!isActive&&10}>You have been subscribed successfully. </Typography></Alert>
                     
                 </Box>
-                        
-                    
-                    
-                  }
+
+                }
+                
+                
+               
                 </Container>
                 
             </Box>
