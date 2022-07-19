@@ -11,6 +11,11 @@ const Styles = makeStyles((theme) => ({
         height:"507px",
         width:"544px",
     },
+    visionImg1:{
+        height:"507px",
+        width:"102%",
+        
+    },
     closeIcon:{
         height:'32px',
         width:'32px',

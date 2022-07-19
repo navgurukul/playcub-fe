@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import {
     Typography,
     Container,
@@ -17,7 +16,8 @@ import { useEffect, useState } from 'react';
 import DailogBox from '../../common/RegistrationTeacher'
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
-import PopupCardWithModel from '../../common/Popup';
+
+
 const HomePage = ()=>{
     const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
     const [successMessage,setSuccessMessage]=useState(false)
@@ -116,58 +116,52 @@ const HomePage = ()=>{
                     <Grid container spacing={isActive?5:4} >
                         <Grid item xs={12} sm={6} md={6}   >
                             <Card sx={{borderRadius:'3%', height:"98.1%",position:!isActive&&'relative' ,right:!isActive&&"20px"}}>
-                            <Image 
-                                
-                                src={require("../../assest/Coding.png")} 
-                                width= {'696px'}
-                                height={'460px'}
-                                
-                                alt="Picture of the student who is doing coding"
-                                
+                                <img 
+                                    src={'https://playcub.s3.ap-south-1.amazonaws.com/assest/Coding.png'} 
+                                    width= {'696px'}
+                                    height={'370px'}      
+                                    alt="Picture of the student who is doing coding"    
                                 />
                             </Card>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} align="left">
                             <Box sx={{display:"flex", mb:2,gap:1}}> 
-                                <Image 
-                                    src={require("../../assest/Menu book.png")} 
+                                <img  
+                                    src="https://playcub.s3.ap-south-1.amazonaws.com/assest/Menu+book.png"
                                     className={classes.Icons}
-                                    alt="Book logo"
-                                            
+                                    alt="Book logo"           
                                 />
                                 <Typography variant="body1">
                                     Curriculum designed by experts 
                                 </Typography>
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
-                                <Image 
-                                    src={require("../../assest/Videocam.png")} 
+                                <img 
+                                    // src={require("../../assest/Videocam.png")} 
+                                    src="https://playcub.s3.ap-south-1.amazonaws.com/assest/Videocam.png"
                                     className={classes.Icons}
                                     alt="Video logo"
-                                
                                 />
                                 <Typography variant="body1">
                                     Private 1-1 classes
                                 </Typography>
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
-                                <Image 
-                                    src={require("../../assest/Perm contact.png")} 
+                                <img 
+                                    src="https://playcub.s3.ap-south-1.amazonaws.com/assest/Perm+contact.png"
                                     className={classes.Icons}
                                     alt="Contact logo"
-                                
                                 />
                                 <Typography variant="body1">
                                     Convenient Scheduling
                                 </Typography>
                             </Box>
                             <Box sx={{display:"flex",mb:2,gap:1}}>
-                                <Image 
-                                    src={require("../../assest/Child care.png")} 
+                                <img 
+                                    src="https://playcub.s3.ap-south-1.amazonaws.com/assest/Child+care.png"
                                     className={classes.homePageIcon}
                                     alt="Child logo"
-                                
                                 />
                                
                                 <Typography variant="body1">
@@ -175,13 +169,11 @@ const HomePage = ()=>{
                                 </Typography>
                             </Box>
                             <Box sx={{display:"flex",mb:2, gap:1}}>
-                                <Image 
-                                        src={require("../../assest/Child care (1).png")} 
-                                        className={classes.homePageIcon}
-                                        alt="Rupee logo"
-                                        
-                                    
-                                    />
+                                <img 
+                                    src="https://playcub.s3.ap-south-1.amazonaws.com/assest/Child+care+(1).png"
+                                    className={classes.homePageIcon}
+                                    alt="Rupee logo"
+                                />
                                 <Typography variant="body1" >
                                     Teachers keep 100% of the feee
                                 </Typography>
@@ -194,10 +186,7 @@ const HomePage = ()=>{
                             width={isActive?"100%":"238px"}
                             >
                             <BookAFreeDemoClassButton />
-                            </Box>
-                            
-                            
-                           
+                            </Box>  
                         </Grid>
                     </Grid>
                 </Container>
@@ -208,17 +197,13 @@ const HomePage = ()=>{
                         <Grid item xs={12} sm={6} md={6}  >                                        
                             <Typography variant="h5"  >
                             Are you a Professional who wants to share their web dev expertise?
-                            </Typography>
-                           
-                            <DailogBox/>
-                            
-                            
+                            </Typography>   
+                            <DailogBox/>    
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={6} >
-                            <Image 
-                                
-                                src={require("../../assest/teacher.png")} 
+                            <img 
+                                src="https://playcub.s3.ap-south-1.amazonaws.com/assest/teacher.png"
                                 alt="Picture of the student who is doing coding"
                                 
                             />   

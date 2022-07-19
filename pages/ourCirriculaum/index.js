@@ -11,7 +11,6 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../common/cardComponent";
 import ClassesData from "../../uitls/ClassesData";
-import Image from 'next/image'
 import BookAFreeDemoClassButton from "../../common/RegistrationStudent";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../../theme/constant";
@@ -161,11 +160,11 @@ const OurCirriculum = () =>{
                                 href='/playcub.pdf' download={"curriculum.pdf"}
                                 height={"715px"}  variant="outlined"  
                                     sx={{ backgroundColor: 'white', borderColor: 'black' }} >
-                                        <Image 
+                                        <img 
                                             onClick={()=>{
                                             props.handleClose()
                                             }}
-                                                src={require("../../assest/Download.png")} 
+                                                src='https://playcub.s3.ap-south-1.amazonaws.com/assest/Download.png'
                                                 className={classes.closeIcon}
                                                 alt="download img"
                                                 sx={{ml:1}}

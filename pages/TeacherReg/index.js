@@ -5,7 +5,6 @@ import {
     Button,
     Box,
 } from "@mui/material";
-import Image from 'next/image'
 import TextField from "@mui/material/TextField";
 import { Link } from '@mui/material';
 import Radio from '@mui/material/Radio';
@@ -179,11 +178,11 @@ const TeacherReg =(props) =>{
             <Box sx={{mt:5}} >
                 <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive&&6,mb:2}}>
                     
-                   <Image 
+                   <img 
                      onClick={()=>{
                       props.handleClose()
                       }}
-                        src={require("../../assest/close.png")} 
+                        src="https://playcub.s3.ap-south-1.amazonaws.com/assest/close.png"
                         className={classes.closeIcon}
                         alt="close image"
                         

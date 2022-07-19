@@ -10,7 +10,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CardStyle from "../../common/cardComponent";
-import Image from 'next/image'
 import TextField from "@mui/material/TextField";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -173,11 +172,11 @@ const Reg =(props) =>{
           <Box sx={{mt:!isActive?5:2,}} >
             <Box display="flex" justifyContent="flex-end"  sx={{mr:!isActive?1:2,mb:!isActive?5:1}}>
                 
-                <Image 
+                <img 
                     onClick={()=>{
                       props.handleClose()
                       }}
-                    src={require("../../assest/close.png")} 
+                    src="https://playcub.s3.ap-south-1.amazonaws.com/assest/close.png" 
                     className={classes.closeIcon}
                     alt="close image"                
                 />

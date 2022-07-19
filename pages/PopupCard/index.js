@@ -1,16 +1,11 @@
 import {
-    Typography,
     Container,
     Button,
     CardContent,
-    CardActions,
     Card,
-    Grid,
     Box,
   } from "@mui/material";
-  import CardStyle from "../../common/cardComponent";
-  import CardMedia from '@mui/material/CardMedia';
-  import Image from 'next/image'
+  
 
 const PopupCard = (props)=>{
     return(
@@ -20,8 +15,8 @@ const PopupCard = (props)=>{
             <Card sx={{width:"540px",height:"534px",borderRadius:"8",borderColor: '#ffff',border:0}} >
       
                 <Box textAlign={"center"} mt={'64px'} mb={2} >
-                    <Image 
-                        src={require("../../assest/popup.png")} 
+                    <img 
+                        src='https://playcub.s3.ap-south-1.amazonaws.com/assest/popup.png'
                         alt="Group image"
                        sx={{ width:' 266.4px',
                         height:' 240px',

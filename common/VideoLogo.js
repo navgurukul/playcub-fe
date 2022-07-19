@@ -3,7 +3,6 @@ import {
     Grid,
     Box,
   } from "@mui/material";
-import Image from 'next/image'
 import Styles from "../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../theme/constant";
@@ -17,9 +16,9 @@ const VideoLogo=()=>{
         <Grid item  display={'flex'} mb={isActive&&"16px"}>
             <Box >
         
-                <Image 
+                <img 
                     
-                    src={require("../assest/video.png")} 
+                    src=" https://playcub.s3.ap-south-1.amazonaws.com/assest/video.png" 
                     className={classes.Icons}
                    
                     alt="Video Content logo"

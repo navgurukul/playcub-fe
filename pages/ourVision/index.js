@@ -23,10 +23,10 @@ const ourVision = ()=>{
         <Container  maxWidth="lg" sx={{mt:13}} >
             <Grid container  spacing={!isActive?12:2} >
                 {isActive&&<Grid  item xs={12} sm={6} md={6} >   
-                        <Image 
-                            src={require("../../assest/Group.png")} 
+                        <img 
+                            src='https://playcub.s3.ap-south-1.amazonaws.com/assest/Group.png' 
                             alt="Group image"
-                            className={classes.visionImg}
+                            className={classes.visionImg1}
                            
                         
                             
@@ -53,20 +53,16 @@ const ourVision = ()=>{
                         }}
                         width={isActive?"100%":"238px"}
                         mb={isActive&&"26px"}
-                         >
-                    {/* <Button  > Book a free demo class</Button>  */}
-                    <BookAFreeDemoClassButton  />
+                    >
+                        <BookAFreeDemoClassButton  />
                     </Box>
                 </Grid>
 
                 {!isActive&&<Grid  item xs={12} sm={6} md={6} >   
-                    <Image 
-                        src={require("../../assest/Group.png")} 
-                        alt="Group image"
+                    <img 
+                        src='https://playcub.s3.ap-south-1.amazonaws.com/assest/Group.png' 
                         className={classes.visionImg}
-                       
-                        
-                       
+                        alt="Group image"    
                     />    
                                         
                 </Grid>}

@@ -7,10 +7,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
-import Logo from "../assest/Playcub 1.svg";
 import Button from "@mui/material/Button";
 import Link from '@mui/material/Link';
-import Image from 'next/image';
 import BookAFreeDemoClassButton from "./RegistrationStudent"
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Container } from '@mui/material';
@@ -66,16 +64,16 @@ const Navbar =(props) => {
             <Box sx={{mt:3,display:"flex"}}>
               <Box  >
                 <Link href="/" underline="none" sx={{ml:2}}>
-                  <Image  src={Logo}></Image>
+                  <img  src=' https://playcub.s3.ap-south-1.amazonaws.com/assest/Playcub+1.svg'/>
                 </Link>
               </Box>
               <Box   sx={{ml:20}}>
-                <Image 
+                <img 
                    onClick={()=>{
                     handleMobileMenuClose()
                     }}
                     
-                      src={require("../assest/close.png")} 
+                      src="https://playcub.s3.ap-south-1.amazonaws.com/assest/close.png" 
                       // sx={{height:"16px",width:"16px"}}
                       className={classes.closeIcon1}
                       alt="close icon"        
@@ -128,7 +126,7 @@ const Navbar =(props) => {
        >
         <Toolbar>
           <Link href="/" underline="none" sx={{mt:2}} aria-label="playcub logo">
-            <Image  src={Logo} sx={{width:'152px',height:'48px'}}  alt='playcub logo'></Image>
+            <img  src='https://playcub.s3.ap-south-1.amazonaws.com/assest/Playcub+1.svg' sx={{width:'152px',height:'48px'}}  alt='playcub logo'></img>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -157,7 +155,7 @@ const Navbar =(props) => {
              
               
             >
-              <Image   src={require("../assest/menu.png")}/>
+              <img  src='https://playcub.s3.ap-south-1.amazonaws.com/assest/menu.png'/>
             </IconButton>
           </Box>
         </Toolbar>

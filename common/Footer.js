@@ -1,8 +1,7 @@
 import BottomNavigation from '@mui/material/BottomNavigation';
 import Link from '@mui/material/Link';
-import Logo from "../assest/Playcub 2.svg";
 import Typography from "@mui/material/Typography";
-import Image from 'next/image';
+
 
 const Footer =(props)=>{
     const {  height } =  props;
@@ -17,7 +16,7 @@ const Footer =(props)=>{
         showLabels
         >        
             <Link href="/" underline="none" sx={{mt:2}}  aria-label="playcub logo">
-                <Image src={Logo} sx={{width:'152px',height:'48px'}} alt='playcub logo' pt="16px" pb="16px"></Image>
+                <img src='https://playcub.s3.ap-south-1.amazonaws.com/assest/Playcub+2.svg' sx={{width:'152px',height:'48px'}} alt='playcub logo' pt="16px" pb="16px"></img>
             </Link>
             <Typography variant="subtitle1" color={"white"} align="right">
                 Made with ❤️ for our students

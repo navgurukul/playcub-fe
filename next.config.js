@@ -5,6 +5,11 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: [
+      'https://s3.ap-south-1.amazonaws.com/'
+    ]
+  }
   
 }
 

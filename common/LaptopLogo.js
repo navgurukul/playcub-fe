@@ -3,7 +3,6 @@ import {
     Grid,
     Box,
   } from "@mui/material";
-import Image from 'next/image'
 import Styles from "../styles/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../theme/constant";
@@ -15,12 +14,12 @@ const LaptopLogo=()=>{
     return(
         <Grid item display={'flex'} mb={isActive&&"16px"} >
             <Box  >
-                <Image 
-                    src={require("../assest/classes.png")} 
+                <img 
+                    src='https://playcub.s3.ap-south-1.amazonaws.com/assest/classes.png' 
                     className={classes.Icons}
                     alt="laptop logo img"
                     
-                    />
+                />
             </Box>
             <Box sx={{ml:1,mr:1}}>
                 <Typography variant="body1" sx={{mt:0.3, mr:"16px", mb:0.3}}>
