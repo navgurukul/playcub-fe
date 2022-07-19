@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import Link from '@mui/material/Link';
+// import Link from 'next/link';
 import BookAFreeDemoClassButton from "./RegistrationStudent"
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Container } from '@mui/material';
@@ -74,7 +75,7 @@ const Navbar =(props) => {
                     }}
                     
                       src="https://playcub.s3.ap-south-1.amazonaws.com/assest/close.png" 
-                      // sx={{height:"16px",width:"16px"}}
+                      
                       className={classes.closeIcon1}
                       alt="close icon"        
                       
@@ -102,7 +103,6 @@ const Navbar =(props) => {
           <Box
               sx={{
                   display: "grid",
-                  // gap: 2,
                   mt:1,
                   width:"86%",
                   mb:2
@@ -151,9 +151,7 @@ const Navbar =(props) => {
               aria-label="show more"
               aria-controls={mobileMenuId}
               aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-             
-              
+              onClick={handleMobileMenuOpen}              
             >
               <img  src='https://playcub.s3.ap-south-1.amazonaws.com/assest/menu.png'/>
             </IconButton>

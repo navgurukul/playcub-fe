@@ -118,8 +118,10 @@ const HomePage = ()=>{
                             <Card sx={{borderRadius:'3%', height:"98.1%",position:!isActive&&'relative' ,right:!isActive&&"20px"}}>
                                 <img 
                                     src={'https://playcub.s3.ap-south-1.amazonaws.com/assest/Coding.png'} 
-                                    width= {'696px'}
-                                    height={'370px'}      
+                                    // width= {'696px'}
+                                    // height={'370px'} 
+                                    width="100%" 
+                                       
                                     alt="Picture of the student who is doing coding"    
                                 />
                             </Card>
@@ -205,7 +207,7 @@ const HomePage = ()=>{
                             <img 
                                 src="https://playcub.s3.ap-south-1.amazonaws.com/assest/teacher.png"
                                 alt="Picture of the student who is doing coding"
-                                
+                                width="100%" 
                             />   
                         </Grid>
                     </Grid>

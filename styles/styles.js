@@ -24,12 +24,16 @@ const Styles = makeStyles((theme) => ({
           }
     },
     closeIcon1:{
-        height:'16px',
-        width:'16px',
+        height:'25px',
+        width:'25px',
         '&:hover': {
             // background: "#FFCC00",
             background: "#FFF5CC",
           }
+    },
+    link:{
+        color:' #2E2E2E',
+        textDecoration:"none"
     }
     
     
